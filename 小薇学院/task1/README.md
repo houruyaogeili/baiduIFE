@@ -15,4 +15,4 @@
 + 示例图仅为参考，不需要完全实现一致，其中的图片、文案均可自行设定
 + 尽可能多地尝试更多的HTML标签
 
-[点我预览](https://houruyaogeili.github.io/ife1/)
+[点我预览]( https://houruyaogeili.github.io/baiduIFE/小薇学院/task1/index.html )
