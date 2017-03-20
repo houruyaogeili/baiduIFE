@@ -6,9 +6,23 @@
 </head>
 <body>
 	<label>请输入北京今天天气质量：<input type="text" name="" id="aqi-input"></label>
+	<div>
+		<span>你的性别</span><label><input type="radio" id="aqi-radio" value="1" name="sex" checked />男</label>
+	</div>
+	<div>
+		<label for="selectcity">你喜欢的城市：</label>
+		<select id="selectcity">
+			<option value="beijing">北京</option>
+			<option value="tianjin" selected>天津</option>
+			<option value="shanghai">上海</option>
+			<option value="guangzhou">广州</option>
+		</select>
+	</div>
 	<button id="button">确认填写</button>
 
 	<div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+	<div>您的性别是：<span id="aqi-display2">尚无录入</span></div>
+	<div>您喜欢的城市是：<span id="aqi-display3">尚无录入</span></div>
 	<script type="text/javascript">
 		(function(){
 			/*
@@ -19,13 +33,27 @@
 			*/
 			var button = document.getElementById("button"),
 				aqi_input = document.getElementById("aqi-input"),
-				aqi_display = document.getElementById("aqi-display");
-			button.onclick = function(){
+				aqi_radio = document.getElementById("aqi-radio"),
+				selectcity = document.getElementById("selectcity"),
+				aqi_display = document.getElementById("aqi-display"),
+				aqi_display2 = document.getElementById("aqi-display2"),
+				aqi_display3 = document.getElementById("aqi-display3");
+			/*button.onclick = function(){
 				aqi_display.innerText = aqi_input.value;
-			};
-
+			};*/
+			addEvent(button,'click',function(){
+				aqi_display.innerText = aqi_input.value;
+				aqi_display2.innerHTML = aqi_radio.value;
+				aqi_display3.innerHTML = "value: "+selectcity.value+" innerText: "+selectcity.innerText+" innerHTML: "+selectcity.innerHTML+" option[0].text"+selectcity.options[0].text;
+			});
 			
-			
+			function addEvent(obj, type, callback) {
+	            if (obj.addEventListener) {
+	                obj.addEventListener(type, callback);
+	            } else {
+	                obj.attachEvent('on'+type, callback);
+	            }
+	        }
 
 		})();
 	</script>

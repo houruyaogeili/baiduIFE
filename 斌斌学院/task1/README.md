@@ -1,5 +1,5 @@
-# 任务一：零基础JavaScript编码（一）
-[点我前往任务地址](http://ife.baidu.com/course/detail/id/93)
+# 任务二：零基础JavaScript编码（二）
+[点我前往任务地址](http://ife.baidu.com/course/detail/id/91)
 
 ## 任务目的
 + JavaScript初体验
