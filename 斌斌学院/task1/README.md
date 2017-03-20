@@ -1,4 +1,4 @@
-# 任务一：任务一：零基础JavaScript编码（一）
+# 任务一：零基础JavaScript编码（一）
 [点我前往任务地址](http://ife.baidu.com/course/detail/id/93)
 
 ## 任务目的
