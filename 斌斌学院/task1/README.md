@@ -1,5 +1,5 @@
-# 任务一：零基础HTML编码
-[点我前往任务地址](http://ife.baidu.com/course/detail/id/90)
+# 任务一：任务一：零基础JavaScript编码（一）
+[点我前往任务地址](http://http://ife.baidu.com/course/detail/id/93)
 
 ## 任务目的
 + JavaScript初体验
@@ -19,4 +19,4 @@
 + 建议不使用任何第三方库、框架
 + 示例代码仅为示例，可以直接使用，也可以完全自己重写
 
-[点我预览]( https://houruyaogeili.github.io/baiduIFE/小薇学院/task1/index.html )
+[点我预览]( https://houruyaogeili.github.io/baiduIFE/斌斌学院/task1/index.html )
