@@ -29,27 +29,43 @@
 	    ["上海", 50],
 	    ["福州", 10],
 	    ["广州", 50],
-	    ["成都", 90],
-	    ["西安", 100]
+	    ["成都", 80],
+	    ["西安", 100],
+	    ["济南", 85],
+	    ["天津", 89]
 	  ];
+	  // var aqi_list = document.getElementById("aqi-list");
+	  // var arr = [];
+	  // for(var i=0,len=aqiData.length;i<len;i++){
+	  // 	if(aqiData[i][1] > 60){
+	  // 		arr.push(aqiData[i]);//筛选出空气质量>60的城市
+	  // 	}
+	  // }
+	  // arr.sort(compare);//对新数组进行排序，改变了数组
+	  // function compare(a,b){
+	  // 	return b[1]-a[1];
+	  // }
+	  // for(var i=0,len=arr.length;i<len;i++){
+	  // 	var aqi_list_li = document.createElement("li");
+	  // 	aqi_list_li.innerText = "第"+(i+1)+"名: "+arr[i][0]+", "+arr[i][1];
+	  // 	aqi_list.appendChild(aqi_list_li);
+	  // }
+	  //学会使用forEach,man,filter
 	  var aqi_list = document.getElementById("aqi-list");
-	  var arr = [];
-	  for(var i=0,len=aqiData.length;i<len;i++){
-	  	if(aqiData[i][1] > 60){
-	  		arr.push(aqiData[i]);//筛选出空气质量>60的城市
+	  aqiData = aqiData.filter(function(item,index,arr){
+	  	if(item[1] > 60){
+	  		return true;
 	  	}
-	  }
-	  arr.sort(compare);//对新数组进行排序，改变了数组
+	  });
+	  aqiData.sort(compare);
 	  function compare(a,b){
-	  	return b-a;
-	  }
-	  for(var i=0,len=arr.length;i<len;i++){
+  	  	return b[1]-a[1];
+  	  }
+	  for(var i=0,len=aqiData.length;i<len;i++){
 	  	var aqi_list_li = document.createElement("li");
-	  	aqi_list_li.innerText = "第"+(i+1)+"名: "+arr[i][0]+", "+arr[i][1];
+	  	aqi_list_li.innerText = "第"+(i+1)+"名: "+aqiData[i][0]+", "+aqiData[i][1];
 	  	aqi_list.appendChild(aqi_list_li);
 	  }
-
-	  
 	})();
 
 </script>
