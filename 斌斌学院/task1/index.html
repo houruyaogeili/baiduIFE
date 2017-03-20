@@ -22,7 +22,7 @@
 
 	<div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
 	<div>您的性别是：<span id="aqi-display2">尚无录入</span></div>
-	<div>您喜欢的城市是：<span id="aqi-display3">尚无录入</span></div>
+	<div id="dddd">您喜欢的城市是：<span id="aqi-display3">尚无录入</span></div>
 	<script type="text/javascript">
 		(function(){
 			/*
@@ -44,6 +44,7 @@
 			addEvent(button,'click',function(){
 				aqi_display.innerText = aqi_input.value;
 				aqi_display2.innerHTML = aqi_radio.value;
+				alert(document.getElementById("dddd").innerHTML);
 				aqi_display3.innerHTML = "value: "+selectcity.value+" innerText: "+selectcity.innerText+" innerHTML: "+selectcity.innerHTML+" option[0].text"+selectcity.options[0].text;
 			});
 			
