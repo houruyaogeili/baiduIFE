@@ -1,0 +1,133 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 04</title>
+    <style type="text/css">
+    	.wrap{
+    		width: 500px;
+    		margin: 200px auto;
+    	}
+    	.wrap .btn{
+    		background-color: #fff;
+    		border:1px solid #ccc;
+    		border-radius: 10%;
+    		cursor: pointer;
+    	}
+    	.queue span{
+    		display: inline-block;
+    		padding: 10px;
+    		background-color: #f00;
+    		color: #fff;
+    		margin: 5px;
+    	}
+
+    </style>
+  </head>
+<body>
+	<div class="wrap">
+		<div><input type="text" name=""> <button  class="btn" id="leftInBtn">左侧入</button> <button class="btn" id="rightInBtn">右侧入</button>&nbsp;&nbsp;<button class="btn" id="leftOutBtn">左侧出</button> <button class="btn" id="rightOutBtn">右侧出</button></div>
+		<div class="queue" id="queue"></div>
+	</div>
+
+<script type="text/javascript">
+
+(function() {
+
+	var leftInBtn = document.querySelector("#leftInBtn"),
+		rightInBtn = document.querySelector("#rightInBtn"),
+		leftOutBtn = document.querySelector("#leftOutBtn"),
+		rightOutBtn = document.querySelector("#rightOutBtn"),
+		queue = document.querySelector("#queue"),
+		textInput = document.querySelector("input");
+	
+	var queueObj = {
+		//左侧入
+		leftIn: function(){
+			var value = textInput.value.trim();
+			var queueChild = queue.firstChild;
+			if(checkValue(value)){
+				var spanNode = newSpan(value);			
+				queue.insertBefore(spanNode,queueChild);
+			}
+			textInput.value = "";
+			textInput.focus();
+		},
+		//右侧入
+		rightIn: function(){
+			var value = textInput.value.trim();
+			if(checkValue(value)){
+				var spanNode = newSpan(value);			
+				queue.appendChild(spanNode);
+			}
+			textInput.value = "";
+			textInput.focus();
+		},
+		//左侧出
+		leftOut: function(){
+			var firstNode = queue.firstElementChild;
+			if(firstNode){
+				var nodeValue = firstNode.innerText;
+				alert("左侧出的值为:"+nodeValue);
+				queue.removeChild(firstNode);
+			}else{
+				alert("没有元素可出");
+			}
+		},
+		//右侧出
+		rightOut: function(){
+			var lastNode = queue.lastElementChild;
+			if(lastNode){
+				var nodeValue = lastNode.innerText;
+				alert("右侧出的值为:"+nodeValue);
+				queue.removeChild(lastNode);
+			}else{
+				alert("没有元素可出");
+			}
+		}
+	};
+
+	//新建span元素
+	function newSpan(value){
+		var spanNode = document.createElement("span");
+		spanNode.innerText = value;
+		return spanNode;
+	}
+	//检验输入的合法性
+	function checkValue(value){
+		if(value === "" || value === null){
+			alert("请输入要入的值!");
+			return false;
+		}
+		if(isNaN(value)){
+			alert("请输入合法的数字!");
+			return false;
+		}
+		return true;
+	}
+	//添加点击事件
+	function addEvent(obj,event,fn){
+		if(obj.addEventListener){
+			obj.addEventListener(event,fn,false);
+		}else{
+			obj.addEvent("on"+event,fn);
+		}
+	}
+	//初始化
+	function init(){
+		addEvent(leftInBtn,"click",queueObj.leftIn);
+		addEvent(rightInBtn,"click",queueObj.rightIn);
+		addEvent(leftOutBtn,"click",queueObj.leftOut);
+		addEvent(rightOutBtn,"click",queueObj.rightOut);
+		addEvent(queue,"click",function(e){
+			if(e.target&&e.target.nodeName.toLowerCase()==='span'){
+				e.target.parentNode.removeChild(e.target);
+			}
+		});
+	}
+
+	init();
+})();
+</script>
+</body>
+</html>
