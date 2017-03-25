@@ -1,0 +1,173 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 04</title>
+    <style type="text/css">
+    	.wrap{
+    		width: 550px;
+    		margin: 20px auto;
+    	}
+    	.wrap .btn{
+    		background-color: #fff;
+    		border:1px solid #ccc;
+    		border-radius: 10%;
+    		cursor: pointer;
+    	}
+    	.queue span{
+    		display: inline-block;
+    		padding: 10px;
+    		background-color: #f00;
+    		color: #fff;
+    		margin: 5px;
+    		cursor: pointer;
+    		vertical-align: bottom;
+    	}
+
+    </style>
+  </head>
+<body>
+	<div class="wrap">
+		<div><input type="text" name=""> <button  class="btn" id="leftInBtn">左侧入</button> <button class="btn" id="rightInBtn">右侧入</button>&nbsp;&nbsp;<button class="btn" id="leftOutBtn">左侧出</button> <button class="btn" id="rightOutBtn">右侧出</button>&nbsp;&nbsp;<button class="btn" id="sort">排序</button></div></div>
+		<div class="queue" id="queue"></div>
+	</div>
+
+<script type="text/javascript">
+
+(function() {
+	
+	var queue = document.getElementById("queue");
+
+	var queueHandle = {
+		queue: [],
+		//左侧入
+		unshift: function(value){
+			this.queue.unshift(value);
+		},
+		//右侧入
+		push: function(value){
+			this.queue.push(value);
+		},
+		
+		//左侧出
+		shift: function(){
+			return this.queue.shift();
+		},
+		//右侧出
+		pop: function(){
+			return this.queue.pop();
+		}
+	};
+
+	//添加点击事件
+	function addEvent(obj,event,fn){
+		if(obj.addEventListener){
+			obj.addEventListener(event,fn,false);
+		}else if(obj.attachEvent){
+			obj.attachEvent("on"+event,fn);
+		}else{
+			obj["on"+event] = fn;
+		}
+	}
+	//移除span元素
+	function removeSpan(arr){
+		var queueChild = queue.querySelectorAll("span");
+		queueChild.forEach(function(item,index,arr){
+			queue.removeChild(item);
+		});
+	}
+	//将数组转化为元素
+	function addSpan(arr){
+		arr.forEach(function(item,index,arr){
+			var span = document.createElement("span");
+			span.innerText = item;
+			span.style.height = item + 'px';
+			queue.appendChild(span);
+		});
+	}
+	//数字输入的合法性
+	function isNum(value){
+		if(!/^\d+$/.test(value)){
+			return false;
+		}else if(value < 10 || value > 100){
+			return false;
+		}else{
+			return true;
+		}
+	}
+	//排序
+	function compare(a,b){
+		return a-b;
+	}
+	function init(){
+		var leftInBtn = document.getElementById("leftInBtn");
+		var rightInBtn = document.getElementById("rightInBtn");
+		var leftOutBtn = document.getElementById("leftOutBtn");
+		var rightOutBtn = document.getElementById("rightOutBtn");
+		var sort = document.getElementById("sort");
+
+		addEvent(leftInBtn,"click",function(){
+			if(queueHandle.queue.length >= 6){
+				alert("队列元素数量最多限制为60个")
+				return ;
+			}
+			var input = document.querySelector("input");
+			if(!isNum(input.value.trim())){
+				alert("请输入10-100范围内的数字！");
+				return ;
+			}
+			queueHandle.unshift(input.value.trim()); 
+			removeSpan(queueHandle.queue);
+			addSpan(queueHandle.queue);
+			input.value = "";
+			input.focus();
+		});
+		addEvent(rightInBtn,"click",function(){
+			if(queueHandle.queue.length >= 6){
+				alert("队列元素数量最多限制为60个")
+				return ;
+			}
+			var input = document.querySelector("input");
+			if(!isNum(input.value.trim())){
+				alert("请输入数字！");
+				return ;
+			}
+			queueHandle.push(input.value); 
+			removeSpan(queueHandle.queue);
+			addSpan(queueHandle.queue);	
+			input.value = "";
+			input.focus();
+		});
+		addEvent(leftOutBtn,"click",function(){
+			var shiftvalue = queueHandle.shift(); 
+			alert(shiftvalue);
+			removeSpan(queueHandle.queue);
+			addSpan(queueHandle.queue);
+		});
+		addEvent(rightOutBtn,"click",function(){
+			var popvalue = queueHandle.pop(); 
+			alert(popvalue);
+			removeSpan(queueHandle.queue);
+			addSpan(queueHandle.queue);
+		});
+		addEvent(queue,"click",function(e){
+			var spans = document.querySelectorAll("span");
+			var index = [].indexOf.call(spans,e.target);
+			queueHandle.queue.splice(index,1);
+			//alert(queueHandle.queue);
+			removeSpan(queueHandle.queue);
+			addSpan(queueHandle.queue);	
+		});
+		
+		addEvent(sort,"click",function(e){
+			queueHandle.queue.sort(compare);
+			removeSpan(queueHandle.queue);
+			addSpan(queueHandle.queue);	
+		});
+	}
+
+	init();
+})();
+</script>
+</body>
+</html>
