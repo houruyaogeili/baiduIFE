@@ -99,7 +99,7 @@
 			alert("请输入要入的值!");
 			return false;
 		}
-		if(isNaN(value)){
+		if(!/^\d+$/.test(value)){
 			alert("请输入合法的数字!");
 			return false;
 		}
@@ -110,7 +110,7 @@
 		if(obj.addEventListener){
 			obj.addEventListener(event,fn,false);
 		}else{
-			obj.addEvent("on"+event,fn);
+			obj.attachEvent("on"+event,fn);
 		}
 	}
 	//初始化
@@ -119,7 +119,7 @@
 		addEvent(rightInBtn,"click",queueObj.rightIn);
 		addEvent(leftOutBtn,"click",queueObj.leftOut);
 		addEvent(rightOutBtn,"click",queueObj.rightOut);
-		addEvent(queue,"click",function(e){
+		addEvent(queue,"click",function(e){//利用事件冒泡到父元素的点击事件
 			if(e.target&&e.target.nodeName.toLowerCase()==='span'){
 				e.target.parentNode.removeChild(e.target);
 			}
