@@ -5,7 +5,7 @@
     <title>IFE JavaScript Task 04</title>
     <style type="text/css">
     	.wrap{
-    		width: 550px;
+    		width: 850px;
     		margin: 20px auto;
     	}
     	.wrap .btn{
@@ -17,7 +17,6 @@
     	.queue span{
     		display: inline-block;
     		padding: 10px;
-    		background-color: #f00;
     		color: #fff;
     		margin: 5px;
     		cursor: pointer;
@@ -28,7 +27,7 @@
   </head>
 <body>
 	<div class="wrap">
-		<div><input type="text" name=""> <button  class="btn" id="leftInBtn">左侧入</button> <button class="btn" id="rightInBtn">右侧入</button>&nbsp;&nbsp;<button class="btn" id="leftOutBtn">左侧出</button> <button class="btn" id="rightOutBtn">右侧出</button>&nbsp;&nbsp;<button class="btn" id="sort">排序</button></div></div>
+		<div><input type="text" name=""> <button  class="btn" id="leftInBtn">左侧入</button> <button class="btn" id="rightInBtn">右侧入</button>&nbsp;&nbsp;<button class="btn" id="leftOutBtn">左侧出</button> <button class="btn" id="rightOutBtn">右侧出</button>&nbsp;&nbsp;<button class="btn" id="bubbleSort">冒泡排序</button>&nbsp;&nbsp;<button class="btn" id="selectionSort">选择排序</button>&nbsp;&nbsp;<button class="btn" id="insertionSort">插入排序</button>&nbsp;&nbsp;<button class="btn" id="quickSort">快速排序</button></div></div>
 		<div class="queue" id="queue"></div>
 	</div>
 
@@ -39,7 +38,7 @@
 	var queue = document.getElementById("queue");
 
 	var queueHandle = {
-		queue: [],
+		queue: [88,100,66,70,20,50,68],
 		//左侧入
 		unshift: function(value){
 			this.queue.unshift(value);
@@ -82,6 +81,7 @@
 			var span = document.createElement("span");
 			span.innerText = item;
 			span.style.height = item + 'px';
+			span.style.backgroundColor = span.style.backgroundColor || "red";
 			queue.appendChild(span);
 		});
 	}
@@ -95,19 +95,27 @@
 			return true;
 		}
 	}
-	//排序
-	function compare(a,b){
-		return a-b;
+	//冒泡升序排序
+	function exchange(a,b){
+			var c = b;
+			b = a;
+			a = c;
 	}
 	function init(){
+		removeSpan(queueHandle.queue);
+		addSpan(queueHandle.queue);
 		var leftInBtn = document.getElementById("leftInBtn");
 		var rightInBtn = document.getElementById("rightInBtn");
 		var leftOutBtn = document.getElementById("leftOutBtn");
 		var rightOutBtn = document.getElementById("rightOutBtn");
-		var sort = document.getElementById("sort");
+		var bubbleSort = document.getElementById("bubbleSort");
+		var selectionSort = document.getElementById("selectionSort");
+		var insertionSort = document.getElementById("insertionSort");
+		var quickSort = document.getElementById("quickSort");
+
 
 		addEvent(leftInBtn,"click",function(){
-			if(queueHandle.queue.length >= 6){
+			if(queueHandle.queue.length >= 60){
 				alert("队列元素数量最多限制为60个")
 				return ;
 			}
@@ -116,23 +124,23 @@
 				alert("请输入10-100范围内的数字！");
 				return ;
 			}
-			queueHandle.unshift(input.value.trim()); 
+			queueHandle.unshift(parseInt(input.value.trim())); 
 			removeSpan(queueHandle.queue);
 			addSpan(queueHandle.queue);
 			input.value = "";
 			input.focus();
 		});
 		addEvent(rightInBtn,"click",function(){
-			if(queueHandle.queue.length >= 6){
+			if(queueHandle.queue.length >= 60){
 				alert("队列元素数量最多限制为60个")
 				return ;
 			}
 			var input = document.querySelector("input");
-			if(!isNum(input.value.trim())){
+			if(!isNum(parseInt(input.value.trim()))){
 				alert("请输入数字！");
 				return ;
 			}
-			queueHandle.push(input.value); 
+			queueHandle.push(parseInt(input.value.trim())); 
 			removeSpan(queueHandle.queue);
 			addSpan(queueHandle.queue);	
 			input.value = "";
@@ -154,16 +162,105 @@
 			var spans = document.querySelectorAll("span");
 			var index = [].indexOf.call(spans,e.target);
 			queueHandle.queue.splice(index,1);
-			//alert(queueHandle.queue);
 			removeSpan(queueHandle.queue);
 			addSpan(queueHandle.queue);	
+		});
+		//冒泡排序
+		addEvent(bubbleSort,"click",function(e){
+			var arr = queueHandle.queue;
+			var time = 0;
+			var spans = document.getElementsByTagName("span");	
+			for(var j=0; j<arr.length; j++) {		
+				for(var i=0; i<arr.length-j; i++) {	
+					(function(i,j){
+						setTimeout(function(){	
+							if(arr[i] > arr[i+1]) {
+								var tmp = arr[i];
+								arr[i] = arr[i+1];
+								arr[i+1] = tmp;
+								removeSpan(arr);
+								addSpan(arr);
+							}
+						},500*time); 
+					})(i,j,time);
+					time++;		
+				}				
+			}
+		});
+		//选择排序
+		addEvent(selectionSort,"click",function(e){
+			var arr = queueHandle.queue;
+			var time = 0;
+			var spans = document.getElementsByTagName("span");	
+			for(var j=0; j<arr.length; j++) {
+				(function(j,time){
+					setTimeout(function(){
+						var min = j;
+						for(var i=j+1; i<arr.length; i++) {		
+							if(arr[min] > arr[i]) {
+						       min = i;
+							}					
+						}
+						if(min != j){
+							var tmp = arr[j];
+							arr[j] = arr[min];
+							arr[min] = tmp;
+							removeSpan(arr);
+							addSpan(arr);
+							//spans[j].style.backgroundColor = "green";
+						}
+						
+							
+					},500*time);
+				})(j,time);
+				time++;
+			}
+		});
+		//插入排序
+		addEvent(insertionSort,"click",function(){
+			var arr = queueHandle.queue;
+			var time = 0;
+			var spans = document.getElementsByTagName("span");	
+			for(var i=0; i<arr.length; i++) {	
+				for(var j=i-1; j>=0; j--) {	
+					(function(i,j,time){
+						setTimeout(function(){	
+							if(arr[j+1] < arr[j]) {
+								var tmp = arr[j+1];
+								arr[j+1] = arr[j];
+								arr[j] = tmp;
+								removeSpan(arr);
+								addSpan(arr);
+							}
+						},500*time);
+					})(i,j,time++);					
+				}		
+			}
+		});
+		//快速排序
+		addEvent(quickSort,"click",function(){
+			var arr = queueHandle.queue;
+			var spans = document.getElementsByTagName("span");	
+			function quickSort(arr){
+				if (arr.length <= 1) {
+				   return arr.slice(0);
+				}
+				var left = [],right = [];
+				var mid = [arr[0]];
+				for(var i=1; i<arr.length; i++) {
+							if(arr[i] < mid[0]){
+								left.push(arr[i]);
+							}else{
+								right.push(arr[i]);
+							}			
+				}
+				return quickSort(left).concat(mid.concat(quickSort(right)));
+			}
+			arr = quickSort(arr);		
+			removeSpan(arr);
+			addSpan(arr);		
 		});
 		
-		addEvent(sort,"click",function(e){
-			queueHandle.queue.sort(compare);
-			removeSpan(queueHandle.queue);
-			addSpan(queueHandle.queue);	
-		});
 	}
 
 	init();
