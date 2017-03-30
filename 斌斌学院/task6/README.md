@@ -16,4 +16,4 @@
 + 代码中含有必要的注释
 + 建议不使用任何第三方库、框架
 
-[点我预览]( https://houruyaogeili.github.io/baiduIFE/斌斌学院/task5/index.html )
+[点我预览]( https://houruyaogeili.github.io/baiduIFE/斌斌学院/task6/index.html )
