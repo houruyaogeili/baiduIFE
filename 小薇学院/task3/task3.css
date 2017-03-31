@@ -1,0 +1,50 @@
+*{
+	margin: 0;
+	pading: 0;
+}
+
+.wrap{
+	padding: 20px;
+	background-color: #eee;
+	border: 1px solid #999;
+}
+.wrap::after{
+	content: " ";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden; 
+	zoom: 1;
+}
+.wrap > div{
+	border: 1px solid #999;
+	pading: 20px;
+	background-color: #fff
+}
+.wrap .teamName{
+	float: left;
+	width: 160px;
+    padding:20px;
+}
+.wrap .teamName img{
+    float: left;
+    margin-right: 20px;
+}
+.wrap .teamer{
+	float: right;
+	width: 120px;
+}
+.wrap .teamInfo{
+	margin-left: 220px;
+	margin-right: 140px;
+}
+.wrap img{
+	width: 80px;
+	height: 80px;
+	border:1px solid #999;
+}
+
+.wrap .teamer img{
+    display: block;
+    margin: 20px auto;
+}
