@@ -219,52 +219,49 @@ By：
 					<h3>这里以后是一个侧栏，这是侧栏的标题</h3>
 					<form action="#" method="get">
 					<!--表单内的元素设置name值 后台传值用，value默认值看需要-->
-						<div class="formTop">
-							<div class="item">
-								<input type="text" value="这是一个文本输入框" id="email" name="email"  maxlength="6" class="sideinput"/>
-								<label for="email" class="sidelabel">请输入邮箱地址</label>
+						<div class="item">
+							<label for="email" class="sidelabel">请输入邮箱地址</label>
+							<input type="text" value="这是一个文本输入框" id="email" name="email"  maxlength="6" class="sideinput"/>
+							<!--注意区分size和maxlength的区别-->
+						</div>	
+						<p>邮箱地址请按要求格式输入</p>
+						<div class="item">
+							<label for="password" class="sidelabel">请输入密码</label>
+							<input type="password" value="这是一个文本输入框" id="password" name="password" class="sideinput" />
+						</div>
+						<div class="item">
+							<label for="password2" class="sidelabel">请重复输入密码</label>
+							<input type="password" value="这是一个文本输入框" id="password2" name="password2" class="sideinput"/> 
+							<!--value是默认值，placeholder是提示值-->
+						</div>
+						<p>密码请为6-16位英文数字</p>	
+						<div class="item">
+							<!--这是最好用span包裹起来 这里区别开span和label label包裹input或者for和id关联 单选框的name要求必须一样-->
+							<span class="sidelabel">性别</span>
+							<label ><input type="radio" name="sex" checked value="1" >男</label>
+							<label ><input type="radio" name="sex" value="2" >女</label>
 
-								<!--注意区分size和maxlength的区别-->
-								<p>邮箱地址请按要求格式输入</p>
-							</div>	
-							<div class="item">
-								<input type="password" value="这是一个文本输入框" id="password" name="password" class="sideinput" />
-								<label for="password" class="sidelabel">请输入密码</label>
-							</div>
-							<div class="item">
-								<input type="password" value="这是一个文本输入框" id="password2" name="password2" class="sideinput"/> 
-								<label for="password2" class="sidelabel">请重复输入密码</label>
-								<!--value是默认值，placeholder是提示值-->
-								<p>密码请为6-16位英文数字</p>	
-							</div>
-							<div class="item">
-								<!--这是最好用span包裹起来 这里区别开span和label label包裹input或者for和id关联 单选框的name要求必须一样-->
-								<span >性别</span>
-								<label ><input type="radio" name="sex" checked value="1" >男</label>
-								<label ><input type="radio" name="sex" value="2" >女</label>
-
-							</div>
-							<div class="item">
-								<!--单选和复选必须指定value否则提交的时候默认是on-->
-								<label for="city">城市</label>
-								<select name="city" id="city">
-									<option value="北京">北京</option>
-									<option selected value="天津2">天津3</option>
-								</select>
-								<!--select option不指定value默认提交文本值 指定提交value-->
-							</div>
-							<div class="item">
-								<span>爱好</span>
-								<!--复选框的name一样 传到后台确定为一组checkbox-->
-								<label><input type="checkbox"  name="hobby" value="sport" checked/>运动</label>
-								<label><input type="checkbox"  name="hobby" value="art" />艺术</label>
-								<label><input type="checkbox"  name="hobby" value="science" />科学</label>
-							</div>
-							<div>
-								<label for="introduction">个人描述</label>
-								<textarea id="introduction"  cols="20" placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
-								<!--放在一行确保显示没有换行空格-->
-							</div>
+						</div>
+						<div class="item">
+							<!--单选和复选必须指定value否则提交的时候默认是on-->
+							<label for="city" class="sidelabel">城市</label>
+							<select name="city" id="city">
+								<option value="北京">北京</option>
+								<option selected value="天津2">天津3</option>
+							</select>
+							<!--select option不指定value默认提交文本值 指定提交value-->
+						</div>
+						<div class="item">
+							<span class="sidelabel">爱好</span>
+							<!--复选框的name一样 传到后台确定为一组checkbox-->
+							<label><input type="checkbox"  name="hobby" value="sport" checked/>运动</label>
+							<label><input type="checkbox"  name="hobby" value="art" />艺术</label>
+							<label><input type="checkbox"  name="hobby" value="science" />科学</label>
+						</div>
+						<div class="item">
+							<label for="introduction" class="sidelabel">个人描述</label>
+							<textarea id="introduction"  cols="20" placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
+							<!--放在一行确保显示没有换行空格-->
 						</div>
 						<input type="submit" id="submit" value="确认提交">
 						</div>
