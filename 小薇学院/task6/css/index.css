@@ -1,0 +1,307 @@
+body,p,span,h1,h2,h3,figure{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+li{
+    list-style: none;
+}
+.clearfix{
+    zoom: 1;
+}
+.clearfix::after{
+    content: ",";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+body{
+    background: #282828;
+    color: #000;
+    font: 12px SimHei,"Microsoft YaHei",SimSun,sans-serif;
+}
+.wrap{
+    width: 980px;
+    margin: 0 auto;
+    background: #fff;
+}
+header,main,footer{
+    width: 892px;
+    margin: 0 auto;
+}
+header{
+    border-bottom: solid 2px #938e8c; 
+}
+header .logo{
+    display: inline-block;
+    width: 110px;
+    height: 61px;
+    background: #d45d5c;
+    color: #fff;
+    text-indent: 5px;
+    line-height: 105px;
+}
+header .date{
+    float: right;
+    height: 61px;
+    line-height: 105px;
+    color: #d45d5c;
+}
+main{
+    margin-top: 34px;
+}
+main .bannerImg{
+    float: left;
+    position: relative;
+}
+main .shadeLeft,main .shadeRight{
+    position: absolute;
+    top: 0;
+    width: 191px;
+    height: 301px;
+    opacity: 0.5;
+}
+main .shadeLeft{
+    left: 0;
+    background: #75b86b;
+}
+main .shadeRight{
+    right: 0;
+    background: #cc8091;
+}
+
+main .bannerText{
+    float: right;
+    width: 203px;
+    border-top: solid 2px #cc8091;
+}
+main .about{
+    font: small-caps 24px/30px "Microsoft YaHei";
+    text-decoration: underline;
+}
+main .info{
+    color: #676767;
+    font: italic 12px/10px KaiTi;
+    margin-bottom: 43px;
+}
+main .strong{
+    font: bold italic 116px/116px "Microsoft YaHei";
+    color: #75b86b;
+}
+main .strong2{
+    float: left;
+    font: 55px/55px "Microsoft YaHei";
+    color: #cc8091;
+}
+main .middle{
+    font: 21px/21px "Microsoft YaHei";
+    color: #cc8091;
+}
+main .bottom{
+    font: 12px/14px "Microsoft YaHei";
+    color: #231815;
+}
+main .pRight{
+    float: left;
+    margin-top: 15px;
+}
+main .WWH{
+    width: 641px;
+    margin-top: 40px;
+}
+.WWH .what,.WWH .when,.WWH .how{
+    float: left;
+    margin-right: 25px;
+}
+.WWH p{
+    font: 12px/16px SimSun;
+    color: #767777;
+    margin-top: 10px;
+}
+.WWH .howP{
+    line-height: 21px;
+}
+.WWH .what{
+    width: 228px;
+}
+.WWH .what a,.WWH .when a,.WWH .how a{
+    font: bold 16px "Microsoft YaHei";
+    text-decoration: underline;
+}
+.WWH .what a{
+    color: #418c59;
+}   
+.WWH .when a{
+    color: #d2994f;
+}  
+.WWH .how a{
+    color: #cc7680;
+}  
+.WWH .when{
+    width: 205px;
+}
+.WWH .how{
+    width: 131px;
+}
+.WWH ul{
+    font: 12px/21px "Microsoft YaHei";
+    color: #767777;
+    padding-left: 8px;
+}
+.WWH ul .item{
+    color: #cd4a48;
+    font-style: italic;
+    opacity: 0.7;
+}
+.three .left{
+    float: left;
+    width: 415px;
+}
+.three .right{
+    float: right;
+    width: 458px;
+}
+.left h1{
+    font-size: 42px;
+    font-weight: bold;
+    color: #11456b;
+}
+.left .the{
+    font-size: 72px;
+    color: #f5e327;
+    font-style: italic;
+    margin: 20px;
+}
+.left h2{
+    margin: 15px 0; 
+    font-size: 33px;
+    font-weight: bold;
+    color: #11456b;
+}
+.leftMain{
+    padding: 25px 0 40px 0;
+    border-top: solid 2px #11456b; 
+    color: #767777;
+    font: 12px/16px SimSun;
+}
+.leftMain .before{
+    float: left;
+    margin: 0 7px 10px 0;
+    font: 70px/70px "Microsoft YaHei";
+    color: #f5e327;
+}
+.leftMain img{
+    float: right;
+    margin: 20px 0 20px 20px;
+}
+.right figure{
+    position: relative;
+    width: 458px;
+    height: 257px;
+}
+.right figcaption{
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 61px;
+    left: 0;
+    bottom: 0;
+    background: rgba(4,0,0,0.4);
+    color: #fff;
+}
+.right .caption{
+    margin-left: 38px;
+    height: 44px;
+    margin-top: 8px;
+    border-left: solid 3px #72b16a;
+    padding-left: 12px;
+    font: 26px/44px "Microsoft YaHei";
+}
+.right .caption em{
+    font: italic 12px/12px "Microsoft YaHei";
+    color: #72b16a;
+    margin-left: 8px;
+}
+.right .rightBottom{
+    margin-top: 30px;
+    background: #eeedd6;
+}
+.right .rightBottom ul{
+    margin: 0;
+    padding: 10px 20px 10px;
+    font: 16px/20px SimHei;
+    color: #5a5b5b;
+}
+.right .rightBottom ul li{
+    margin: 20px 0;
+}
+.rightBottom .caret{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-right: 8px;
+    vertical-align: text-bottom;
+    border-bottom: 10px dashed #10456b;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+}
+.right .rightBottom span{
+    font: italic 12px/20px SimHei;
+}
+.rightBottom article .left2{
+    float: left;
+    width: 260px;
+    height: 120px;
+    background: #d45d5c;
+    color: #fff;
+    padding-top: 40px;
+    padding-left: 15px;
+}
+.rightBottom article .strong3{
+    float: left;
+    height: 86px;
+    padding-right: 8px;
+    margin-right: 8px;
+    border-right: 2px solid #fff;
+    font: 85px/85px "Microsoft YaHei";
+}
+.rightBottom article .right2{
+    float: left;
+    width: 158px;
+}
+article .right2 h3{
+    font: italic 21px/24px SimHei; 
+}
+article .right2 p{
+    margin-top: 8px;
+}
+.rightBottom article .right3{
+    float: right;
+    width: 147px;
+    margin-right: 20px;
+    margin-left: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #5a5b5b;
+}
+article .right3 .yinhao{
+    font-size: 26px;
+    line-height: 6px;
+    vertical-align: bottom;
+    text-align: left;
+    color: #d45d5c;
+}
+footer{
+    height: 58px;
+    border-top: solid 1px #938e8c;
+    text-align: right;
+    font: 12px/14px SimHei;
+    color: #d45d5c;
+
+}

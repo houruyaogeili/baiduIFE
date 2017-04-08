@@ -3,7 +3,7 @@
 	padding: 0;
 }
 html,body{
-	overflow: hidden;
+	overflow-x: hidden;
 }
 body{
 	font-family: "微软雅黑";
@@ -12,7 +12,7 @@ body{
 }
 .wrap{
 	margin: 0 20px;
-	min-width: 1240px;	
+	min-width: 1000px;	
 }
 header{
 	width: 100%;
@@ -21,6 +21,11 @@ header{
 }
 header #logo{
 	display: inline-block;
+	width: 90px;
+	height: 60px;
+	text-indent: -1000px;
+	background: url(../images/bd_logo.png) center no-repeat; 
+	background-size: contain;
 }
 header #logo img{
 	display: block;
@@ -59,11 +64,11 @@ header nav ul li .item{
 	box-shadow: 2px 2px 1px #848484;
 }
 main{
-	margin-right: 30%;
+	margin-right: 380px;
 }
 aside{
 	float: right;
-	width: 27%;
+	width: 360px;
 }
 main article h3{
 	margin: 20px 0;

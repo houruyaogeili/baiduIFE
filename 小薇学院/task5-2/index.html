@@ -1,0 +1,251 @@
+<!--  
+Content：
+    百度前端技术学院 
+    任务一：零基础HTML编码
+    导师小薇
+By：
+    houru
+    2017-3-18
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>零基础html编码</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="wrap">
+			<!--header包含网站的标题logo之类的-->
+			<a href="#" id="logo">百度logo</a>
+			<nav>
+			<!--导航栏之前没用nav包裹起来，包裹起来语义化比较好-->
+				<ul>
+					<li><a href="#">导航链接一</a></li>
+					<li><a href="#">导航链接二</a></li>
+					<li><a href="#">导航链接三</a></li>
+					<li><a href="#" class="item">导航链接四</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<div class="wrap clearfix">	
+		<main>
+				<!--文档的主要内容，不包含侧边栏，导航栏，版权信息，网站logo等附属信息-->
+				<!--文档中可以脱离其他部分，独立出来而又完整，甚至可以复用的一部分，通常有自己的标题，当article内嵌artical时，里外层的内容应该是相关的，比如一篇微博和他的评论-->
+				<article class="box">
+					<h2>文章一级标题</h2>
+					<h3>文章二级标题</h3>
+					<p class="author">文章作者 文章发表时间</p>
+					<p class="article">
+						这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+						<br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+						<br>这是一个很长很长的段落，这是一个很长很长的段落，
+						<a href="http://ife.baidu.com" class="link">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。
+					</p>
+					<img src="images/1.png" alt="这是一个图片">
+					<p class="article">
+						这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+						<br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，
+						<a href="http://ife.baidu.com" target="_blank" class="link">这里有一个链接点击后打开新窗口链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。
+					</p>
+				</article>
+				<article class="box">
+					<h2>另一篇文章一级标题</h2>
+					<h3>文章二级标题</h3>
+					<p class="author">文章作者 文章发表时间</p>
+					<p class="article">
+						这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+						<br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+						这是一个很长很长的段落，这是一个很长很长的段落，
+						<a href="">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。</p>
+					<img src="images/1.png" alt="这是一个图片">
+					<ul class="list">
+						<li>列表项目一</li>
+						<li>列表项目二</li>
+						<li>列表项目三</li>
+					</ul>
+				</article>
+				<article class="box clearfix">
+					<h2>图片</h2>			
+					<figure>
+						<figcaption>好看的图片</figcaption>
+						<!--figcaption应该至于子元素的第一或者最后一个位置-->
+						<img src="images/1.png" alt="这是一个图片">
+					</figure>
+					<figure>
+						<figcaption>好看的图片</figcaption>
+						<img src="images/1.png" alt="这是一个图片">
+					</figure>
+					<figure>
+						<figcaption>好看的图片</figcaption>
+						<img src="images/1.png" alt="这是一个图片">
+					</figure>
+					<figure>
+						<figcaption>好看的图片</figcaption>
+						<img src="images/1.png" alt="这是一个图片">
+					</figure>
+					<figure>
+						<figcaption>好看的图片</figcaption>
+						<img src="images/1.png" alt="这是一个图片">
+					</figure>
+					<figure>
+						<figcaption>好看的图片</figcaption>
+						<img src="images/1.png" alt="这是一个图片">
+					</figure>
+					<figure>
+						<figcaption>好看的图片</figcaption>
+						<img src="images/1.png" alt="这是一个图片">
+					</figure>
+					<figure>
+						<figcaption>好看的图片</figcaption>
+						<img src="images/1.png" alt="这是一个图片">
+					</figure>
+					<figure>
+						<figcaption>好看的图片</figcaption>
+						<img src="images/1.png" alt="这是一个图片">
+					</figure>
+					<figure>
+						<figcaption>好看的图片</figcaption>
+						<img src="images/1.png" alt="这是一个图片">
+					</figure>
+					<!-- 去黑点太麻烦<ul>
+						<li>
+							<p>好看的图片</p>
+							<img src="images/1.png" alt="这是一个图片">
+						</li>
+						<li>
+							<p>好看的图片</p>
+							<img src="images/1.png" alt="这是一个图片">
+						</li>
+						<li>
+							<p>好看的图片</p>
+							<img src="images/1.png" alt="这是一个图片">
+						</li>
+						<li>
+							<p>好看的图片</p>
+							<img src="images/1.png" alt="这是一个图片">
+						</li>
+						<li>
+							<p>好看的图片</p>
+							<img src="images/1.png" alt="这是一个图片">
+						</li>
+						<li>
+							<p>好看的图片</p>
+							<img src="images/1.png" alt="这是一个图片">
+						</li>
+					</ul> -->
+				</article>
+				<article class="box">
+					<h2>最后一篇文章一级标题</h2>
+					<h3>文章二级标题</h3>
+					<p class="author">文章作者 文章发表时间</p>
+					<ol>
+						<li>排名1</li>
+						<li>排名2</li>
+						<li>排名3</li>
+					</ol>
+					<p>下面是一个表格，给表格加了一个border="1"好让你看出是一个表格</p>
+					<table border="1">
+						<thead>
+							<tr>
+								<td>表头</td>
+								<td>表头</td>
+								<td>表头</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>表内容单元格</td>
+								<td>表内容单元格</td>
+								<td><a href="#">操作</a></td>
+							</tr>
+							<tr>
+								<td>表内容单元格</td>
+								<td>表内容单元格</td>
+								<td><a href="#">操作</a></td>
+							</tr>
+							<tr>
+								<td>表内容单元格</td>
+								<td>表内容单元格</td>
+								<td><a href="#">操作</a></td>
+							</tr>
+							<tr>
+								<td>表内容单元格</td>
+								<td>表内容单元格</td>
+								<td><a href="#">操作</a></td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>总计</td>
+								<td colspan="2">1000</td>
+							</tr>
+						</tfoot>
+					</table>
+				</article>
+		</main>
+		<aside>
+				<div class="box">
+					<!--侧边栏或者嵌入内容，通常认为是独立拆分出来而不受整体影响的一部分，作为主要内容的附属信息
+					-->
+						<h3>这里以后是一个侧栏，这是侧栏的标题</h3>
+						<form action="#" method="get">
+						<!--表单内的元素设置name值 后台传值用，value默认值看需要-->
+							<div class="item">
+								<label for="email" class="sidelabel">请输入邮箱地址</label>
+								<input type="text" value="这是一个文本输入框" id="email" name="email"  maxlength="6" class="sideinput"/>
+								<!--注意区分size和maxlength的区别-->
+							</div>	
+							<p>邮箱地址请按要求格式输入</p>
+							<div class="item">
+								<label for="password" class="sidelabel">请输入密码</label>
+								<input type="password" value="这是一个文本输入框" id="password" name="password" class="sideinput" />
+							</div>
+							<div class="item">
+								<label for="password2" class="sidelabel">请重复输入密码</label>
+								<input type="password" value="这是一个文本输入框" id="password2" name="password2" class="sideinput"/> 
+								<!--value是默认值，placeholder是提示值-->
+							</div>
+							<p>密码请为6-16位英文数字</p>	
+							<div class="item">
+								<!--这是最好用span包裹起来 这里区别开span和label label包裹input或者for和id关联 单选框的name要求必须一样-->
+								<span class="sidelabel">性别</span>
+								<label ><input type="radio" name="sex" checked value="1" >男</label>
+								<label ><input type="radio" name="sex" value="2" >女</label>
+
+							</div>
+							<div class="item">
+								<!--单选和复选必须指定value否则提交的时候默认是on-->
+								<label for="city" class="sidelabel">城市</label>
+								<select name="city" id="city">
+									<option value="北京">北京</option>
+									<option selected value="天津2">天津3</option>
+								</select>
+								<!--select option不指定value默认提交文本值 指定提交value-->
+							</div>
+							<div class="item">
+								<span class="sidelabel">爱好</span>
+								<!--复选框的name一样 传到后台确定为一组checkbox-->
+								<label><input type="checkbox"  name="hobby" value="sport" checked/>运动</label>
+								<label><input type="checkbox"  name="hobby" value="art" />艺术</label>
+								<label><input type="checkbox"  name="hobby" value="science" />科学</label>
+							</div>
+							<div class="item">
+								<label for="introduction" class="sidelabel">个人描述</label>
+								<textarea id="introduction"  cols="20" placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
+								<!--放在一行确保显示没有换行空格-->
+							</div>
+							<input type="submit" id="submit" value="确认提交">
+						</form>
+				</div>
+		</aside>	
+	</div>
+	<footer>
+	<!--页脚-->
+		<p>版权所有©</p>
+	</footer>	
+</body>
+</html>

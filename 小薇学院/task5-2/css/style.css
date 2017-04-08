@@ -1,0 +1,179 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	overflow-x: hidden;
+}
+body{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	background-color: #dedede;
+}
+.wrap{
+	margin: 0 20px;
+	min-width: 1000px;	
+}
+header{
+	width: 100%;
+	height: 60px;
+	background-color: #333;
+}
+header #logo{
+	display: inline-block;
+	width: 90px;
+	height: 60px;
+	text-indent: -1000px;
+	background: url(../images/bd_logo.png) center no-repeat; 
+	background-size: contain;
+}
+header nav{
+	float: right;
+
+}
+header nav ul{
+	list-style: none;
+	overflow: hidden;
+	margin-right: 10px;
+}
+header nav ul li{
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 10px
+}
+header nav ul li a{
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+}
+header nav ul li .item{
+	color: #ccc;
+}
+
+.box{
+	margin: 20px 0;
+	padding: 40px 20px;
+	background-color: #fff;
+	border: 1px solid #cdcdcd;
+	box-shadow: 2px 2px 1px #848484;
+}
+main{
+	float: left;
+	margin-right: 380px;
+}
+aside{
+	float: left;
+	margin-top: 20px;
+	margin-left: -360px;
+	width: 360px;
+}
+main article h3{
+	margin: 20px 0;
+	color: #646464;
+}
+main article .author{
+	margin: 20px 0;
+	color: #827c7e;
+}
+main article .article{
+	text-indent: 2em;
+}
+main article .link{
+	color: blue;
+}
+main article .list{
+	list-style: none;
+	margin-left: 20px;
+}
+.clearfix::after{
+	content: ",";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix {
+    zoom: 1;  
+}
+main article figure{
+	float: left;
+	margin: 20px 18px;
+	border: 1px solid #cecece;
+	text-align: center;
+}
+main article figure img{
+	display: block;
+	width: 200px;
+	margin: 10px auto;
+}
+main article ol{
+	margin: 20px 40px;
+}
+main article table{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border:1px solid #b8b8b8;
+}
+main article table thead{
+	height: 24px;
+	background-color: #333;
+	color: #fff;
+}
+main article table tfoot{
+	background-color: #ccc;
+}
+aside .box{
+	margin: 0;
+}
+aside h3{
+	height: 38px;
+	line-height: 38px;
+	border-left: 3px solid #d3d3d3;
+	padding-left: 10px;
+}
+aside form .item{
+	margin: 10px 0;
+}
+aside form .sidelabel{
+	display: inline-block;
+	width: 35%;
+	margin-right: 2%;
+	text-align: right;
+	vertical-align: top;
+}
+aside form p{
+	padding-left: 37%;
+	color: #a29990;
+	margin-bottom: 20px;
+}
+aside form select{
+	
+}
+aside form textarea{
+	width: 60%;
+	height: 100px;
+}
+aside form input[type="submit"]{
+	width: 100%;
+	height: 38px;
+	border: 1px solid #c4cccf;
+	background-color: #3355d0;
+	border-radius: 6px;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+}
+
+footer{
+	width: 100%;
+	height: 70px;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+}
+footer p{
+	line-height: 70px;
+}
