@@ -39,18 +39,20 @@ header{
     border-bottom: solid 2px #938e8c; 
 }
 header .logo{
+    box-sizing: border-box;
     display: inline-block;
     width: 110px;
     height: 61px;
     background: #d45d5c;
     color: #fff;
-    text-indent: 5px;
-    line-height: 105px;
+    text-indent: 7px;
+    padding-top: 46px;
 }
 header .date{
+    box-sizing: border-box;
     float: right;
     height: 61px;
-    line-height: 105px;
+    padding-top: 46px;
     color: #d45d5c;
 }
 main{
@@ -251,7 +253,7 @@ main .WWH{
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
 }
-.right .rightBottom span{
+.right .rightBottom ul span{
     font: italic 12px/20px SimHei;
 }
 .rightBottom article .left2{
@@ -283,18 +285,29 @@ article .right2 p{
 }
 .rightBottom article .right3{
     float: right;
-    width: 147px;
-    margin-right: 20px;
-    margin-left: 16px;
+    width: 161px;
+    margin-right: 10px;
     font-size: 14px;
     line-height: 16px;
     color: #5a5b5b;
 }
-article .right3 .yinhao{
-    font-size: 26px;
-    line-height: 6px;
-    vertical-align: bottom;
-    text-align: left;
+article .right3 .yinhao1{
+    float: left;
+    margin-left: -40px;
+    margin-top: 16px;
+    margin-right: 9px;
+    font-size: 72px;
+    line-height: 16px;
+    height: 0;
+    color: #d45d5c;
+}
+article .right3 .yinhao2{
+    float: right;
+    margin-top: 27px;
+    margin-right: -40px;
+    font-size: 72px;
+    line-height: 16px;
+    height: 0;
     color: #d45d5c;
 }
 footer{

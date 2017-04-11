@@ -1,0 +1,553 @@
+/*重置样式*/
+body,p,span,h1,h2,h3,figure,ul{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+li{
+    list-style: none;
+}
+.clearfix{
+    zoom: 1;
+}
+.clearfix::after{
+    content: ",";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+body{
+    background: #fff;
+    color: #000;
+    font: 14px SimHei,"Microsoft YaHei",SimSun,sans-serif;
+}
+/*header部分样式*/
+header{
+    width: 100%;
+    height: 56px;
+}
+header .logo{
+    display: inline-block;
+    margin-left: 60px;
+    font-size: 21px;
+    line-height: 56px;
+    color: #393a3a;
+}
+header .logo .icon-book-copy-copy-copy{
+    font-size: 31px;
+    color: #e74f4d;
+    padding-right: 10px;
+}
+header nav{
+    float: right;
+    margin-right: 44px;
+}
+header nav li{
+    float: left;
+}
+header nav .item{
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 17px 23px 21px; 
+    font-size: 14px;
+    line-height: 1;
+    font-family: "Microsoft YaHei";
+    color: #787b83;
+}
+header nav .active{
+    color: #e74f4d;
+    border-bottom: solid 4px #e74f4d;
+}
+header nav .login{
+    color: #e74f4d;
+}
+/*banner样式*/
+main .banner{
+    position: relative;
+    width: 100%;
+    height: 692px;
+    background: url(../images/banner.jpg) no-repeat center;
+    background-size: cover;
+}
+main .banner::after{
+    content: " ";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.2;
+}
+main .banner section{
+    position: absolute;
+    top: 230px;
+    left: 117px;
+    z-index: 1;
+}
+.banner section h1{
+    font: 60px/60px "Microsoft YaHei";
+    color: #fff;
+}
+.banner section p{
+    margin: 24px 0 62px 8px;
+    font: 21px/33px "Microsoft YaHei";
+    color: #fffdfd;
+}
+.banner section a{
+    display: inline-block;
+    width: 331px;
+    height: 65px;
+    margin-left: 9px;
+    background-color: #e74f4d;
+    color: #fff;
+    text-align: center;
+    font: 30px/65px "Microsoft YaHei"; 
+}
+/*bannerFour样式*/
+main{
+    min-width: 1280px;
+}
+main .bannerFour{
+    width: 100%;
+    margin: 44px 0 65px;
+    text-align: center;
+}
+.bannerFour section{
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+}
+.bannerFour section p{
+    height: 52px;
+    padding: 47px 85px 0;
+    line-height: 18px;
+    color: #767777;
+}
+.bannerFour section:not(:last-child) p{
+    border-right: solid 2px #aaa;
+}
+.bannerFour section .iconfont{
+    color: #e7504d;
+    font-size: 40px;
+}
+/*unknown样式*/
+main .unknown{
+    height: 361px;
+    padding-top: 90px;
+    background-color: #ededec;
+    text-align: center;
+}
+main .unknown .iconfont{
+    font-size: 90px;
+    color: #e74f4d;
+}
+main .unknown p{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 54px;
+    color: #a1a1a1;
+}
+/*map样式*/
+main .map{
+    position: relative;
+    height: 341px;
+    background: url(../images/map.jpg) no-repeat center;
+    background-size: cover;
+}
+main .map::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    background-color: #aa3432;
+    opacity: 0.2;
+}
+.map .mapContent{
+    width: 1080px;
+    position: absolute;
+    top: 44px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+}
+.mapContent .title{
+    font: 21px/42px "Microsoft YaHei";
+}
+.mapContent .divide{
+    display: inline-block;
+    width: 31px;
+    height: 3px;
+    background-color: #fff;
+}
+.mapContent .tip{
+    margin: 15px 0 47px;
+    font: 12px/32px "Microsoft YaHei";
+}
+
+.mapContent select,.mapContent button{
+    width: 236px;
+    height: 36px;
+    border: none;
+    margin-right: 28px;
+}
+.mapContent select{
+    font: 12px "Microsoft YaHei";
+    color: #a8aaaa;
+}
+.mapContent button{
+    background-color: #be4e48;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+}
+/*activit样式*/
+main .activity{
+    position: relative;
+    width: 100%;
+    height: 604px;
+    background-color: #f7f7f7;
+}
+.activity .activityLists{
+    width: 1020px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+.activity .activityLists li{
+    float: left;
+    margin-right: 36px;
+}
+.activityLists img{
+    padding: 12px 7px;
+    border: solid 1px #e1e1e1;
+}
+.activityLists figcaption{
+    text-align: center;
+}
+.activityLists figcaption p{
+    margin: 14px 0 10px;
+    font-family: "Microsoft YaHei";
+    color: #323333;
+}
+.activityLists figcaption span{
+    color: #818281;
+    font: 12px "Microsoft YaHei";
+}
+.activityLists .active p{
+    margin: 0;
+    letter-spacing: 32px;
+    font-size: 21px;
+}
+.activityLists .active span{
+    display: inline-block;
+    margin: 8px 0;
+}
+/*time部分*/
+main .time{
+    width: 1280px;
+    height: 567px;
+    margin: 0 auto;
+}
+.time .left{
+    position: relative;
+    float: left;
+    width: 850px;
+    height: 567px;
+    background: url(../images/time.png) no-repeat center;
+    text-align: center;
+    color: #fff;
+}
+.time .left::after{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: solid 23px #fff; 
+    border-top: solid 13px transparent;
+    border-bottom: solid 13px transparent;
+}
+.time .left h2{
+    margin-top: 132px;
+    font: 50px/76px "Microsoft YaHei";
+}
+.time .left h1{
+    font: 120px/120px "Microsoft YaHei";
+}
+.time .left .address{
+    font: 22px "Microsoft YaHei";
+    margin: 40px 0 20px;
+}
+.time .left .date{
+    font: 18px "Microsoft YaHei";
+}
+.time section{
+    float: right;
+    width: 430px;
+    text-align: center;
+    padding-top: 165px;
+}
+.time section h3{
+    font: bold 20px SimSun;
+    color: #323333;
+    vertical-align: middle;
+}
+.time h3 .divide{
+    display: inline-block;
+    width: 2px;
+    height: 18px;
+    background-color: #7f7f7f;
+    transform: skew(-45deg);
+    margin: 0 10px;
+} 
+.time h3 .num{
+    color: #e74f4d;
+}
+.time section p{
+    width: 285px;
+    margin: 22px auto 40px;
+    text-align: left;
+    font: 12px/30px SimSun;
+    color: #aaa;
+}
+.time section a{
+    display: inline-block;
+    width: 105px;
+    height: 33px;
+    border: solid 1px #e5676a;
+    font: 12px/33px "Microsoft YaHei";
+    color: #e5676a;
+}
+.time section ul{
+    width: 84px;
+    margin: 24px auto;
+}
+.time section li{
+    float: left;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #919292;
+    border-radius: 50%;
+    margin-right: 14px;
+}
+.time section .active{
+    background-color: #919292;
+}
+/*info部分*/
+main .info{
+    width: 1280px;
+    height: 520px;
+    margin: 0 auto;
+}
+.info .infoLeft,.info .infoMiddle,.info .infoRight{
+    box-sizing: border-box;
+    float: left;
+    width: 425px;
+    height: 520px;
+}
+.info .infoLeft{
+    background-color: #e74f4d;
+    text-align: center;
+    color: #fff;
+    padding-top: 170px;
+}
+.info .infoLeft p{
+    width: 170px;
+    margin: 0 auto;
+    font: 21px/30px SimHei;
+}
+.info .infoLeft .divide{
+    width: 30px;
+    height: 2px;
+    margin: 25px auto;
+    background-color: #fff;
+}
+.info .infoLeft a{
+    display: inline-block;
+    width: 170px;
+    height: 40px;
+    border: 1px solid #fff;
+    font: 21px/40px SimHei;
+    color: #fff;
+}
+.info .infoMiddle{
+    text-align: center;
+    color: #e74f4d;
+    padding-top: 170px;
+}
+.info .infoMiddle p{
+    width: 170px;
+    margin: 0 auto;
+    font: 21px/30px SimHei;
+}
+.info .infoMiddle .divide{
+    width: 30px;
+    height: 2px;
+    margin: 25px auto;
+    background-color: #e74f4d;
+}
+.info .infoMiddle a{
+    display: inline-block;
+    width: 170px;
+    height: 40px;
+    border: 1px solid #e74f4d;
+    font: 21px/40px SimHei;
+    color: #e74f4d;
+}
+.info .infoRight{
+    position: relative;
+    background: url(../images/info.png) no-repeat;
+    background-size: cover;
+}
+.info .infoRight::after{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: solid 23px #fff; 
+    border-top: solid 13px transparent;
+    border-bottom: solid 13px transparent;
+}
+/*volunteer样式*/
+main .volunteer{
+    width: 1000px;
+    margin: 120px auto 160px;   
+}
+.volunteer > h2,.volunteer > p{
+    text-align: center;
+}
+.volunteer h2{
+    font-size: 21px;
+    color: #323333;
+}
+.volunteer > p{
+    font: 12px/16px "Microsoft YaHei";
+    color: #aaa;
+    padding: 0 280px;
+}
+.volunteer .divide{
+    display: block;
+    margin: 8px auto;
+    width: 30px;
+    height: 2px;
+    background-color: #e7504d;
+}
+.volunteer .volunteerBottom{
+    margin-top: 100px;
+}
+.volunteerBottom .agreement{
+    float: left;
+    width: 300px;
+}
+.volunteerBottom .agreement .item:not(:last-child){
+    margin-bottom: 25px;
+}
+.agreement .item h3{
+    font: bold 14px SimHei;
+    color: #666160;
+}
+.agreement .item p{
+    font: 12px/21px SimSun;
+    color: #a5a3a2;
+    margin: 23px 0 8px;
+}
+.agreement .item span{
+    float: right;
+    font: 12px SimSun;
+    color: #a5a3a2;
+}
+.volunteerBottom form{
+    float: right;
+    width: 640px;
+}
+.volunteerBottom form .item{
+    box-sizing: border-box;
+    float: left;
+    width: 310px;
+    height: 40px;
+    background-color: #edecee;
+    font: 12px SimSun;
+    color: #787474;
+    padding-left: 17px;
+    margin-bottom: 15px;
+}
+.volunteerBottom form .item:nth-child(odd){
+    margin-right: 20px;
+}
+.volunteerBottom .item input{
+    background-color: #edecee;
+    border: none;
+    padding: 0;
+    vertical-align: middle;
+    width: 80%;
+    height: 100%;
+}
+.volunteerBottom form .introduction{
+    box-sizing: border-box;
+    clear: both;
+    width: 640px;
+    height: 120px;
+    background-color: #edecee;
+    font: 12px SimSun;
+    color: #787474;
+    padding: 10px 0 0 17px;
+    margin-bottom: 15px;
+}
+.volunteerBottom .introduction textarea{
+    width: 100%;
+    height: 80%;
+    border: none;
+    padding: 0;
+    background-color: #edecee;
+}
+.volunteerBottom form input[type="submit"]{
+    border: none;
+    width: 100%;
+    height: 40px;
+    background-color: #edecee;
+    cursor: pointer;
+}
+/*contact样式*/
+main .contact{
+    height: 360px;
+    padding: 90px 380px 0;
+    background-color: #33363f;
+    color: #fff;
+    text-align: center;
+}
+main .contact p{
+    padding: 0 20px;
+}
+/*footer样式*/
+footer{
+    height: 60px;
+    background-color: #30303a;
+    font: 12px/60px SimSun;
+    color: #fff;
+    padding-left: 100px;
+}
+footer .right{
+    float: right;
+    margin-right: 40px;
+}
