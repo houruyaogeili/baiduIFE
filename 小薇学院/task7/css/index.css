@@ -239,6 +239,7 @@ main .map::after{
     height: 36px;
 }
 .mapContent select{
+    padding-left: 10px;
     font: 12px "Microsoft YaHei";
     color: #a8aaaa;
 }
