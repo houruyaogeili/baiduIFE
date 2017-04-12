@@ -12,13 +12,14 @@ img{
 li{
     list-style: none;
 }
-input,button,textarea,select{
+input,button,textarea,select,option{
+    border: none;
     border: none;
 }
 textarea{
     resize: none;
 }
-input:focus,textarea:focus,button:focus,select:focus{
+input:focus,textarea:focus,button:focus,select:focus,option:focus{
     outline: none;
 }
 select{
@@ -74,10 +75,11 @@ header nav li{
 }
 header nav .item{
     box-sizing: border-box;
-    display: inline-block;
-    padding: 17px 23px 21px; 
+    display: block;
+    height: 56px;
+    padding: 0 23px;
+    line-height: 56px;
     font-size: 14px;
-    line-height: 1;
     font-family: "Microsoft YaHei";
     color: #787b83;
 }
@@ -263,13 +265,16 @@ main .activity{
     height: 604px;
     background-color: #f7f7f7;
 }
-.activity .activityLists{
-    width: 1020px;
+.activity .content{
+    width: 985px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     overflow: hidden;
+}
+.activity .activityLists{
+    width: 1200px;
 }
 .activity .activityLists li{
     float: left;
@@ -380,9 +385,13 @@ main .time{
     font: 12px/33px "Microsoft YaHei";
     color: #e5676a;
 }
-.time section ul{
-    width: 84px;
+.time section .content{
+    width: 80px;
     margin: 24px auto;
+    overflow: hidden;
+}
+.time section ul{
+    width: 100px;  
 }
 .time section li{
     float: left;
@@ -550,7 +559,7 @@ main .volunteer{
     background-color: #edecee;
     padding: 0;
     vertical-align: middle;
-    width: 80%;
+    width: 63%;
     height: 100%;
 }
 .volunteerBottom form .introduction{
@@ -566,7 +575,7 @@ main .volunteer{
 }
 .volunteerBottom .introduction textarea{
     width: 100%;
-    height: 80%;
+    height: 70%;
     margin-top: 5px;
     background-color: #edecee;
 }
