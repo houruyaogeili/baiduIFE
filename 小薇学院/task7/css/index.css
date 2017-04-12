@@ -1,5 +1,5 @@
 /*重置样式*/
-body,p,span,h1,h2,h3,figure,ul,input,textarea{
+body,p,span,h1,h2,h3,figure,ul,input,textarea,button{
     margin: 0;
     padding: 0;
 }
@@ -15,9 +15,18 @@ li{
 input,button,textarea,select{
     border: none;
 }
+textarea{
+    resize: none;
+}
 input:focus,textarea:focus,button:focus,select:focus{
     outline: none;
 }
+select{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+select::-ms-expand { display: none; }
 .clearfix{
     zoom: 1;
 }
@@ -35,8 +44,14 @@ body{
 }
 /*header部分样式*/
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    min-width: 1280px;
     width: 100%;
     height: 56px;
+    background-color: #fff;
 }
 header .logo{
     display: inline-block;
@@ -72,6 +87,10 @@ header nav .active{
 }
 header nav .login{
     color: #e74f4d;
+}
+main{
+    min-width: 1280px;
+    margin-top: 56px;
 }
 /*banner样式*/
 main .banner{
@@ -118,9 +137,6 @@ main .banner section{
     font: 30px/65px "Microsoft YaHei"; 
 }
 /*bannerFour样式*/
-main{
-    min-width: 1280px;
-}
 main .bannerFour{
     width: 100%;
     margin: 44px 0 65px;
@@ -202,18 +218,31 @@ main .map::after{
     margin: 15px 0 47px;
     font: 12px/32px "Microsoft YaHei";
 }
-
+.mapContent .select{
+    float: left;
+    position: relative;
+    margin-right: 28px;
+    cursor: pointer;
+}
+.mapContent .select .caret{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #be4e48;
+    line-height: 20px;
+}
 .mapContent select,.mapContent button{
     width: 236px;
     height: 36px;
-    margin-right: 28px;
 }
 .mapContent select{
     font: 12px "Microsoft YaHei";
     color: #a8aaaa;
 }
 .mapContent select option{
-    padding: 8px 0;
+    text-indent: 8px;
 }
 .mapContent select option:hover{
     background-color: #bf4f49;
@@ -584,6 +613,9 @@ main .contact p{
     color: #fff;
     vertical-align: middle;
     cursor: pointer;
+}
+.contact .icon a{
+    color: #fff;
 }
 .contact .iconfont{
     font-size: 32px;
