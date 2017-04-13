@@ -16,4 +16,4 @@
 + 有能力的同学可以尝试跨浏览器的兼容性
 + 有能力的同学可以在实现一遍后尝试用less, sass或者stylus等再实现一次
 
-[点我预览](https://houruyaogeili.github.io/baiduIFE/小薇学院/task7/index.html)
+[点我预览](https://houruyaogeili.github.io/baiduIFE/小薇学院/task7/dist/index.html)
