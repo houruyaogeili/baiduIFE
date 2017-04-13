@@ -1,0 +1,108 @@
+.time{
+    width: 1280px;
+    height: 567px;
+    margin: 0 auto;
+
+    .left{
+        position: relative;
+        float: left;
+        width: 850px;
+        height: 567px;
+        background: url(../images/time.png) no-repeat center;
+        text-align: center;
+        color: #fff;
+
+        &::after{
+            @include caret;
+            right: 0;
+            border-right: solid 23px #fff; 
+            border-top: solid 13px transparent;
+            border-bottom: solid 13px transparent;
+        }
+
+        h2{
+            margin-top: 132px;
+            font: 50px/76px "Microsoft YaHei";
+        }
+
+        h1{
+            font: 120px/120px "Microsoft YaHei";
+        }
+
+        .address{
+            font: 22px "Microsoft YaHei";
+            margin: 40px 0 20px;
+        }
+
+        .date{
+            font: 18px "Microsoft YaHei";
+        }
+    }
+
+    section{
+        float: right;
+        width: 430px;
+        text-align: center;
+        padding-top: 165px;
+
+        h3{
+            font: bold 20px SimSun;
+            color: #323333;
+            vertical-align: middle;
+
+            .divide{
+                display: inline-block;
+                width: 2px;
+                height: 18px;
+                background-color: #7f7f7f;
+                transform: skew(-45deg);
+                margin: 0 10px;
+            } 
+
+            .num{
+                color: $red-color;
+            }
+        }
+
+        p{
+            width: 285px;
+            margin: 22px auto 40px;
+            text-align: left;
+            font: 12px/30px SimSun;
+            color: #aaa;
+        }
+
+        a{
+            display: inline-block;
+            width: 105px;
+            height: 33px;
+            border: solid 1px $red-color;
+            font: 12px/33px "Microsoft YaHei";
+            color: $red-color;
+        }
+
+        .content{
+            width: 80px;
+            margin: 24px auto;
+            overflow: hidden;
+
+            ul{
+                width: 100px;  
+
+                li{
+                    float: left;
+                    width: 12px;
+                    height: 12px;
+                    border: 1px solid #919292;
+                    border-radius: 50%;
+                    margin-right: 14px;
+                    cursor: pointer;
+
+                    &.active{
+                        background-color: #919292;
+                    }
+                }
+            }
+        }
+    }
+}

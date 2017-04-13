@@ -1,0 +1,79 @@
+.map{
+    position: relative;
+    height: 341px;
+    background: url(../images/map.jpg) no-repeat center;
+    background-size: cover;
+
+    &::after{
+        content: " ";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        background-color: #aa3432;
+        opacity: 0.2;
+    }
+
+    .mapContent{
+        width: 1080px;
+        position: absolute;
+        top: 44px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        text-align: center;
+        color: #fff;
+
+        .title{
+            font: 21px/42px "Microsoft YaHei";
+        }
+
+        .divide{
+            @include divide;
+        }
+
+        .tip{
+            margin: 15px 0 47px;
+            font: 12px/32px "Microsoft YaHei";
+        }
+
+        .select{
+            float: left;
+            position: relative;
+            margin-right: 28px;
+            cursor: pointer;
+
+            .caret{
+                position: absolute;
+                top: 8px;
+                right: 10px;
+                width: 20px;
+                height: 20px;
+                background-color: $map-red-color;
+                line-height: 20px;
+            }
+
+            .wh{
+                width: 236px;
+                height: 36px;
+            }
+
+            select{
+                @extend .wh;
+                padding-left: 10px;
+                font: 12px "Microsoft YaHei";
+                color: #a8aaaa;
+            }
+
+            button{
+                @extend .wh;
+                background-color: $map-red-color;
+                color: #fff;
+                font-family: "Microsoft YaHei";
+                cursor: pointer;
+            }
+        }
+    }
+}

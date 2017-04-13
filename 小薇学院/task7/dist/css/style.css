@@ -1,0 +1,881 @@
+/*=mixin Start*/
+/*=mixin End*/
+/*=reset Start*/
+body, button, figure, h1, h2, h3, input, p, span, textarea, ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+button, input, option, select, textarea {
+  border: none;
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+button:focus, input:focus, option:focus, select:focus, textarea:focus {
+  outline: 0;
+}
+
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix::after {
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0;
+  content: ",";
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font: 14px SimHei,"Microsoft YaHei",SimSun,sans-serif;
+}
+
+/*=reset End*/
+/*=font Start*/
+.fm-SimHei {
+  font-family: "SimHei","Microsoft YaHei","MicrosoftJhengHeiRegular","simSun","Lucida Grande","Lucida Sans Unicode";
+}
+
+.fm-SimSun {
+  font-family: "SimSun","Microsoft YaHei","MicrosoftJhengHeiRegular","simSun","Lucida Grande","Lucida Sans Unicode";
+}
+
+/*=font End*/
+/*=function Start*/
+.f-clr {
+  *zoom: 1;
+}
+
+.f-clr:after, .f-clr:before {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.f-db {
+  display: block;
+}
+
+.f-dib {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.f-fltL {
+  float: left;
+}
+
+.f-fltR {
+  float: right;
+}
+
+.f-fltN {
+  float: none;
+}
+
+.f-setCenter {
+  margin: 0 auto;
+}
+
+.f-tc {
+  text-align: center;
+}
+
+.f-tr {
+  text-align: right;
+}
+
+.f-title {
+  font-weight: bold;
+}
+
+.f-full {
+  width: 100%;
+  height: 100%;
+}
+
+/*=function End*/
+main {
+  min-width: 1280px;
+  margin-top: 56px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  min-width: 1280px;
+  width: 100%;
+  height: 56px;
+  background-color: #fff;
+}
+
+header .logo {
+  display: inline-block;
+  height: 56px;
+  margin-left: 60px;
+  font-size: 21px;
+  line-height: 56px;
+  color: #393a3a;
+}
+
+header .logo .icon-book-copy-copy-copy {
+  font-size: 31px;
+  color: #e74f4d;
+  padding-right: 10px;
+}
+
+header nav {
+  float: right;
+  margin-right: 44px;
+}
+
+header nav li {
+  float: left;
+}
+
+header nav li .item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  height: 56px;
+  padding: 0 23px;
+  line-height: 56px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #787b83;
+}
+
+header nav li .item.active {
+  color: #e74f4d;
+  border-bottom: solid 4px #e74f4d;
+}
+
+header nav li .login {
+  color: #e74f4d;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 692px;
+  background: url(../images/banner.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.banner::after {
+  content: " ";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.2;
+}
+
+.banner section {
+  position: absolute;
+  top: 230px;
+  left: 117px;
+  z-index: 1;
+}
+
+.banner section h1 {
+  font: 60px/60px "Microsoft YaHei";
+  color: #fff;
+}
+
+.banner section p {
+  margin: 24px 0 62px 8px;
+  font: 21px/33px "Microsoft YaHei";
+  color: #fffdfd;
+}
+
+.banner section a {
+  display: inline-block;
+  width: 331px;
+  height: 65px;
+  margin-left: 9px;
+  background-color: #e74f4d;
+  color: #fff;
+  text-align: center;
+  font: 30px/65px "Microsoft YaHei";
+}
+
+.bannerFour {
+  width: 100%;
+  margin: 44px 0 65px;
+  text-align: center;
+}
+
+.bannerFour section {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+}
+
+.bannerFour section p {
+  height: 52px;
+  padding: 0 85px;
+  margin-top: 47px;
+  line-height: 18px;
+  color: #767777;
+}
+
+.bannerFour section:not(:last-child) p {
+  border-right: solid 2px #aaa;
+}
+
+.bannerFour section .iconfont {
+  color: #e74f4d;
+  font-size: 40px;
+}
+
+.unknown {
+  height: 361px;
+  padding-top: 90px;
+  background-color: #ededec;
+  text-align: center;
+}
+
+.unknown .iconfont {
+  font-size: 90px;
+  color: #e74f4d;
+}
+
+.unknown p {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 54px;
+  color: #a1a1a1;
+}
+
+.map {
+  position: relative;
+  height: 341px;
+  background: url(../images/map.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.map::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-color: #aa3432;
+  opacity: 0.2;
+}
+
+.map .mapContent {
+  width: 1080px;
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.map .mapContent .title {
+  font: 21px/42px "Microsoft YaHei";
+}
+
+.map .mapContent .divide {
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.map .mapContent .tip {
+  margin: 15px 0 47px;
+  font: 12px/32px "Microsoft YaHei";
+}
+
+.map .mapContent .select {
+  float: left;
+  position: relative;
+  margin-right: 28px;
+  cursor: pointer;
+}
+
+.map .mapContent .select .caret {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #be4e48;
+  line-height: 20px;
+}
+
+.map .mapContent .select .wh, .map .mapContent .select select, .map .mapContent .select button, .map .mapContent .select .info .infoLeft, .info .map .mapContent .select .infoLeft, .map .mapContent .select .info .infoMiddle, .info .map .mapContent .select .infoMiddle, .map .mapContent .select .info .infoRight, .info .map .mapContent .select .infoRight {
+  width: 236px;
+  height: 36px;
+}
+
+.map .mapContent .select select {
+  padding-left: 10px;
+  font: 12px "Microsoft YaHei";
+  color: #a8aaaa;
+}
+
+.map .mapContent .select button {
+  background-color: #be4e48;
+  color: #fff;
+  font-family: "Microsoft YaHei";
+  cursor: pointer;
+}
+
+.activity {
+  position: relative;
+  width: 100%;
+  height: 604px;
+  background-color: #f7f7f7;
+}
+
+.activity .content {
+  width: 985px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.activity .activityLists {
+  width: 1200px;
+}
+
+.activity .activityLists li {
+  float: left;
+  margin-right: 36px;
+  cursor: pointer;
+}
+
+.activity .activityLists li figure img {
+  padding: 12px 7px;
+  border: solid 1px #e1e1e1;
+}
+
+.activity .activityLists li figure figcaption {
+  text-align: center;
+}
+
+.activity .activityLists li figure figcaption p {
+  margin: 14px 0 10px;
+  font-family: "Microsoft YaHei";
+  color: #323333;
+}
+
+.activity .activityLists li figure figcaption span {
+  color: #818281;
+  font: 12px "Microsoft YaHei";
+}
+
+.activity .activityLists li figure.active p {
+  margin: 0;
+  letter-spacing: 32px;
+  font-size: 21px;
+}
+
+.activity .activityLists li figure.active span {
+  display: inline-block;
+  margin: 8px 0;
+}
+
+.time {
+  width: 1280px;
+  height: 567px;
+  margin: 0 auto;
+}
+
+.time .left {
+  position: relative;
+  float: left;
+  width: 850px;
+  height: 567px;
+  background: url(../images/time.png) no-repeat center;
+  text-align: center;
+  color: #fff;
+}
+
+.time .left::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  right: 0;
+  border-right: solid 23px #fff;
+  border-top: solid 13px transparent;
+  border-bottom: solid 13px transparent;
+}
+
+.time .left h2 {
+  margin-top: 132px;
+  font: 50px/76px "Microsoft YaHei";
+}
+
+.time .left h1 {
+  font: 120px/120px "Microsoft YaHei";
+}
+
+.time .left .address {
+  font: 22px "Microsoft YaHei";
+  margin: 40px 0 20px;
+}
+
+.time .left .date {
+  font: 18px "Microsoft YaHei";
+}
+
+.time section {
+  float: right;
+  width: 430px;
+  text-align: center;
+  padding-top: 165px;
+}
+
+.time section h3 {
+  font: bold 20px SimSun;
+  color: #323333;
+  vertical-align: middle;
+}
+
+.time section h3 .divide {
+  display: inline-block;
+  width: 2px;
+  height: 18px;
+  background-color: #7f7f7f;
+  -webkit-transform: skew(-45deg);
+  -ms-transform: skew(-45deg);
+  transform: skew(-45deg);
+  margin: 0 10px;
+}
+
+.time section h3 .num {
+  color: #e74f4d;
+}
+
+.time section p {
+  width: 285px;
+  margin: 22px auto 40px;
+  text-align: left;
+  font: 12px/30px SimSun;
+  color: #aaa;
+}
+
+.time section a {
+  display: inline-block;
+  width: 105px;
+  height: 33px;
+  border: solid 1px #e74f4d;
+  font: 12px/33px "Microsoft YaHei";
+  color: #e74f4d;
+}
+
+.time section .content {
+  width: 80px;
+  margin: 24px auto;
+  overflow: hidden;
+}
+
+.time section .content ul {
+  width: 100px;
+}
+
+.time section .content ul li {
+  float: left;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #919292;
+  border-radius: 50%;
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+.time section .content ul li.active {
+  background-color: #919292;
+}
+
+.info {
+  width: 1280px;
+  height: 520px;
+  margin: 0 auto;
+}
+
+.info .wh, .info .map .mapContent .select select, .map .mapContent .select .info select, .info .map .mapContent .select button, .map .mapContent .select .info button, .info .infoLeft, .info .infoMiddle, .info .infoRight {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 425px;
+  height: 520px;
+}
+
+.info .p, .info .infoLeft p, .info .infoMiddle p {
+  width: 170px;
+  margin: 0 auto;
+  font: 21px/30px SimHei;
+}
+
+.info .infoLeft {
+  background-color: #e74f4d;
+  text-align: center;
+  color: #fff;
+  padding-top: 170px;
+}
+
+.info .infoLeft .divide {
+  margin: 25px auto;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.info .infoLeft a {
+  display: inline-block;
+  width: 170px;
+  height: 40px;
+  border: 1px solid #fff;
+  font: 21px/40px SimHei;
+  color: #fff;
+}
+
+.info .infoMiddle {
+  text-align: center;
+  padding-top: 170px;
+}
+
+.info .infoMiddle p {
+  color: #323333;
+}
+
+.info .infoMiddle .divide {
+  margin: 25px auto;
+  width: 30px;
+  height: 2px;
+  background-color: #aaa;
+}
+
+.info .infoMiddle a {
+  display: inline-block;
+  width: 170px;
+  height: 40px;
+  border: 1px solid #e74f4d;
+  font: 21px/40px SimHei;
+  color: #e74f4d;
+}
+
+.info .infoRight {
+  position: relative;
+  background: url(../images/info.png) no-repeat;
+  background-size: cover;
+}
+
+.info .infoRight::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  left: 0;
+  border-left: solid 23px #fff;
+  border-top: solid 13px transparent;
+  border-bottom: solid 13px transparent;
+}
+
+.volunteer {
+  width: 1000px;
+  margin: 120px auto 160px;
+}
+
+.volunteer .center, .volunteer h2, .volunteer .title {
+  text-align: center;
+}
+
+.volunteer h2 {
+  font-size: 21px;
+  color: #323333;
+}
+
+.volunteer .divide {
+  margin: 8px auto;
+  width: 30px;
+  height: 2px;
+  background-color: #e74f4d;
+}
+
+.volunteer .title {
+  font: 12px/16px "Microsoft YaHei";
+  color: #aaa;
+  padding: 0 280px;
+}
+
+.volunteer .volunteerBottom {
+  margin-top: 100px;
+}
+
+.volunteer .volunteerBottom .agreement {
+  float: left;
+  width: 300px;
+}
+
+.volunteer .volunteerBottom .agreement .item:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.volunteer .volunteerBottom .agreement .item h3 {
+  font: bold 14px SimHei;
+  color: #666160;
+}
+
+.volunteer .volunteerBottom .agreement .item p {
+  font: 12px/21px SimSun;
+  color: #a5a3a2;
+  margin: 23px 0 8px;
+}
+
+.volunteer .volunteerBottom .agreement .item .more {
+  float: right;
+  font: 12px SimSun;
+  color: #a5a3a2;
+}
+
+.volunteer .volunteerBottom .agreement .item .more .iconfont {
+  font-size: 12px;
+  padding: 0 5px;
+  vertical-align: middle;
+}
+
+.volunteer .volunteerBottom form {
+  float: right;
+  width: 640px;
+}
+
+.volunteer .volunteerBottom form .item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 310px;
+  height: 40px;
+  background-color: #edecee;
+  font: 12px SimSun;
+  color: #787474;
+  padding-left: 17px;
+  margin-bottom: 15px;
+}
+
+.volunteer .volunteerBottom form .item:nth-child(odd) {
+  margin-right: 20px;
+}
+
+.volunteer .volunteerBottom form .item input {
+  background-color: #edecee;
+  padding: 0;
+  vertical-align: middle;
+  width: 63%;
+  height: 100%;
+}
+
+.volunteer .volunteerBottom form .introduction {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  width: 640px;
+  height: 120px;
+  background-color: #edecee;
+  font: 12px SimSun;
+  color: #787474;
+  padding: 10px 17px 0;
+  margin-bottom: 15px;
+}
+
+.volunteer .volunteerBottom form .introduction textarea {
+  width: 100%;
+  height: 70%;
+  margin-top: 5px;
+  background-color: #edecee;
+}
+
+.volunteer .volunteerBottom form input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  background-color: #edecee;
+  cursor: pointer;
+  font: 14px/40px SimHei;
+  color: #323333;
+}
+
+.contact {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 360px;
+  padding: 90px 380px 0;
+  background-color: #33363f;
+  color: #fff;
+  text-align: center;
+}
+
+.contact h2 {
+  font: 21px/48px SimHei;
+}
+
+.contact p {
+  padding: 0 55px;
+  font: 12px/18px SimSun;
+  color: #f5f5f5;
+}
+
+.contact .form {
+  margin: 30px auto;
+}
+
+.contact .form input[type="text"] {
+  width: 430px;
+  height: 40px;
+  background-color: #fff;
+  padding-left: 10px;
+  font: 14px/40px "Microsoft YaHei";
+  color: #aaa;
+  vertical-align: middle;
+}
+
+.contact .form input[type="submit"] {
+  width: 80px;
+  height: 40px;
+  background-color: #6f7178;
+  font: 15px/40px "Microsoft YaHei";
+  color: #fff;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.contact .icon a {
+  color: #fff;
+}
+
+.contact .icon a .iconfont {
+  font-size: 32px;
+  padding: 0 12px;
+}
+
+footer {
+  height: 60px;
+  background-color: #30303a;
+  font: 12px/60px SimSun;
+  color: #fff;
+  padding-left: 100px;
+}
+
+footer .right {
+  float: right;
+  margin-right: 40px;
+  color: #fff;
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: url("../fonts/iconfont.eot?t=1491903128098");
+  /* IE9*/
+  src: url("../fonts/iconfont.eot?t=1491903128098#iefix") format("embedded-opentype"), url("../fonts/iconfont.woff?t=1491903128098") format("woff"), url("../fonts/iconfont.ttf?t=1491903128098") format("truetype"), url("../fonts/iconfont.svg?t=1491903128098#iconfont") format("svg");
+  /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-down:before {
+  content: "\e653";
+}
+
+.icon-icon3:before {
+  content: "\e603";
+}
+
+.icon-person:before {
+  content: "\e63c";
+}
+
+.icon-sigekuang:before {
+  content: "\e616";
+}
+
+.icon-kongxinhua:before {
+  content: "\e64c";
+}
+
+.icon-twitter:before {
+  content: "\e74e";
+}
+
+.icon-book-copy-copy-copy:before {
+  content: "\f015a";
+}
+
+.icon-diqiu:before {
+  content: "\e621";
+}
+
+.icon-xinlang:before {
+  content: "\e60f";
+}
+
+.icon-qizhi-kongxin:before {
+  content: "\e8a8";
+}

@@ -1,0 +1,55 @@
+.contact{
+    box-sizing: border-box;
+    height: 360px;
+    padding: 90px 380px 0;
+    background-color: #33363f;
+    color: #fff;
+    text-align: center;
+
+    h2{
+        font: 21px/48px SimHei;
+    }
+
+    p{
+        padding: 0 55px;
+        font: 12px/18px SimSun;
+        color: #f5f5f5;
+    }
+
+    .form{
+        margin: 30px auto;
+
+        input[type="text"]{
+            width: 430px;
+            height: 40px;
+            background-color: #fff;
+            padding-left: 10px;
+            font: 14px/40px "Microsoft YaHei";
+            color: #aaa;
+            vertical-align: middle;
+        }
+
+        input[type="submit"]{
+            width: 80px;
+            height: 40px;
+            background-color: #6f7178;
+            font: 15px/40px "Microsoft YaHei";
+            color: #fff;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    }
+
+    .icon{
+
+        a{
+            color: #fff;
+
+            .iconfont{
+                font-size: 32px;
+                padding: 0 12px;
+            }
+        }
+        
+    }
+}

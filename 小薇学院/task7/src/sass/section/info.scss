@@ -1,0 +1,74 @@
+.info{
+    width: 1280px;
+    height: 520px;
+    margin: 0 auto;
+
+    .wh{
+        box-sizing: border-box;
+        float: left;
+        width: 425px;
+        height: 520px;
+    }
+    
+    .p{
+        width: 170px;
+        margin: 0 auto;
+        font: 21px/30px SimHei;
+    }
+
+    .infoLeft{
+        @extend .wh;
+        background-color: $red-color;
+        text-align: center;
+        color: #fff;
+        padding-top: 170px;
+
+        p{
+            @extend .p;
+        }
+
+        .divide{
+            margin: 25px auto;
+            @include divide;
+        }
+
+        a{
+            @include info-more(#fff);
+        }
+    }
+
+    .infoMiddle{
+        @extend .wh;
+        text-align: center;
+        padding-top: 170px;
+
+        p{
+            @extend .p;
+            color: #323333;
+        }
+
+        .divide{
+            margin: 25px auto;
+            @include divide(30px,2px,#aaa);
+        }
+        
+        a{
+            @include info-more($red-color);
+        }
+    }
+
+    .infoRight{
+        @extend .wh;
+        position: relative;
+        background: url(../images/info.png) no-repeat;
+        background-size: cover;
+
+        &::after{
+            @include caret;
+            left: 0;
+            border-left: solid 23px #fff; 
+            border-top: solid 13px transparent;
+            border-bottom: solid 13px transparent;
+        }
+    }
+}

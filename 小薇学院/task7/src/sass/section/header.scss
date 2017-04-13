@@ -1,0 +1,56 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    min-width: 1280px;
+    width: 100%;
+    height: 56px;
+    background-color: #fff;
+
+    .logo{
+        display: inline-block;
+        height: 56px;
+        margin-left: 60px;
+        font-size: 21px;
+        line-height: 56px;
+        color: #393a3a;
+
+        .icon-book-copy-copy-copy{
+            font-size: 31px;
+            color: $red-color;
+            padding-right: 10px;
+        }
+    }
+
+    nav{
+        float: right;
+        margin-right: 44px;
+
+        li{
+            float: left;
+
+            .item{
+                box-sizing: border-box;
+                display: block;
+                height: 56px;
+                padding: 0 23px;
+                line-height: 56px;
+                font-size: 14px;
+                font-family: "Microsoft YaHei";
+                color: #787b83;
+
+                &.active{
+                    color: $red-color;
+                    border-bottom: solid 4px $red-color;
+                }
+            }
+
+            .login{
+                color: $red-color;
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,28 @@
+/*=mixin Start*/
+
+@mixin divide($width:30px,$height:2px,$color:#fff){
+    width: $width;
+    height: $height;
+    background-color: $color;
+}
+
+@mixin caret(){
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+@mixin info-more($color) {
+   display: inline-block;
+   width: 170px;
+   height: 40px;
+   border: 1px solid $color;
+   font: 21px/40px SimHei;
+   color: $color;
+}
+
+/*=mixin End*/

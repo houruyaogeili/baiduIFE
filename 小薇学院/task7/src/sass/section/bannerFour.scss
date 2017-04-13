@@ -1,0 +1,28 @@
+.bannerFour{
+    width: 100%;
+    margin: 44px 0 65px;
+    text-align: center;
+
+    section{
+        box-sizing: border-box;
+        float: left;
+        width: 25%;
+
+        p{
+            height: 52px;
+            padding: 0 85px;
+            margin-top: 47px;
+            line-height: 18px;
+            color: #767777;
+        }
+
+        &:not(:last-child) p{
+            border-right: solid 2px #aaa;
+        }
+
+        .iconfont{
+            color: $red-color;
+            font-size: 40px;
+        }
+    }
+}
