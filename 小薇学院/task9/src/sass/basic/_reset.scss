@@ -1,0 +1,17 @@
+/*=reset Start*/
+body,button,figure,h1,h2,h3,input,p,span,textarea,ul,li,fieldset{box-sizing:border-box;margin:0;padding:0}
+div{box-sizing:border-box;}
+a{display:inline-block;text-decoration:none}
+li{list-style:none}
+button,input,option,select,textarea{border:none;}
+textarea{resize:none}
+button:focus,input:focus,option:focus,select:focus,textarea:focus{outline:0}
+select{appearance:none;-moz-appearance:none;-webkit-appearance:none}
+select::-ms-expand{display:none}
+.clearfix{zoom:1}
+.clearfix::after{clear:both;display:block;visibility:hidden;height:0;content:","}
+body{background:#282828;color:#000;font:12px SimHei,"Microsoft YaHei",SimSun,sans-serif}
+fieldset{border:none;}
+fieldset legend{display:none;}
+caption{display:none;}
+/*=reset End*/

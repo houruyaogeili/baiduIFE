@@ -1,0 +1,152 @@
+.list-info{
+    float: left;
+    width: 260px;
+    color: #6e8095;
+
+    .avatar-name{
+        margin: 18px 0 0 45px;
+        font-size: 16px;
+        color: #f6f5f5;
+
+        img{
+            float: left;
+            margin-right: 19px;
+        }
+
+        span{
+            line-height: 57px;
+        }
+    }
+
+    .collect-fans{
+          margin: 21px 0 21px 30px;
+
+          a{
+              float: left;
+              width: 24px; 
+              height: 30px;
+              padding: 0 31px;
+              color: #6e8095;
+
+              &:first-child{
+                  border-right: 2px solid #323647;
+              }
+              .num{
+                 font-size: 16px; 
+              }
+          }         
+    }
+
+    .lists{
+
+        & > li{
+            padding-left: 46px;
+            margin-bottom: 36px;
+
+            a{
+               color: #6e8095;
+            }
+
+            .li-icon{
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                margin-right: 14px;
+            }
+
+            &:first-child{
+                margin-bottom: 17px;
+                padding: 15px 0 15px 46px;   
+                background: #393d4e;
+
+                & > a{
+                    color: #ededef;
+                }
+
+                & > ul{
+                    margin-left: 20px;
+                }
+            }
+
+            & li{
+                margin: 15px 0;
+            }
+
+            & > ul > li:nth-child(3){
+                margin: 0;
+            }
+
+            & > ul > li:nth-child(1), & > ul > li:nth-child(3){
+                color: #6e8095;
+
+                .icon{
+                    font-size: 12px;
+                    margin-right: 6px;
+                    vertical-align: middle;
+                }
+
+                .li-icon{
+                    margin-right: 6px;
+                    vertical-align: middle;
+                    background: url(../images/bg.png) 0 -12px no-repeat;    
+                }
+            }
+
+            & > ul > li:nth-child(2){
+                
+                & > a{
+                    color: #ededef;
+                }
+                
+                .icon{
+                    font-size: 12px;
+                    vertical-align: middle;
+                    margin-right: 6px;
+                }
+
+                .li-icon{
+                    margin-right: 6px;
+                    vertical-align: middle;
+                    background: url(../images/bg.png) 0 -24px no-repeat;
+                }
+
+                li{
+                    padding-left: 36px;
+
+                    .li-icon{
+                        margin: 0 5px 0 0;
+                        background: url(../images/bg.png) 0 -36px no-repeat;    
+                    }
+
+                    &:nth-child(1) a{
+                        color: #ededef;
+                    }
+
+                    &:nth-child(2) a{
+                        color: #6e8095;
+                    }
+                }
+            }
+
+            &:first-child .li-icon{
+                background: url(../images/bg.png) 0 0 no-repeat;
+            }
+
+            &:nth-child(2) .li-icon,&:nth-child(4) .li-icon,&:nth-child(5) .li-icon{
+                background: url(../images/bg.png) 0 -48px no-repeat;
+            }
+
+            &:nth-child(3) .li-icon{
+                background: url(../images/bg.png) 0 -60px no-repeat;
+            }
+
+            &:nth-child(6) .li-icon{
+                background: url(../images/bg.png) 0 -72px no-repeat;
+            }
+
+            
+        }
+
+       
+    }
+}

@@ -1,0 +1,79 @@
+.time-money-history{
+    width: $width;
+    height: 65px;
+    margin-top: 10px;
+
+    .time-money{
+        float: left;
+
+        &::after,&::before{
+            box-sizing: border-box;
+            content: " ";
+            float: left;
+            width: 30px;
+            height: 65px;
+            margin-right: 4px;
+            border: 1px solid #ddd;
+        }
+        &::before{
+            background: #fff url(../images/left.png) no-repeat center/14px 20px;
+        }
+        &::after{
+            background: #fff url(../images/right.png) no-repeat center/14px 20px;
+        }
+        ul{
+            float: left;
+        }
+        .item{
+            box-sizing: border-box; 
+            float: left;
+            width: 110px;
+            height: 65px;
+            margin-right: 4px;
+            border: 1px solid #ddd;
+            background: #fff;
+
+            p{
+                text-align: center;
+                font: 12px/12px "Microsoft YaHei";
+                color: #aaa;
+            }
+            p:first-child{
+                margin: 10px 0;
+                font: 12px/12px "Microsoft YaHei";
+                color: #323333;
+            }
+            p:last-child span{
+                font: 21px/21px "Microsoft YaHei";
+                color: #ec6500;
+            }
+            &.active{
+                border-top: 2px solid #4389c9;
+            }
+        }
+
+    }
+
+    .history{
+        float: right;
+        width: 136px;
+        height: 65px;
+        background: #fff;
+        border: 1px solid #ddd;
+
+        a{
+            width: 100%;
+            height: 100%;
+            line-height: 63px;
+            color: #535353;
+
+            .icon{
+                margin: 0 10px 0 18px;
+                vertical-align: middle;
+                color: #388ac1;
+                font-size: 30px;
+            }
+        }
+    }
+
+}

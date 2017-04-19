@@ -1,0 +1,151 @@
+.first-item{
+    margin-top: 13px;
+    width: $width;
+
+
+    .material{
+
+        @include content(left,533px,358px);
+
+        p{
+            @include title;
+            
+        }
+
+        ul{
+            margin: 12px 0 0 20px;
+
+            li{
+                float: left;
+                width: 86px;
+                height: 27px;
+                margin-right: 3px;
+                background: #ededf0;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                text-align: center;
+                font: 12px/27px "Microsoft YaHei";
+                color: #535353;
+                cursor: pointer;
+            }
+            .active{
+                position: relative;
+                border: 1px solid #cbcbcb;
+                border-bottom: none;
+                background: #fff;
+            }
+            .active::after{
+                content: " ";
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 100%;
+                height: 2px;
+                background: #fff;
+            }
+        }
+        .item{
+            width: 490px;
+            height: 256px;
+            margin-left: 20px;
+            border: 1px solid #cbcbcb;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            table{
+                width: 404px;
+                margin: 28px auto;
+                border-collapse:collapse;
+
+               
+                td{
+                    border: 1px solid #d2d2d2;
+                    height: 32px;
+                    text-align: center;
+
+                    &.active{
+                        background: #f4f5f6;
+                    }
+                }
+            }
+        }
+    }
+
+    .summary{
+        @include content(right,353px,358px);
+
+        p{
+            @include title;
+        }
+
+        form{
+            width: 280px;
+            margin: 0 auto;
+
+            label{
+                font: 12px/12px "Microsoft YaHei";
+                color: #c3c2c2;
+            }
+            input[type="text"],textarea{
+                width: 100%;
+                padding: 7px 0 10px 16px;
+                font: 12px/12px "Microsoft YaHei";
+                color: #535353;
+            }
+            .title{
+                margin-top: 17px;
+                border-bottom: 1px solid #e7e7e7;
+
+            }
+            .price,.director,.description{
+                padding: 4px;
+            }
+            .price{
+                float: left;
+                width: 95px;
+                border-right: 1px solid #e7e7e7;
+            }
+            .director{
+                float: left;
+                width: 185px;
+            }
+            .description{
+                clear: both;
+                border-top: 1px solid #e7e7e7;
+                border-bottom: 1px solid #e7e7e7;
+
+                textarea{
+                    width: 100%;
+                    height: 100px;
+                }
+            }
+            .search{
+                margin-top: 10px;
+
+                .agreement{
+                    float: left;
+                    margin-top: 5px;
+                }
+
+                input[type="checkbox"]{
+                    width: 14px;
+                    height: 14px;
+                    border: none;
+                    vertical-align: middle;
+                    background: #d6d6d6;
+                }
+                
+                input[type="button"]{
+                    float: right;
+                    width: 50px;
+                    height: 25px;
+                    vertical-align: middle;
+                    color: #fff;
+                    background: #388ac1;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

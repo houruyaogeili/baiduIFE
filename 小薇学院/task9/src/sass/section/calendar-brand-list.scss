@@ -1,0 +1,186 @@
+.calendar-brand-list{
+    width: $width;
+    padding:8px 0 155px 0;
+
+    .calendar{
+        @include content(left,356px,362px);
+
+        p{
+            @include title;
+        }
+
+        .op-calendar{
+            padding: 10px 22px;
+
+            .op-calendar-new-select-box{
+                float: left;
+                height: 22px;
+
+                .op-calendar-new-year-box{
+                    float: left;
+                    width: 64px;
+                    margin-right: 6px;
+
+                    .c-dropdown2{
+                        position: relative;
+                        display: inline-block;
+                        width: 100%;
+                        height: 22px;
+                        line-height: 22px;
+                        vertical-align: middle; 
+                        color: #535353;
+
+                        .c-dropdown2-btn-group{
+                            position: relative;
+                            height: 22px;
+                            border: 1px solid #cececf;
+                            user-select: none;
+
+                            .c-dropdown2-btn{
+                                height: 20px;
+                                padding: 0 7px;
+                                overflow: hidden;
+                                white-space: nowrap;
+                            }
+                            .c-dropdown2-btn-icon{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                width: 15px;
+                                height: 20px;
+
+                                .c-dropdown2-btn-icon-border{
+                                    height: 20px;
+                                    border-left: 1px solid #f5f6f7;
+                                    text-align: center;
+
+                                    .c-icon{
+                                        display: inline-block;
+                                        width: 14px;
+                                        height: 14px;
+                                        vertical-align: text-bottom;
+                                        background: url(../images/icons_5859e57.png) no-repeat 0 0;
+                                        background-position: -408px -144px;
+                                    }
+                                }
+
+                            }
+                        }
+
+                        .c-dropdown2-menu{
+                            visibility: hidden;
+                            position: absolute;
+                            left: 0;
+                            top: 100%;
+                            width: 100%;
+                            overflow: hidden;
+                            border: 1px solid #bbb;
+
+                            .c-dropdown2-menu-inner{
+                                height: 321px;
+                                overflow: scroll;
+                            }
+
+                            .c-dropdown2-option{
+                                height: 26px;
+                                line-height: 26px;
+                                color: #333;
+                                white-space: nowrap;
+                                cursor: pointer;
+                                padding-left: 10px;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            .op-calendar-new-month-box{
+                position: relative;
+                float: left;
+                height: 22px;
+                width: 85px; 
+                padding: 0 20px;
+                border: 1px solid #cececf;    
+
+                .op-calendar-new-prev-month{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    color: #7a7a7a;
+                    line-height: 20px;
+                    text-align: center;
+                }
+
+                .op-calendar-new-next-month{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 20px;
+                    height: 20px;
+                    color: #7a7a7a;
+                    line-height: 20px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .date-table{
+            table{
+                width: 100%;
+
+                thead{
+                    height: 29px;
+                    border-top: 1px solid #a9cfec;
+                    border-bottom: 1px solid #e1e1e2;
+                }
+            }
+        }
+    }
+
+    .brand-list{
+        @include content(right,527px,362px);
+
+        p{
+            @include title;
+        }
+        .table{
+            height: 274px;
+            margin: 20px 0 20px 40px;
+            overflow: hidden;
+
+            table{
+                width: 450px;
+                border: 1px solid #c9caca;
+                border-collapse:collapse;
+
+                td,th{
+                    height: 25px;
+                    border: 1px solid #c9caca;
+                    text-align: center;
+                }
+                th{
+                    color: #231815;
+                    font-size: 13px;
+                }
+                td{
+                    color: #323333;
+
+                    img{
+                        margin-left: 24px;
+                    }
+                }
+
+                th:nth-child(1){
+                    width: 65px;
+                }
+
+                th:nth-child(2){
+                    width: 90px;
+                }
+            }
+        }
+    }
+}

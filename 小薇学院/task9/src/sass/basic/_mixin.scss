@@ -1,0 +1,47 @@
+/*=mixin Start*/
+
+@mixin title(){
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    color: #aaa;
+    background: #f4f5f6;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #e7e8eb;
+}
+
+@mixin content($float,$width,$height){
+    float: $float;
+    width: $width;
+    height: $height;
+    border: 1px solid #d8d8db;
+    border-radius: 5px;
+    background: #fff;
+}
+@mixin divide($width:30px,$height:2px,$color:#fff){
+    width: $width;
+    height: $height;
+    background-color: $color;
+}
+
+@mixin caret(){
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+@mixin info-more($color) {
+   display: inline-block;
+   width: 170px;
+   height: 40px;
+   border: 1px solid $color;
+   font: 21px/40px SimHei;
+   color: $color;
+}
+
+/*=mixin End*/

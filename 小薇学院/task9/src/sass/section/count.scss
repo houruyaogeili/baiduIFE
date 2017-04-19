@@ -1,0 +1,67 @@
+.count{
+    width: $width;
+    margin-top: 15px;
+
+    .title{
+        font: 12px/22px "Microsoft YaHei";
+        color: #323333;
+    }
+
+    .statistics{
+        overflow: hidden;
+        ul{
+            width: 1000px;
+            li{
+                position: relative;
+                float: left;
+                margin-right: 28px;
+                width: 202px;
+                height: 72px;
+                border: 1px solid #ddd;
+                background: #fff;
+
+                &::before{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: " ";
+                    width: 3px;
+                    height: 100%;
+                }
+                &::after{
+                    position: absolute;
+                    top: 12px;
+                    right: 15px;
+                    content: " ";
+                    width: 61px;
+                    height: 47px;
+                }
+                &:nth-child(1)::before,&:nth-child(1)::after{
+                    background: #43b29e;
+                }
+                &:nth-child(2)::before,&:nth-child(2)::after{
+                    background: #388ac1;
+                }
+                &:nth-child(3)::before,&:nth-child(3)::after{
+                    background: #d04a36;
+                }
+                &:nth-child(4)::before,&:nth-child(4)::after{
+                    background: #e2cd46;
+                }
+                
+                .num{
+                    margin: 20px 0 14px 11px;
+                    color: #323333;
+                    line-height: 1;
+                }
+
+                .trade{
+                    margin-left: 11px;
+                    font-size: 10px;
+                    line-height: 1;
+                    color: #aaa;
+                }
+            }
+        }
+    }
+}

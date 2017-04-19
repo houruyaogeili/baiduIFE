@@ -1,0 +1,27 @@
+ .nav{
+        height: 30px;
+        padding-left: 20px;
+        background: #fff;
+
+        li{
+            float: left;
+            height: 12px;
+            margin: 9px 0;
+            border-right: solid 1px #aaa; 
+            transform: skewX(-20deg);
+
+            a{
+                padding: 0 10px;
+                color: #aaa;
+                transform: skewX(20deg);
+            }
+
+            &:last-child{
+                border-right: none;
+            }
+
+            &:last-child a{
+                color: #6898c2;
+            }
+        }
+    }

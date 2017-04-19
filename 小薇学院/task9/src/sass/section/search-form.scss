@@ -1,0 +1,89 @@
+.search-form{
+    width: $width;
+    height: 86px;
+    padding: 14px 0 0 30px;
+    border: solid 1px #ddd;
+    background: #fff;
+
+    label{
+        color: #aaa;
+    }
+
+    select,input[type="text"]{
+        border: solid 1px #aaa;
+        margin-left: 15px;
+        padding-left: 10px;
+        vertical-align: middle;
+    }
+    select{
+        background: url(../images/tobottom.png) no-repeat 90% center/10px; 
+    }
+    .fl{
+        float: left;
+    }
+    .query-item{
+        @extend .fl;
+        margin-right: 38px;
+
+        select{
+            width: 70px;
+            height: 25px;
+        }
+    }
+
+    .buy-sell{
+        @extend .fl;
+        width: 194px;
+        margin-right: 30px;
+        background: url(../images/exchange.png) no-repeat center right;
+
+        select{
+            width: 120px;
+            height: 25px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .other{
+        @extend .fl;
+        width: 348px;
+        div{
+            float: left;
+            margin-bottom: 5px;
+        }
+        .date{
+            margin-right: 20px;
+        }
+        .rs{
+            margin-right: 15px;
+        }
+        input{
+            width: 120px;
+            height: 25px;
+        }
+        .zhs select,.rs select{
+            width: 75px;
+            height: 25px;
+        }
+        .cjx select{
+            width: 125px;
+            height: 25px;
+        }
+        
+    }
+    .button{
+        float: left;
+        width: 50px;
+        height: 26px;
+        margin-top: 16px;
+
+        input{
+            width: 50px;
+            height: 26px;
+            border: none;
+            color: #fff;
+            background: #388ac1;
+            cursor: pointer;
+        }
+    }
+}
