@@ -187,11 +187,18 @@ caption {
 }
 
 #header .wrap .search-login .search input {
-  width: 312px;
+  width: 150px;
   height: 28px;
   padding-left: 48px;
   border-radius: 28px;
   background-color: #fff;
+  -webkit-transition: width .2s ease-out;
+  -moz-transition: width .2s ease-out;
+  -o-transition: width .2s ease-out;
+}
+
+#header .wrap .search-login .search input:focus {
+  width: 312px;
 }
 
 #header .wrap .search-login .login {
@@ -216,9 +223,24 @@ caption {
   color: #f6f5f5;
 }
 
-.list-info .avatar-name img {
+.list-info .avatar-name .pic {
   float: left;
+  width: 57px;
+  height: 57px;
   margin-right: 19px;
+  border-radius: 50%;
+  background: url(../images/tou.jpg) no-repeat center;
+  background-size: cover;
+  -webkit-transition: -webkit-transform 2s ease-out;
+  transition: -webkit-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  transition: transform 2s ease-out, -webkit-transform 2s ease-out;
+}
+
+.list-info .avatar-name .pic:hover {
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(360deg);
 }
 
 .list-info .avatar-name span {
@@ -527,6 +549,7 @@ caption {
   margin-right: 4px;
   border: 1px solid #ddd;
   background: #fff;
+  cursor: pointer;
 }
 
 .time-money-history .time-money .item p {
@@ -546,7 +569,7 @@ caption {
   color: #ec6500;
 }
 
-.time-money-history .time-money .item.active {
+.time-money-history .time-money .item.active, .time-money-history .time-money .item:hover {
   border-top: 2px solid #4389c9;
 }
 
@@ -707,29 +730,77 @@ caption {
   background: #fff;
 }
 
-.first-item .material .item {
+.first-item .material .test_box {
+  width: 490px;
+  margin: 12px 0 0 20px;
+  position: relative;
+}
+
+.first-item .material .test_tab {
+  float: left;
+  width: 86px;
+  height: 27px;
+  margin-right: 3px;
+}
+
+.first-item .material .test_tab .test_label {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 86px;
+  height: 27px;
+  background: #ededf0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+  font: 12px/27px "Microsoft YaHei";
+  color: #535353;
+  cursor: pointer;
+}
+
+.first-item .material .test_tab .test_radio,
+.first-item .material .test_tab .test_tab_content {
+  position: absolute;
+  left: -999em;
+}
+
+.first-item .material .test_tab .test_radio:checked ~ .test_tab_content {
+  margin-top: -1px;
+  border: 1px solid #ccc;
+  left: 0;
+  right: 0;
+}
+
+.first-item .material .test_tab .test_radio:checked ~ .test_label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.first-item .material .test_tab .test_tab_content {
   width: 490px;
   height: 256px;
-  margin-left: 20px;
   border: 1px solid #cbcbcb;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.first-item .material .item table {
+.first-item .material .test_tab .test_tab_content table {
   width: 404px;
   margin: 28px auto;
   border-collapse: collapse;
 }
 
-.first-item .material .item table td {
+.first-item .material .test_tab .test_tab_content table td {
   border: 1px solid #d2d2d2;
   height: 32px;
   text-align: center;
 }
 
-.first-item .material .item table td.active {
+.first-item .material .test_tab .test_tab_content table td.active {
   background: #f4f5f6;
 }
 
@@ -842,7 +913,7 @@ caption {
   background: #fff;
 }
 
-.calendar-brand-list .calendar p {
+.calendar-brand-list .calendar .title {
   height: 40px;
   line-height: 40px;
   padding-left: 20px;
@@ -942,44 +1013,121 @@ caption {
   padding-left: 10px;
 }
 
-.calendar-brand-list .calendar .op-calendar .op-calendar-new-month-box {
+.calendar-brand-list .calendar .op-calendar .op-calendar-new-select-box .op-calendar-new-month-box {
   position: relative;
   float: left;
   height: 22px;
   width: 85px;
   padding: 0 20px;
+  margin-right: 6px;
   border: 1px solid #cececf;
 }
 
-.calendar-brand-list .calendar .op-calendar .op-calendar-new-month-box .op-calendar-new-prev-month {
+.calendar-brand-list .calendar .op-calendar .op-calendar-new-select-box .op-calendar-new-month-box .op-calendar-new-prev-month {
   position: absolute;
   top: 0;
   left: 0;
   width: 20px;
   height: 20px;
+  border-right: 1px solid #f5f6f7;
   color: #7a7a7a;
   line-height: 20px;
   text-align: center;
 }
 
-.calendar-brand-list .calendar .op-calendar .op-calendar-new-month-box .op-calendar-new-next-month {
+.calendar-brand-list .calendar .op-calendar .op-calendar-new-select-box .op-calendar-new-month-box .op-calendar-new-next-month {
   position: absolute;
   top: 0;
   right: 0;
   width: 20px;
   height: 20px;
+  border-left: 1px solid #f5f6f7;
   color: #7a7a7a;
   line-height: 20px;
   text-align: center;
 }
 
+.calendar-brand-list .calendar .op-calendar .op-calendar-new-select-box .op-calendar-new-month-box .c-dropdown2 .c-dropdown2-btn {
+  height: 20px;
+  line-height: 20px;
+  color: #535353;
+  text-align: center;
+}
+
+.calendar-brand-list .calendar .op-calendar .op-calendar-new-select-box .op-calendar-new-holiday-box {
+  float: left;
+}
+
+.calendar-brand-list .calendar .op-calendar .c-btn {
+  float: right;
+  width: 64px;
+  height: 20px;
+  border: 1px solid #cdcece;
+  color: #535353;
+  text-align: center;
+  line-height: 20px;
+}
+
+.calendar-brand-list .calendar .op-calendar .c-btn:hover {
+  background: #c9161d;
+  color: #fff;
+}
+
+.calendar-brand-list .calendar .date-table {
+  width: 311px;
+  margin: 0 auto;
+}
+
 .calendar-brand-list .calendar .date-table table {
   width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .calendar-brand-list .calendar .date-table table thead {
-  height: 29px;
+  display: block;
+  width: 311px;
   border-top: 1px solid #a9cfec;
+  border-bottom: 1px solid #e1e1e2;
+}
+
+.calendar-brand-list .calendar .date-table table thead th {
+  height: 29px;
+  width: 44px;
+  padding: 0;
+  color: #535353;
+  font-weight: normal;
+}
+
+.calendar-brand-list .calendar .date-table table tbody {
+  display: block;
+  width: 311px;
+}
+
+.calendar-brand-list .calendar .date-table table tbody td {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 44px;
+  height: 41px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.calendar-brand-list .calendar .date-table table tbody td a {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 7px 0 6px;
+}
+
+.calendar-brand-list .calendar .date-table table tbody td a:hover {
+  border: 1px solid #f7d463;
+}
+
+.calendar-brand-list .calendar .date-table table tbody td a .jr, .calendar-brand-list .calendar .date-table table tbody td a .zm {
+  color: #c9161d;
 }
 
 .calendar-brand-list .brand-list {
@@ -1012,6 +1160,10 @@ caption {
   width: 450px;
   border: 1px solid #c9caca;
   border-collapse: collapse;
+}
+
+.calendar-brand-list .brand-list .table table tr:hover {
+  background: #f4f5f6;
 }
 
 .calendar-brand-list .brand-list .table table td, .calendar-brand-list .brand-list .table table th {
