@@ -193,8 +193,7 @@ caption {
   border-radius: 28px;
   background-color: #fff;
   -webkit-transition: width .2s ease-out;
-  -moz-transition: width .2s ease-out;
-  -o-transition: width .2s ease-out;
+  transition: width .2s ease-out;
 }
 
 #header .wrap .search-login .search input:focus {
