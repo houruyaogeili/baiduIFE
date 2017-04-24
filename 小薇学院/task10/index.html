@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <title>Flexbox布局练习</title>
     <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+        }
         .wrap{
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
+            align-items: center;
+            padding: 20px;
         }
         .one,.two,.three,.four{
             width: 150px;
             padding: 20px;
             border: 1px solid red;
+            margin-top: 20px;
         }
         .one{
             height: 120px;
@@ -25,10 +32,15 @@
         }
         .four{
             height: 200px;
+            border: 1px solid blue;
         }
+
         @media screen and (max-width: 640px){
+            .wrap{
+               align-items: flex-start; 
+            }
             .four{
-                align-self: flex-start;
+                order: -1;
             }
         }
     </style>
