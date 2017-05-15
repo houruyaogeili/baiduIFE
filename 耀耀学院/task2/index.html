@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任务一：表单（一）单个表单项的检验</title>
+    <style type="text/css">
+    .wrap {
+        width: 800px;
+        margin: 0 auto;
+    }
+    
+    fieldset {
+        border: 1px solid #cacaca;
+    }
+    
+    legend {
+        display: none;
+    }
+    
+    .item {
+        text-align: right;
+        margin: 30px;
+    }
+    
+    .item label,
+    .item .btn {
+        font: 26px/60px simHei;
+    }
+    
+    .item .itemIpt {
+        box-sizing: border-box;
+        width: 510px;
+        height: 60px;
+        margin: 0 20px 0 55px;
+        padding-left: 28px;
+        border: 1px solid #cacaca;
+        border-radius: 5px;
+        font: 24px simHei;
+    }
+    
+    .item input:focus {
+        outline: none;
+    }
+    
+    .item .notempty {
+        border: 1px solid #f00 !important;
+    }
+    
+    .item .right {
+        border: 1px solid #55ba38 !important;
+    }
+    
+    .item .btn {
+        display: inline-block;
+        width: 100px;
+        height: 60px;
+        background: #2e79ba;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 5px;
+    }
+    
+    .item .tip {
+        display: none;
+        margin-top: 16px;
+        margin-left: 180px;
+        text-align: left;
+        font: 24px "Microsoft YaHei";
+        color: #cacaca;
+    }
+    
+    .red {
+        color: #f00 !important;
+    }
+    
+    .green {
+        color: #55ba38 !important;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <form>
+            <fieldset>
+                <legend>表单验证</legend>
+                <div class="item">
+                    <label for="name">名称</label>
+                    <input type="text" name="name" class="itemIpt" id="name">
+                    <p class="tip" id="name-tip">必填，长度为4~16个字符</p>
+                </div>
+                <div class="item">
+                    <label for="name">密码</label>
+                    <input type="password" name="password" class="itemIpt" id="password">
+                    <p class="tip" id="password-tip">请输入密码</p>
+                </div>
+                <div class="item">
+                    <label for="name">密码确认</label>
+                    <input type="password" name="password2" class="itemIpt" id="password2">
+                    <p class="tip" id="password2-tip">再次输入相同密码</p>
+                </div>
+                <div class="item">
+                    <label for="name">邮箱</label>
+                    <input type="text" name="email" class="itemIpt" id="email">
+                    <p class="tip" id="email-tip">请输入邮箱</p>
+                </div>
+                <div class="item">
+                    <label for="name">手机</label>
+                    <input type="text" name="phone" class="itemIpt" id="phone">
+                    <p class="tip" id="phone-tip">请输入手机号</p>
+                </div>
+                <div class="item">
+                    <a href="#" class="btn" id="btn">提交</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script type="text/javascript">
+    (function() {
+
+        $("name").onfocus = function() {
+            $("name" + "-tip").style.display = "block";
+        };
+
+        $("name").onblur = function() {
+            checkName("name");
+        };
+
+        $("password").onfocus = function() {
+            $("password" + "-tip").style.display = "block";
+        };
+
+        $("password").onblur = function() {
+            checkPass("password");
+        };
+
+        $("password2").onfocus = function() {
+            $("password2" + "-tip").style.display = "block";
+        };
+
+        $("password2").onblur = function() {
+            checkPassAgain("password", "password2");
+        };
+
+        $("email").onfocus = function() {
+            $("email" + "-tip").style.display = "block";
+        };
+
+        $("email").onblur = function() {
+            checkEmail("email");
+        };
+
+        $("phone").onfocus = function() {
+            $("phone" + "-tip").style.display = "block";
+        };
+
+        $("phone").onblur = function() {
+            checkPhone("phone");
+        };
+
+        //全部提交
+
+        $("btn").onclick = function() {
+            if (checkName("name") && checkPass("password") && checkPassAgain("password", "password2") && checkEmail("email") && checkPhone("phone")) {
+                alert('恭喜你,全部通过验证！');
+
+            }
+
+
+        };
+
+        //验证用户名输入
+        function checkName(str) {
+            var name = $(str);
+            var val = name.value;
+            var name_tip = $(str + "-tip");
+            if (val.length === 0) {
+                name_tip.innerHTML = "名称不能为空";
+                name.className = "itemIpt red";
+                name_tip.className = "tip red";
+
+                return false;
+            } else {
+                if (getByteLen(val) < 4 || getByteLen(val) > 16) {
+                    name_tip.innerHTML = "长度输入不正确";
+                    name.className = "itemIpt red";
+                    name_tip.className = "tip red";
+
+                    return false;
+                } else {
+                    name_tip.innerHTML = "名称可用";
+                    name.className = "itemIpt green";
+                    name_tip.className = "tip green";
+
+                    return true;
+                }
+            }
+        }
+        //验证密码的输入
+        function checkPass(str) {
+            var pass = $(str);
+            var val = pass.value;
+            var pass_tip = $(str + "-tip");
+            if (val.length === 0) {
+                pass_tip.innerHTML = "密码不能为空";
+                pass.className = "itemIpt red";
+                pass_tip.className = "tip red";
+
+                return false;
+            } else if (val.length < 6) {
+                pass_tip.innerHTML = "密码不能少于6位";
+                pass.className = "itemIpt red";
+                pass_tip.className = "tip red";
+
+                return false;
+            } else {
+                pass_tip.innerHTML = "密码可用";
+                pass.className = "itemIpt green";
+                pass_tip.className = "tip green";
+
+                return true;
+            }
+        }
+
+        //验证密码确认的输入
+        function checkPassAgain(str1, str2) {
+            var pass1 = $(str1);
+            var pass2 = $(str2);
+            var val1 = pass1.value;
+            var val2 = pass2.value;
+            var pass_tip = $(str2 + "-tip");
+            if (val1 === val2) {
+                pass_tip.innerHTML = "密码输入一致";
+                pass2.className = "itemIpt green";
+                pass_tip.className = "tip green";
+
+                return true;
+            } else {
+                pass_tip.innerHTML = "两次密码输入不一致";
+                pass2.className = "itemIpt red";
+                pass_tip.className = "tip red";
+
+                return false;
+            }
+        }
+        //验证邮箱
+        function checkEmail(str) {
+            var emi = $(str);
+            var val = emi.value;
+            var emi_tip = $(str + "-tip");
+            if (val.length > 0) {
+                var re = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+                if (re.test(val)) {
+                    emi_tip.innerHTML = "邮箱格式正确";
+                    emi.className = "itemIpt green";
+                    emi_tip.className = "tip green";
+
+                    return true;
+                } else {
+                    emi_tip.innerHTML = "邮箱格式错误";
+                    emi.className = "itemIpt red";
+                    emi_tip.className = "tip red";
+
+                    return false;
+                }
+            }
+            return true;
+
+        }
+        //验证手机
+        function checkPhone(str) {
+            var pho = $(str);
+            var val = pho.value;
+            var pho_tip = $(str + "-tip");
+            if (val.length > 0) {
+                var re = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+                if (re.test(val)) {
+                    pho_tip.innerHTML = "手机格式正确";
+                    pho.className = "itemIpt green";
+                    pho_tip.className = "tip green";
+
+                    return true;
+                } else {
+                    pho_tip.innerHTML = "手机格式错误";
+                    pho.className = "itemIpt red";
+                    pho_tip.className = "tip red";
+
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function getByteLen(val) {
+            var len = 0;
+            for (var i = 0; i < val.length; i++) {
+                var length = val.charCodeAt(i);
+                if (length >= 0 && length <= 128) {
+                    len += 1;
+                } else {
+                    len += 2;
+                }
+            }
+            return len;
+        }
+
+        function $(id_selector) {
+            return document.getElementById(id_selector);
+        }
+    })();
+    </script>
+</body>
+
+</html>
