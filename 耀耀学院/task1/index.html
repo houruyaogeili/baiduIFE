@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务一：表单（一）单个表单项的检验</title>
+    <style type="text/css">
+        .wrap{
+            width: 800px;
+            margin: 0 auto; 
+        }
+        fieldset{
+            border: 1px solid #cacaca;
+        }
+        legend{
+            display: none;
+        }
+        .item label,.item .btn{
+            font: 26px/60px simHei;
+        }
+        .item input[type="text"]{
+            box-sizing: border-box;
+            width: 510px;
+            height: 60px;
+            margin: 0 20px 0 55px;
+            border: 1px solid #cacaca;
+            border-radius: 5px;
+            font: 24px simHei;
+        }
+        .item input:focus{
+            outline: none;
+        }
+        .item .notempty{
+            border: 1px solid #f00 !important;
+        }
+        .item .right{
+            border: 1px solid #55ba38 !important;
+        }
+        .item .btn{
+            display: inline-block;
+            width: 100px;
+            height: 60px;
+            background: #2e79ba;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .tip{
+            margin-top: 16px;
+            margin-left: 112px;
+            font: 24px "Microsoft YaHei";
+            color: #cacaca;
+        }
+        .red{
+           color: #f00 !important;
+        }
+        .green{
+           color: #55ba38 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <form>
+            <fieldset>
+                <legend>表单验证</legend>
+                <div class="item">
+                    <label for="name">名称</label>
+                    <input type="text" name="name" id="name">
+                    <a href="#" class="btn" id="btn">验证</a>
+                </div>
+                <p class="tip" id="tip">必填，长度为4~16个字符</p>
+            </fieldset>
+        </form>
+    </div>
+    <script type="text/javascript">
+        (function(){
+            var btn = document.getElementById("btn");
+            btn.onclick = function(){
+                var text = document.getElementById("name");
+                var tip = document.getElementById("tip");
+                
+                if(!text.value){
+                    tip.innerHTML = "姓名不能为空";
+                    tip.className = "tip red";
+                    text.className = "notempty";
+                    return ;
+                }
+
+                if(getByteLen(text.value) < 4 || getByteLen(text.value) > 16){
+                    tip.innerHTML = "长度为4~16个字符";
+                    tip.className = "tip red";
+                    text.className = "notempty";
+                    return ;
+                }else{
+                    tip.innerHTML = "名称格式正确";
+                    tip.className = "tip green";
+                    text.className = "right";
+                }
+                alert("验证通过!");
+            };
+
+            function getByteLen(val) {
+                var len = 0;
+                for (var i = 0; i < val.length; i++) {
+                   var length = val.charCodeAt(i);
+                   if(length>=0&&length<=128)
+                    {
+                        len += 1;
+                    }
+                    else
+                    {
+                        len += 2;
+                    }
+                }
+                return len;
+            }
+        })();
+    </script>
+</body>
+</html>
