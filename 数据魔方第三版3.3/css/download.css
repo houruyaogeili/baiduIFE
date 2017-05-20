@@ -1,0 +1,305 @@
+.subnav-selects{
+	border: 1px solid #bfbfbf;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	margin-bottom: 50px;
+}
+.subnav-selects .main-item,.subnav-selects .limit-condition{
+	height: 73px;
+	line-height: 73px;
+	text-align: center;
+	background-color: #eaeaea;
+	font-size: 28px;
+	color: #373737;
+	cursor: pointer;
+}
+.subnav-selects .main-item{
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom: 1px solid #bfbfbf;	
+}
+.subnav-selects .limit-condition{
+	border-top: 1px solid #bfbfbf;
+	border-bottom: 1px solid #bfbfbf;	
+}
+.download-selects{
+	width: 100%;
+	line-height: 73px;
+	font-size: 28px;
+	text-align: center;
+	color: #373737;
+	background-color: #eaeaea;
+	cursor: pointer;
+}
+.download-selects li{
+	width: 100%;
+	line-height: 50px;
+	font-size: 23px;
+	font-family: "PingFang Light";
+	color: #454545;
+	background-color: #fff;
+	cursor: pointer;
+	text-align: center;
+	margin: 0;
+}
+/*.limitSelect{
+	border-bottom: 1px solid #bfbfbf;
+}*/
+.limitSelect p{
+	position: relative;
+}
+.limitText ~ ul{
+	display: none;
+}
+.subulList .selecedLi{
+	background-color: #97dada;
+	color: #fff;
+	border-bottom: 1px solid #6cb6b6;
+}
+.selectMore~ul > li{
+	font-size: 20px;
+	
+}
+.selectMore:after{
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	content: '';
+	display: block;
+	width: 12px;
+	height: 12px;
+	border: 3px solid #454545;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+}
+.download-selects .active{
+	background-color: #97dada;
+}
+.fl{
+	float: left;
+}
+/*.download-selects li:hover{
+	background-color: #97dada;
+}*/
+/*.subnav-selects select[disabled]{
+    background: #e2e4e5 url("../images/noselect-bg.png") no-repeat scroll 90% center;
+    color: #babec2;
+    cursor: not-allowed;
+}
+.subnav-selects option[disabled]{
+	background-color: #e2e4e5;
+	color: #babec2;
+    cursor: not-allowed;
+}*/
+.subnav-btn{
+	margin-top: 13px;
+	text-align: center;
+}
+label.create-btn{
+	display: inline-block;
+	width: 185px;
+	line-height: 57px;
+	background-color: #eb6e94;
+	border: none;
+	font-size: 32px;
+	color: #fff;
+	font-family: "方正兰亭中黑_GBK";
+	font-weight: bold;
+	border-radius: 8px;
+	cursor: pointer;
+	outline: none;
+}
+.content{
+	width: 100%;
+	box-sizing: border-box;
+	padding-top: 30px;
+	padding-left: 21.5px;
+	position: relative;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.content_left{
+	width: 356px;
+} 
+.content_right{
+	position: relative;
+	width: 1440px;
+	height: 700px;
+	/*margin: 0 50px 0 35px;*/
+}
+.downloadList{
+	font-size: 0;
+}
+.downloadList li{
+	margin-left: 90px;
+	width: 270px;
+	height: 260px;
+	float: left;
+	text-align: center;
+	font-size: 28px;
+}
+.downloadList li p{
+	cursor: pointer;
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+}
+.downloadList li p span{
+	/*display: inline-block;*/
+	float: right;
+	width: 34px;
+	height: 50px;
+	background: url(../images/download_gou.png) no-repeat right;
+	background-size: 100%;
+	opacity: 0;
+}
+.downloadList li p span.show{
+	opacity: 1;
+}
+
+.down-type{
+	font-size: 0;
+}
+.down-type li{
+	display: inline-block;
+	width: 270px;
+	height: 260px;
+	text-align: center;
+}
+.down-type li{
+	margin-left: 90px;
+}
+.down-type li:nth-child(4n){
+	margin-right: 0;
+}
+.down-type li img{
+	width: 100%;
+	height: 200px;
+}
+.down-type li p{
+	/*position: relative;*/
+	font-size: 24px;
+	height: 60px;
+	width: 270px;
+	line-height: 60px;
+	cursor: pointer;
+	vertical-align: middle;
+	font-family: "microsoft yahei";
+}
+.imgText span{
+	display: inline-block;
+	float: right;
+	width: 44px;
+	height: 50px;
+	line-height: 50px;
+	background: url(../images/download_gou.png) no-repeat 8px center;
+	opacity: 0;
+	
+}
+/*.down-type li p.select-pic i{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	background: url(../images/download_gou.png) no-repeat center center;
+}*/
+
+#main{padding: 0;}
+.download{
+	background: #fff;
+	margin: 30px 120px;
+	padding-top: 20px;
+	/*height: 1120px;*/
+	position: relative;
+}
+/*.download ul{
+	width: 100%;
+}*/
+.download_one{
+	width: 100%;
+}
+.download_two,.download_three{
+	float: left;
+	width: 47%;
+}
+.download ul,.download li{
+	list-style: none;
+	font-size: 20px;
+}
+.download_title li{
+	width: 30%;
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 24px;
+	cursor: pointer;
+}
+.download_one ul li{
+	width: 24%;
+	font-size: 20px;
+}
+
+.download_img1 li img,.download_img2 li img,.download_img3 li img{
+	width: 100%;
+	margin: 30px 0;
+}
+#download_save{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+}
+/*.download_save{
+	height: 50px;
+	line-height: 50px;
+	width: 120px;
+	text-align: center;
+	font-size: 20px;
+	border: 1px solid #02a3d8;
+	border-radius: 3px;
+	text-shadow: 0px 0px 2px #fff;
+	box-shadow: 0 0 5px #2fa9d7;
+	text-decoration: none;
+	vertical-align: middle;
+	color: #fff;
+	cursor: pointer;
+	background: -webkit-linear-gradient(#67bfe2, #096eab); 
+	background: -o-linear-gradient(#67bfe2, #096eab); 
+	background: -moz-linear-gradient(#67bfe2, #096eab); 
+	background: linear-gradient(#67bfe2, #096eab);
+}*/
+.download_save{
+    width: 185px;
+	height: 57px;
+	line-height: 57px;
+	background-color: #eb6e94;
+	border: none;
+    text-align: center;
+	font-size: 28px;
+	color: #fff;
+	font-family: "方正兰亭中黑_GBK";
+	font-weight: bold;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.download li input {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: text-bottom;
+}
+.download li input,.download li label{
+	cursor: pointer;
+}
+.download_input{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	opacity: 0;
+	text-indent: -9999px;
+	cursor: pointer;
+}

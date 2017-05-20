@@ -1,0 +1,130 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: "microsoft yahei","微软雅黑",verdana,Arial,sans-serif;
+}
+ul,li{
+	list-style: none;
+}
+.public-nav{
+	width: auto;
+	height: 140px;
+	background-color: #3a485b;
+}
+.wrapper{
+	width: 1860px;
+	margin: 0 auto;
+}
+.public-nav .logo{
+	float: left;
+	width: 336px;
+	height: 140px;
+	background: url(../images/logo.png) no-repeat 50% 50%;
+	text-indent: -9999px;
+}
+.public-nav .navbar{
+	float: left;
+	height: 140px;
+}
+.public-nav li{
+	float: left;
+	position: relative;
+}
+.public-nav .caret{
+	border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px dashed;
+    display: inline-block;
+    height: 0;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 0;
+}
+.public-nav li ul{
+	display: none;
+	z-index: 9999;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 100%;
+	margin-left: -134px;
+	background-color: #fff;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+	border-radius: 4px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	
+}
+.public-nav li ul li{
+	float: none;
+}
+.public-nav li ul a{
+	width: auto;
+	height: auto;
+	font-size: 24px;
+	color: #333;
+	line-height: 2;
+}
+.public-nav li ul a:hover{
+	background-color: #eee;
+}
+.public-nav li ul a:active{
+	background-color: #eee;
+}
+.public-nav li{
+	float: left;
+}
+.public-nav a{
+	display: block;
+	width: 268px;
+	height: 140px;
+	font-size: 30px;
+	color: #fdfdfd;
+	text-decoration: none;
+	text-align: center;
+	line-height: 140px;
+}
+
+.public-nav ul a:hover{
+	background-color: #455163;
+}
+.public-nav ul a.active{
+	background-color:rgba(0,0,0,0.3);
+}
+.banner{
+	width: 100%;
+	height: 70px;
+	background-color: #22b6ae;
+}
+select {
+  border: none;
+  appearance: none;
+ -moz-appearance: none;
+ -webkit-appearance: none; 
+  background: url("../images/select-bg.png") no-repeat scroll 90% center transparent;
+  outline: none;
+}
+select::-ms-expand { display: none; }
+
+.nochoose{
+	cursor: not-allowed;
+}
+/*生成按钮样式*/
+.subnav-btn{
+	margin-top: 13px;
+	text-align: center;
+}
+.banner-btn {
+    float: left;
+    display: block;
+    width: 358px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #2d8e89;
+    color: #fff;
+}

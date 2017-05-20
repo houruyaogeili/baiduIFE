@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数据魔方-公共导航条</title>
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+</head>
+<body>
+	<div class="public-nav">
+		<a href="" class="logo">logo</a>
+		<ul class="navbar">
+			<li ><a href="index.html" class="active">首页</a></li>
+			<li>
+				<a href="javascript:void(0);">用户画像<span class="caret"></span></a>
+				<ul>
+					<li><a href="">基本信息</a></li>
+					<li><a href="">通讯消费</a></li>
+					<li><a href="">终端信息</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">用户行为分析<span class="caret"></span></a>
+				<ul>
+					<li><a href="">视频方向</a></li>
+					<li><a href="">汽车方向</a></li>
+				</ul> 
+			</li>
+			<li><a href="">APP分析</a></li>
+			<li><a href="">下载</a></li>
+		</ul>
+	</div>
+	<div class="banner">		
+	</div>
+	<div class="subnav">
+		<span>主字段</span>
+	</div>
+	<script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(function(){
+			$(".navbar li").click(function(e){
+				var ulcss = $(this).find("ul");
+				$(this).siblings("li").find("ul").hide();
+				ulcss.toggle();
+				$(document).one("click", function(){
+				       $(".navbar li ul").hide();
+				});
+				e.stopPropagation();
+			});
+		});
+	</script>
+</body>
+</html>

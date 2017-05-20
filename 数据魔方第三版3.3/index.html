@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <title>数据魔方-首页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+  </head>
+  <body>
+    <div class="public-nav">
+            <div class="wrapper">
+                <a href="login.html" class="logo">logo</a>
+                <ul class="navbar">
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li>
+                        <a href="javascript:void(0);">用户画像<span class="caret"></span></a>
+                        <ul>
+                            <li><a href="baseinfo.html">基本信息</a></li>
+                            <li><a href="communication.html">通讯消费</a></li>
+                            <li><a href="terminal.html">终端信息</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">用户行为分析<span class="caret"></span></a>
+                        <ul>
+                            <li><a href="userbehavior.html">视频方向</a></li>
+                            <li><a href="javascript:return false;" class="nochoose">汽车方向</a></li>
+                            <li><a href="javascript:return false;" class="nochoose">游戏方向</a></li>
+                            <li><a href="javascript:return false;" class="nochoose">金融方向</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="app.html">APP分析</a></li>
+                    <li><a href="download.html">下载</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="banner">   
+       联通用户画像
+       <a href="javascript:void(0);" class="submit-btn">提交数据</a>
+       <div class="bg"></div>
+       <div class="content">
+            <div class="content-head">
+              <button type="button" class="close" ><span >×</span></button>
+              <h4>提交数据</h4>
+            </div>
+            <div class="content-body">
+              <label for="fjfile">添加数据文件</label>
+              <input id="fjfile" type="file">
+            </div>
+            <div class="content-foot">
+              <button type="button" class="confirm-btn">确定</button>
+            </div>
+        </div>
+    </div>
+    <div class="dataload">数据加载中……</div>
+    <div class="progressBar"><div id="bar"></div></div>
+    <div id="panel" class="panel">      
+    <!--  <img
+       src="images/index.png"
+       border="0" 
+       alt="用户画像" width="100%" id="indeximg"/> --> 
+     <!-- <img src='images/index2.png' border='0' usemap='#indexmap' alt='用户画像' width='100%' id="indeximgr" /> -->
+     <div class="indeximgr">
+       <div class="indeximgr-l">
+         <a href="javascript:void(0)" class="item1"><img src="images/1.png"></a>
+         <a href="baseinfo.html" class="item2"><img src="images/2.png"></a>
+         <a href="baseinfo.html" class="item3"><img src="images/3.png"></a>
+         <a href="baseinfo.html" class="item4"><img src="images/4.png"></a>
+       </div>
+       <div class="indeximgr-r">
+         <a href="baseinfo.html" class="item5"><img src="images/5.png"></a>
+         <a href="userbehavior.html" class="item6"><img src="images/6.png"></a>
+         <a href="userbehavior.html" class="item7"><img src="images/7.png"></a>
+         <a href="app.html" class="item8"><img src="images/8.png"></a>
+       </div>
+     </div>
+   </div> 
+    <script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript">
+      $(function(){
+          $('.submit-btn').click(function(){
+              $('.bg').css({'display':'block'});
+              $('.content').css({'display':'block'});
+          });
+          $('.close').click(function(){
+              $('.bg').css({'display':'none'});
+              $('.content').css({'display':'none'});
+          });
+      });
+      $(function(){
+        $(".confirm-btn").click(function(){
+          upload();
+        });
+      });
+      function upload(){
+        var r=confirm("您确定要提交该数据吗？");
+        if(r==true){
+           $('.bg').css({'display':'none'});
+           $('.content').css({'display':'none'});
+           $("#panel").hide();        
+           $(".dataload").show();
+           $(".progressBar").show();
+            //初始化js进度条
+            $("#bar").css("width","0px");
+            //进度条的速度，越小越快
+            var speed = 20;
+
+            bar = setInterval(function(){
+             nowWidth = parseInt($("#bar").width());
+             //宽度要不能大于进度条的总宽度
+             if(nowWidth<600){
+              barWidth = (nowWidth + 10)+"px";
+              $("#bar").css("width",barWidth);
+             }else{
+              //进度条读满后，停止
+              clearInterval(bar);
+              $(".dataload").hide();
+              $(".progressBar").hide();
+              /*$("#indeximg").hide();*/
+              $("#panel").show();
+              $(".indeximgr").show();
+           } 
+            },speed);   
+          
+        }
+       
+      };
+    </script>
+    
+  </body>
+</html>

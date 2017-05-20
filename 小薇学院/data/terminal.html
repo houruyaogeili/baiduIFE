@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>用户画像-终端信息</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/terminal.css">
+	</head>
+
+	<body>
+		<div class="public-nav">
+			<div class="wrapper">
+				<a href="" class="logo">logo</a>
+				<ul class="navbar">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);"  class="active">用户画像<span class="caret"></span></a>
+						<ul>
+							<li>
+								<a href="baseinfo.html">基本信息</a>
+							</li>
+							<li>
+								<a href="communication.html">通讯消费</a>
+							</li>
+							<li>
+								<a href="terminal.html">终端信息</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0);">用户行为分析<span class="caret"></span></a>
+						<ul>
+							<li>
+								<a href="userbehavior.html">视频方向</a>
+							</li>
+							<li>
+								<a href=" " class="nochoose">汽车方向</a>
+							</li>
+							<li>
+								<a href="javascript:return false;" class="nochoose">游戏方向</a>
+							</li>
+							<li>
+								<a href="javascript:return false;" class="nochoose">金融方向</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="app.html">APP分析</a>
+					</li>
+					<li>
+						<a href="download.html">下载</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="wrapper">
+	            <span class="banner-btn">终端信息</span>
+	        </div>	
+		</div>
+		
+		<div class="content clearfix">
+			<div class="content_left fl">
+				<form class="subnav" name="form1">
+					<div class="subnav-selects">
+						<div class="main-item">终端分布</div>
+						<div class="main-select">
+							<select id="main-item">
+				              <option value="mobile_brand">终端品牌</option>
+				              <option value="mobile_change">换机频率</option>
+							</select>
+							<select>
+				              <option selected="selected">账期</option>
+				              <option>16-06</option>
+				              <option disabled>16-07</option>
+				              <option disabled>16-08</option>
+				            </select>
+						</div>
+						<div class="limit-condition">限定条件</div>
+						<div class="limit-select">
+							<select id="terminal_sex">
+								<option selected="selected" disabled>性别</option>
+								<option>全部</option>
+								<option>男</option>
+								<option>女</option>
+							</select>
+							<select id="terminal_age">
+								<option selected="selected" disabled>年龄</option>
+								<option>全部</option>
+								<option id="children">[10,20)</option>
+								<option>[20,30)</option>
+								<option>[30,40)</option>
+								<option>[40,50)</option>
+								<option>50及以上</option>
+							</select>
+							<select id="terminal_area">
+								<option selected="selected" disabled>地域</option>
+								<option>全部</option>
+								<option>安徽</option>
+								<option>北京</option>
+								<option>重庆</option>
+								<option>福建</option>
+								<option>甘肃</option>
+								<option>广东</option>
+								<option>广西</option>
+								<option>贵州</option>
+								<option>海南</option>
+								<option>河北</option>
+								<option>河南</option>
+								<option>黑龙江</option>
+								<option>湖北</option>
+								<option>吉林</option>
+								<option>江苏</option>
+								<option>江西</option>
+								<option>辽宁</option>
+								<option>内蒙古</option>
+								<option>宁夏</option>
+								<option>青海</option>
+								<option>山东</option>
+								<option>山西</option>
+								<option>陕西</option>
+								<option>上海</option>
+								<option>四川</option>
+								<option>天津</option>
+								<option>西藏</option>
+								<option>新疆</option>
+								<option>云南</option>
+								<option>浙江</option>
+							</select>
+							<select id="terminal_child">
+								<option selected="selected" disabled>子嗣</option>
+								<option>全部</option>
+								<option id="childtext"><label for="childtext">无子女</label></option>
+								<option>有子女</option>
+							</select>
+							<!--<select>
+								<option value="">账 期</option>
+								<option value="">16-06</option>
+								<option value="" disabled>16-07</option>
+								<option value="" disabled>16-08</option>
+							</select>-->
+						</div>
+					</div>
+				</form>
+				<div class="subnav-btn">
+					<input type="button" value="生成" class="create-btn" id="create-btn"  onclick="refreshBrand()">
+				</div>
+			</div>
+	
+			<!--content_left结束-->
+			<div class="content_right fl">
+				<div class="pic-show mobile_brand">
+					<!--<span href="#">终端品牌、机型分布</span>-->
+					<p id="mobile_brand"  class="mobile_img"></p>
+				</div>
+				<div class="pic-show mobile_change">
+					<!--<span href="#">换机频率</span>-->
+					<p id="mobile_change" class="mobile_img"></p>
+					<p id="mobile_change2" class="mobile_img"></p>
+				</div>
+			</div>
+			<!--content_right结束-->
+		</div>
+		<!--content结束-->
+		<script src="js/jquery-2.1.4.min.js" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lib/terminal.js" charset="utf-8"></script>
+		<script src="js/lib/echarts.js"></script>
+		<script src="js/lib/terminal.js"></script>
+		<script src="js/lib/init.js"></script>
+		<script src="js/lib/refresh.js"></script>
+		<script src="js/lib/china.js"></script>
+		<script src="js/terminal_mobile.js" charset="utf-8"></script>
+		<script type="text/javascript">
+		
+		
+		
+//		换机频率
+			var dom1 = document.getElementById("mobile_change");
+			var dom2 = document.getElementById("mobile_change2");
+			var myChart_one = echarts.init(dom1);
+			var myChart_two = echarts.init(dom2);
+
+			function init() {
+				moblieChangeChart();
+				moblieChangeChart2();
+			}
+//		换机频率标准图
+			function moblieChangeChart() {
+				var data = [{
+					value: 1556,
+					name: '从未换机'
+				}, {
+					value: 5233,
+					name: '1-6月'
+				}, {
+					value: 31800,
+					name: '6-12月'
+				}, {
+					value: 86314,
+					name: '12-18月'
+				}, {
+					value: 12053,
+					name: '18-24月'
+				}, {
+					value: 11297,
+					name: '24月以上'
+				}];
+				var color = ['#ffc77e', '#bc93f5', '#67bbf6', '#f5e693', '#f593ac', '#5edad0'];
+				initCharts("gender", "mobile_change", data, color);
+			}
+//			换机频率对比图
+			function moblieChangeChart2() {
+				var data = [{
+					value: 1556,
+					name: '从未换机'
+				}, {
+					value: 5233,
+					name: '1-6月'
+				}, {
+					value: 31800,
+					name: '6-12月'
+				}, {
+					value: 86314,
+					name: '12-18月'
+				}, {
+					value: 12053,
+					name: '18-24月'
+				}, {
+					value: 11297,
+					name: '24月以上'
+				}];
+				var color = ['#ffc77e', '#bc93f5', '#67bbf6', '#f5e693', '#f593ac', '#5edad0'];
+				initCharts("gender", "mobile_change2", data, color);
+			}
+			
+		//刷新换机频率图表
+			function refreshBrand() {
+				var data = [{
+					value: randomData(),
+					name: '从未换机'
+				}, {
+					value: randomData(),
+					name: '1-6月'
+				}, {
+					value: randomData(),
+					name: '6-12月'
+				}, {
+					value: randomData(),
+					name: '12-18月'
+				}, {
+					value: randomData(),
+					name: '18-24月'
+				}, {
+					value: randomData(),
+					name: '24月以上'
+				}];
+				var color = ['#ffc77e', '#bc93f5', '#67bbf6', '#f5e693', '#f593ac', '#5edad0'];
+				refreshCharts("mobile_change","gender", data, color);
+			}
+
+			function randomData() {
+				return Math.round(Math.random() * 1000000);
+			}
+			
+			init();
+		</script>
+
+	</body>
+
+</html>

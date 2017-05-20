@@ -1,0 +1,134 @@
+/*限定条件样式*/
+
+.subnav-selects{
+	border: 1px solid #bfbfbf;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	margin-bottom: 50px;
+}
+.subnav-selects .main-item,.subnav-selects .limit-condition{
+	height: 73px;
+	line-height: 73px;
+	text-align: center;
+	background-color: #eaeaea;
+	font-size: 28px;
+	color: #373737;
+	cursor: pointer;	
+}
+.subnav-selects .main-item{
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom: 1px solid #bfbfbf;	
+}
+.subnav-selects .limit-condition{
+	border-top: 1px solid #bfbfbf;
+	border-bottom: 1px solid #bfbfbf;	
+}
+.subnav-selects select{
+	width: 100%;
+	height: 50px;
+	font-size: 23px;
+	font-family: "PingFang Light";
+	color: #454545;
+	line-height: 50px;
+	cursor: pointer;
+	text-align: center;
+}
+.subnav-selects select:hover{
+	background-color: #97dada;
+}
+.subnav-selects select[disabled]{
+    background: #e2e4e5 url("../images/noselect-bg.png") no-repeat scroll 90% center;
+    color: #babec2;
+    cursor: not-allowed;
+}
+.subnav-selects option[disabled]{
+	background-color: #e2e4e5;
+	color: #babec2;
+    cursor: not-allowed;
+}
+.subnav-btn{
+	margin-top: 13px;
+	text-align: center;
+}
+.content{
+	width: 1900px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding-top: 15px;
+	padding-left: 21.5px;
+	position: relative;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.content_left{
+	width: 358px;
+} 
+
+.subnav-btn{
+	margin-top: 13px;
+	text-align: center;
+}
+.create-btn{
+	width: 185px;
+	height: 57px;
+	background-color: #eb6e94;
+	border: none;
+	font-size: 32px;
+	color: #fff;
+	font-family: "方正兰亭中黑_GBK";
+	font-weight: bold;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.fl{
+	float: left;
+}
+.content_right{
+	position: relative;
+	width: 1430px;
+	height: 610px;
+	margin-top: 115px;
+	margin-left: 50px;
+	/*margin-bottom: 20px;*/
+	/*padding-left: 50px;*/
+	box-sizing: border-box;
+	overflow: hidden;
+	box-shadow: 21px 21px 21px rgba(11,2,5,0.2);
+	
+}
+.pic-show{
+	width: 1430px;
+	position: relative;
+	/*width: 100%;*/
+	/*margin-top: 0;*/
+	text-align: center;
+	height: 610px;
+}
+#mobile_change,#mobile_change2{
+	width: 50%;
+	float: left;
+}
+.mobile_img{
+	width: 100%;
+	height: 610px;
+	margin: 0 auto;
+}
+/*.mobile_img{
+	position: absolute;
+	top: 20px;
+	
+}
+#mobile_brand{
+	width: 100%;
+	height: 100%;
+	left: 0;
+}
+#mobile_change{
+	width: 100%;
+	height: 100%;
+	right: 0;
+}*/

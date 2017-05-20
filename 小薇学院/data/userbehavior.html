@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <title>数据魔方-通讯消费</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/userbehavior.css">
+  </head>
+  <body>
+    <div class="public-nav">
+            <div class="wrapper">
+                <a href="login.html" class="logo">logo</a>
+                <ul class="navbar">
+                    <li ><a href="index.html">首页</a></li>
+                    <li>
+                        <a href="javascript:void(0);">用户画像<span class="caret"></span></a>
+                        <ul>
+                            <li><a href="baseinfo.html">基本信息</a></li>
+                            <li><a href="communication.html">通讯消费</a></li>
+                            <li><a href="terminal.html">终端信息</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="active">用户行为分析<span class="caret"></span></a>
+                        <ul>
+                            <li><a href="userbehavior.html">视频方向</a></li>
+                            <li><a href="javascript:return false;" class="nochoose">汽车方向</a></li>
+                            <li><a href="javascript:return false;" class="nochoose">游戏方向</a></li>
+                            <li><a href="javascript:return false;" class="nochoose">金融方向</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="app.html">APP分析</a></li>
+                    <li><a href="download.html">下载</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="banner">  
+        <div class="wrapper">
+            <a href="javascript:void(0);" class="banner-btn con-btn active">频道内容偏好</a>
+            <a href="javascript:void(0);" class="banner-btn view-btn">剧目人群电商属性</a>
+            <a href="javascript:void(0);" class="banner-btn time-btn">活跃时段</a>
+            <a href="javascript:void(0);" class="banner-btn like-btn">兴趣分布</a>
+            <select class="date-select">
+                <option>16-06</option>
+                <option disabled>16-07</option>
+                <option disabled>16-08</option>
+            </select> 
+        </div>
+    </div>
+    <div class="content">
+        <div class="wrapper">
+            <div class="pic-show">
+                <div id="sankey" style="height:680px"></div>
+                <div class="sankeyinfo" ></div>
+                <div id="chord" style="height:760px;"></div>
+                <div id="activeImg" style="height:760px;"></div>
+                <div id="show-img">
+                    <img src="images/video.png" width="1100">
+                </div> 
+            </div>  
+        </div>
+    </div>
+<script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/public.js"></script>
+<script src="js/lib/echarts.js"></script>
+<script src="js/lib/echarts2.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".banner-btn").click(function(){
+        $(".banner-btn").removeClass("active");
+        $(this).addClass("active");
+    });
+});
+$(function(){   
+    $(".con-btn").click(function(e){
+        sankey();
+        $(".pic-show").stop().animate({top: "0"},1000);
+    });
+    $(".view-btn").click(function(e){
+        chord();
+        $(".pic-show").stop().animate({top: "-760px"},1000);
+    });
+    $(".time-btn").click(function(e){
+        activeImg();
+        $(".pic-show").stop().animate({top: "-1520px"},1000);
+    });
+    $(".like-btn").click(function(e){
+        $(".pic-show").stop().animate({top: "-2280px"},1000);
+    });
+});
+</script>
+<script type="text/javascript">
+    sankey();
+    chord();
+    activeImg();
+    function sankey(){
+        var myChart = echarts.init(document.getElementById('sankey'));
+        myChart.showLoading();                
+        var data = {
+            "nodes":[
+                {"name":"好先生"},
+                {"name":"极限挑战第二季"},
+                {"name":"火星情报局第一季"},
+                {"name":"三八线"},
+                {"name":"火影忍者"},
+                {"name":"终极一班4"},
+                {"name":"Oh 我的维纳斯"},
+                {"name":"秦时明月之君临天下"},
+                {"name":"优酷全娱乐 2016年6月"},
+                {"name":"画江湖之灵主"},
+                {"name":"德云社20周年之优酷会员专场"},
+                {"name":"北京遇上西雅图之不二情书"},
+                {"name":"独立日"},
+                {"name":"荒野猎人"},
+                {"name":"疯狂动物城"},
+                {"name":"荒野求生 第五季"},
+                {"name":"怪兽来了"},
+                {"name":"逗比实验室"},
+                {"name":"2016法国欧洲杯进球直击"},
+                {"name":"电视剧"},
+                {"name":"综艺"},
+                {"name":"电影"},
+                {"name":"动漫"},
+                {"name":"纪录片"},
+                {"name":"资讯"},
+                {"name":"用户视频偏好"}
+            ],
+            "links":[
+                {"source": "电视剧", "target": "好先生",  "value": 154085},
+                {"source": "综艺", "target": "极限挑战第二季",  "value": 120816},
+                {"source": "综艺", "target": "火星情报局第一季",  "value": 120816},
+                {"source": "电视剧", "target": "三八线",  "value": 52529},
+                {"source": "动漫", "target": "火影忍者",  "value": 45525},
+                {"source": "电视剧", "target": "终极一班4",  "value": 42023},
+                {"source": "电视剧", "target": "Oh 我的维纳斯",  "value": 38521},
+                {"source": "动漫", "target": "秦时明月之君临天下",  "value": 36770},
+                {"source": "综艺", "target": "优酷全娱乐 2016年6月",  "value": 35019},
+                {"source": "动漫", "target": "画江湖之灵主",  "value": 33268},
+                {"source": "综艺", "target": "德云社20周年之优酷会员专场",  "value": 31517},
+                {"source": "电影", "target": "北京遇上西雅图之不二情书",  "value": 29766},
+                {"source": "电影", "target": "独立日",  "value": 28015},
+                {"source": "电影", "target": "荒野猎人",  "value": 26264},
+                {"source": "电影", "target": "疯狂动物城",  "value": 24513},
+                {"source": "纪录片", "target": "荒野求生 第五季",  "value": 24397},
+                {"source": "纪录片", "target": "怪兽来了",  "value": 21011},
+                {"source": "资讯", "target": "逗比实验室",  "value": 19260},
+                {"source": "资讯", "target": "2016法国欧洲杯进球直击",  "value": 17509},
+                {"source": "用户视频偏好", "target": "电视剧",  "value": 287159},
+                {"source": "用户视频偏好", "target": "综艺",  "value": 308168},
+                {"source": "用户视频偏好", "target": "电影",  "value": 108560},
+                {"source": "用户视频偏好", "target": "动漫",  "value": 115564},
+                {"source": "用户视频偏好", "target": "纪录片",  "value": 45409},
+                {"source": "用户视频偏好", "target": "资讯",  "value": 36770}
+            ]
+        };
+        myChart.hideLoading();
+        myChart.setOption(option = {
+            title: {
+                text: ''
+            },
+            tooltip: {
+                trigger: 'item',
+                triggerOn: 'mousemove',
+                textStyle:{
+                    fontSize: '24',
+                }
+            },
+            series: [{
+                type: 'sankey',
+                layout: 'none',
+                data: data.nodes,
+                links: data.links,
+                label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '16',
+                                fontWeight: 'normal'
+                            }
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                },
+                itemStyle: {
+                    normal: {
+                        borderWidth: 1,
+                        borderColor: '#aaa'
+                        
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        curveness: 0.5,
+                        color: '#314656',
+                        curveness: 0.5//弯曲度 
+                    }
+                }
+            }]
+    });
+}
+
+    function chord(){
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'js/echarts-m-1.0.0/echarts-m-1.0.0/dist'
+            }
+        });
+        // 使用
+        require([
+            'echarts',
+            'echarts/chart/chord' // 使用柱状图就加载bar模块，按需加载
+        ],
+        function (ec) {
+            // 基于准备好的dom，初始化echarts图表
+            var myChart = ec.init(document.getElementById('chord'));         
+            option = {
+                title : {
+                text: '',
+                x:'left',
+                y:'top',
+                /*textStyle:{
+                    fontSize: 18,
+                    fontWeight: 'normal',
+                    color: '#a53838'
+                }  */
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: function (params) {
+                    if (params.indicator2) {    // is edge
+                        return params.indicator2 + ' ' + params.name + ' ' + params.indicator;
+                    } else {    // is node
+                        return params.name
+                    }
+                },
+                textStyle:{
+                    fontSize: '24',
+                }
+            },
+            toolbox: {
+                show : false,
+                feature : {
+                    restore : {show: true},
+                    magicType: {show: true, type: ['force', 'chord']},
+                    saveAsImage : {show: true}
+                }
+            },
+            legend: {
+                x: 'left',
+                data:['好先生', '三八线', '极限挑战','火星情报局','终极一班'],
+                textStyle:{
+                    fontSize: 18,
+                    fontWeight: 'normal',
+                    color: '#a53838'
+                }
+            },
+            series : [{
+                type:'chord',
+                sort : 'ascending',
+                sortSub : 'descending',
+                showScale : false,
+                itemStyle : {
+                    normal : {
+                        label : {
+                            rotate : true,
+                            textStyle: {
+                               fontSize: 17
+                            }
+                        }
+                    }
+                },
+                // 使用 nodes links 表达和弦图
+                nodes: [{name:'服饰'},
+                    {name:'饮食'},
+                    {name:'数码'},
+                    {name:'礼物'},
+                    {name:'书籍'},
+                    {name:'生活日化'},
+                    {name:'奢侈品'},
+                    {name:'汽车用品'},
+                    {name:'化妆品'},
+                    {name:'虚拟商品'},
+                    {name:'生活家电'},
+                    {name:'好先生'},
+                    {name:'三八线'},
+                    {name:'极限挑战'},
+                    {name:'火星情报局'},
+                    {name:'终极一班'}],
+                links: [{source: '好先生', target: '服饰', weight: 0.9, name: '关注'},
+                        {source: '好先生', target: '数码', weight: 0.9, name: '关注'},
+                        {source: '好先生', target: '礼物', weight: 0.9, name: '关注'},
+                        {source: '三八线', target: '饮食', weight: 0.9, name: '关注'},
+                        {source: '三八线', target: '生活家电', weight: 0.9, name: '关注'},
+                        {source: '三八线', target: '生活日化', weight: 0.9, name: '关注'},
+                        {source: '极限挑战', target: '数码', weight: 0.9, name: '关注'},
+                        {source: '极限挑战', target: '汽车用品', weight: 0.9, name: '关注'},
+                        {source: '极限挑战', target: '奢侈品', weight: 0.9, name: '关注'},
+                        {source: '火星情报局', target: '化妆品', weight: 0.9, name: '关注'},
+                        {source: '火星情报局', target: '虚拟商品', weight: 0.9, name: '关注'},
+                        {source: '火星情报局', target: '服饰', weight: 0.9, name: '关注'},
+                        {source: '终极一报', target: '服饰', weight: 0.9, name: '关注'},
+                        {source: '终极一班', target: '饮食', weight: 0.9, name: '关注'},
+                        {source: '终极一班', target: '书籍', weight: 0.9, name: '关注'},
+                        // Ribbon Type 的和弦图每一对节点之间必须是双向边
+                        {target: '好先生', source: '服饰', weight: 1},
+                        {target: '好先生', source: '数码', weight: 1},
+                        {target: '好先生', source: '礼物', weight: 1},
+                        {target: '三八线', source: '饮食', weight: 1},
+                        {target: '三八线', source: '生活家电', weight: 1},
+                        {target: '三八线', source: '生活日化', weight: 1},
+                        {target: '极限挑战', source: '数码', weight: 1},
+                        {target: '极限挑战', source: '汽车用品', weight: 1},
+                        {target: '极限挑战', source: '奢侈品', weight: 1},
+                        {target: '火星情报局', source: '化妆品', weight: 1},
+                        {target: '火星情报局', source: '虚拟商品', weight: 1},
+                        {target: '火星情报局', source: '服饰', weight: 1},
+                        {target: '终极一班', source: '服饰', weight: 1},
+                        {target: '终极一班', source: '饮食', weight: 1},
+                        {target: '终极一班', source: '书籍', weight: 1}
+                    ]
+                }]
+    };
+
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    }
+);
+}
+    function activeImg(){
+        var myChart = echarts.init(document.getElementById('activeImg'));
+        var hours = ['0点','1点', '2点', '3点', '4点', '5点', '6点',
+                    '7点', '8点', '9点', '10点', '11点', '12点', '13点',
+                    '14点', '15点', '16点','17点','18点',
+                    '19点', '20点', '21点', '22点', '23点'
+                    ];
+                    var days = ['星期一', '星期二', '星期三',
+                    '星期四', '星期五', '星期六', '星期日'];
+
+        var data = [ 
+                    [0, 0,2800],
+                    [0, 1,2482],
+                    [0, 2,1627],
+                    [0, 3,1055],
+                    [0, 4,430],
+                    [0, 5,185],
+                    [0, 6,283],
+                    [0, 7,1147],
+                    [0, 8,1643],
+                    [0, 9,2251],
+                    [0,10,2363],
+                    [0,11,3583],
+                    [0,12,5040],
+                    [0,13,4307],
+                    [0,14,4141],
+                    [0,15,3592],
+                    [0,16,3713],
+                    [0,17,4344],
+                    [0,18,5079],
+                    [0,19,5051],
+                    [0,20,5215],
+                    [0,21,5021],
+                    [0,22,4647],
+                    [0,23,4069],
+                    [1, 0,2832],
+                    [1, 1,2005],
+                    [1, 2,1591],
+                    [1, 3,1186],
+                    [1, 4,491],
+                    [1, 5,286],
+                    [1, 6,288],
+                    [1, 7,1225],
+                    [1, 8,1728],
+                    [1, 9,2057],
+                    [1,10,2239],
+                    [1,11,3674],
+                    [1,12,5055],
+                    [1,13,4099],
+                    [1,14,4027],
+                    [1,15,3821],
+                    [1,16,3624],
+                    [1,17,4672],
+                    [1,18,4623],
+                    [1,19,5014],
+                    [1,20,5329],
+                    [1,21,5059],
+                    [1,22,4783],
+                    [1,23,4102],
+                    [2, 0,2941],
+                    [2, 1,2282],
+                    [2, 2,1659],
+                    [2, 3,1095],
+                    [2, 4,304],
+                    [2, 5,243],
+                    [2, 6,377],
+                    [2, 7,1291],
+                    [2, 8,1718],
+                    [2, 9,2202],
+                    [2,10,2489],
+                    [2,11,3802],
+                    [2,12,4992],
+                    [2,13,4157],
+                    [2,14,4051],
+                    [2,15,3557],
+                    [2,16,3775],
+                    [2,17,4348],
+                    [2,18,5082],
+                    [2,19,5057],
+                    [2,20,5492],
+                    [2,21,4935],
+                    [2,22,4548],
+                    [2,23,4105],
+                    [3, 0,2732],
+                    [3, 1,2368],
+                    [3, 2,1479],
+                    [3, 3,1054],
+                    [3, 4,405],
+                    [3, 5,197],
+                    [3, 6,434],
+                    [3, 7,1107],
+                    [3, 8,1542],
+                    [3, 9,2229],
+                    [3,10,2321],
+                    [3,11,3899],
+                    [3,12,5154],
+                    [3,13,4003],
+                    [3,14,4265],
+                    [3,15,3542],
+                    [3,16,3746],
+                    [3,17,4429],
+                    [3,18,4966],
+                    [3,19,5173],
+                    [3,20,5491],
+                    [3,21,4962],
+                    [3,22,4520],
+                    [3,23,4061],
+                    [4, 0,2968],
+                    [4, 1,2106],
+                    [4, 2,1693],
+                    [4, 3,1030],
+                    [4, 4,420],
+                    [4, 5,229],
+                    [4, 6,433],
+                    [4, 7,1103],
+                    [4, 8,1561],
+                    [4, 9,2224],
+                    [4,10,2261],
+                    [4,11,3825],
+                    [4,12,4925],
+                    [4,13,4541],
+                    [4,14,4124],
+                    [4,15,3947],
+                    [4,16,3766],
+                    [4,17,4385],
+                    [4,18,4516],
+                    [4,19,5096],
+                    [4,20,5358],
+                    [4,21,5008],
+                    [4,22,4798],
+                    [4,23,4084],
+                    [5, 0,2943],
+                    [5, 1,2382],
+                    [5, 2,1706],
+                    [5, 3,1437],
+                    [5, 4,594],
+                    [5, 5,264],
+                    [5, 6,321],
+                    [5, 7,1233],
+                    [5, 8,1690],
+                    [5, 9,2166],
+                    [5,10,2406],
+                    [5,11,3676],
+                    [5,12,5025],
+                    [5,13,4532],
+                    [5,14,4272],
+                    [5,15,3790],
+                    [5,16,3773],
+                    [5,17,4579],
+                    [5,18,4941],
+                    [5,19,5172],
+                    [5,20,5362],
+                    [5,21,5044],
+                    [5,22,4637],
+                    [5,23,4047],
+                    [6, 0,2837],
+                    [6, 1,2404],
+                    [6, 2,1778],
+                    [6, 3,1453],
+                    [6, 4,624],
+                    [6, 5,264],
+                    [6, 6,459],
+                    [6, 7,1432],
+                    [6, 8,1705],
+                    [6, 9,2243],
+                    [6,10,2204],
+                    [6,11,3637],
+                    [6,12,5177],
+                    [6,13,4491],
+                    [6,14,4169],
+                    [6,15,3849],
+                    [6,16,3812],
+                    [6,17,4524],
+                    [6,18,4720],
+                    [6,19,5153],
+                    [6,20,5473],
+                    [6,21,5003],
+                    [6,22,4754],
+                    [6,23,4000]]
+
+            option = {
+                tooltip: {
+                    position: 'top',
+                    textStyle:{
+                        fontSize: '24',
+                    }
+                },
+                title: [],
+                singleAxis: [],
+                series: []
+            };
+
+        echarts.util.each(days, function (day, idx) {
+            option.title.push({
+                textBaseline: 'middle',
+                top: (idx + 0.7) * 100 / 7 + '%',
+                text: day
+            });
+            option.singleAxis.push({
+                left: 150,
+                type: 'category',
+                boundaryGap: false,
+                data: hours,
+                top: (idx * 100 / 7 + 6) + '%',
+                height: (100 / 7 - 9) + '%',
+                axisLabel: {
+                    interval: 2
+                }
+            });
+            option.series.push({
+                singleAxisIndex: idx,
+                coordinateSystem: 'singleAxis',
+                type: 'scatter',
+                data: [],
+                symbolSize: function (dataItem) {
+                    return dataItem[1] / 130;
+                }
+            });
+        });
+
+    echarts.util.each(data, function (dataItem) {
+        option.series[dataItem[0]].data.push([dataItem[1], dataItem[2]]);
+    });
+    myChart.setOption(option); 
+}
+</script>
+  </body>
+</html>

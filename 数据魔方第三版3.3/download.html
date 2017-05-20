@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>下载</title>
+
+		<link rel="stylesheet" type="text/css" href="" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/download.css" />
+
+	</head>
+
+	<body>
+		<div class="public-nav">
+			<div class="wrapper">
+				<a href="" class="logo">logo</a>
+				<ul class="navbar">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">用户画像<span class="caret"></span></a>
+						<ul>
+							<li>
+								<a href="baseinfo.html">基本信息</a>
+							</li>
+							<li>
+								<a href="communication.html">通讯消费</a>
+							</li>
+							<li>
+								<a href="terminal.html">终端信息</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0);">用户行为分析<span class="caret"></span></a>
+						<ul>
+							<li>
+								<a href="userbehavior.html">视频方向</a>
+							</li>
+							<li>
+								<a href=" " class="nochoose">汽车方向</a>
+							</li>
+							<li>
+								<a href="javascript:return false;" class="nochoose">游戏方向</a>
+							</li>
+							<li>
+								<a href="javascript:return false;" class="nochoose">金融方向</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="app.html">APP分析</a>
+					</li>
+					<li>
+						<a href="download.html" class="active">下载</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--<div class="banner">
+			<div class="wrapper">
+            	<span class="banner-btn">下载</span>
+       		</div>	
+		</div>		-->
+		<div class="content clearfix">
+			<div class="content_left fl">
+				<!--<form class="subnav-selects" name="form1">
+					<ul class="download-selects">
+						<p class="limit-condition">用户画像</p>
+						<li class="limitSelect" value="downloadSex">性别</li>
+						<li class="limitSelect" value="downloadAge">年龄</li>
+						<li class="limitSelect" value="downloadArea">地域</li>
+						<li class="limitSelect" value="downloadChild">子嗣</li>
+					</ul>
+					<ul class="download-selects">
+						<p class="limit-condition">用户行为分析</p>
+						<li class="limitSelect" value="downloadVideo">视频节目偏好</li>
+					</ul>
+					<ul class="download-selects">
+						<p class="limit-condition">APP分析</p>
+						<li class="limitSelect last-li" value="downloadLiucun">APP留存率</li>
+					</ul>
+				</form>-->
+
+				<form class="subnav-selects" name="form1">
+					<ul class="download-selects" name="userImg">用户画像
+						<li class="limitSelect">
+							<p class="limitText selectMore">基础信息</p>
+							<ul class="subulList">
+								<li class="subliList" value="downArea">地域</li>
+								<li class="subliList" value="downSex">性别</li>
+								<li class="subliList" value="downAge">年龄</li>
+								<li class="subliList" value="downChild">子嗣</li>
+							</ul>
+						</li>
+						<li class="limitSelect">
+							<p class="limitText selectMore">通讯消费</p>
+							<ul class="subulList">
+								<li class="subliList" value="downXiaofei">消费能力</li>
+								<li class="subliList" value="downTaocan">套餐</li>
+								<li class="subliList" value="downLiuliang">使用流量</li>
+								<li class="subliList" value="downShouru">出账收入</li>
+							</ul>
+						</li>
+						<li class="limitSelect">
+							<p class="limitText selectMore">终端信息</p>
+							<ul class="subulList">
+								<li class="subliList" value="downPinpai">终端品牌</li>
+								<li class="subliList" value="downHuanji">换机频率</li>
+							</ul>
+						</li>
+					</ul>
+
+					<ul class="download-selects" name="behavior">用户行为分析
+						<li class="limitSelect">
+							<ul class="subulList">
+								<li class="subliList" value="downPindao">频道内容偏好</li>
+							</ul>
+						</li>
+						
+						<li class="limitSelect">
+							<ul class="subulList">
+								<li class="subliList" value="downJumu">剧目人群电商属性</li>
+							</ul>
+						</li>
+						<li class="limitSelect">
+							<ul class="subulList">
+								<li class="subliList" value="downHuoyue">活跃时段</li>
+							</ul>
+						</li>
+						<li class="limitSelect">
+							<ul class="subulList">
+								<li class="subliList" value="downXingqu">兴趣分布</li>
+							</ul>
+						</li>
+					</ul>
+
+					<ul class="download-selects" name="app">APP分析
+						<li class="limitSelect">
+							<ul class="subulList">
+								<li class="subliList" value="downShixu">APP时序分布</li>
+							</ul>
+						</li>
+						<li class="limitSelect">
+							<ul class="subulList">
+								<li class="subliList" value="downLiucun">APP留存率</li>
+							</ul>
+						</li>
+					</ul>
+				</form>
+				<div class="subnav-btn">
+					<!--<input type="button" value="下载报告" class="create-btn" id="create-btn">-->
+					<label for="create-btn" class="create-btn">下载报告</label><input type="file" name="downloads" id="create-btn" class="download_input" />
+				</div>
+				<!--<form class="subnav" name="form1">
+					<div class="subnav-selects">
+						<div class="limit-condition">用户画像</div>
+						<div class="limit-select">
+							<select id="sexlimit">
+								<option selected="selected" disabled>用户画像</option>
+								<option value="">性别</option>
+								<option value="">年龄</option>
+								<option value="">地域</option>
+								<option value="">子嗣</option>
+								
+							</select>
+							<select id="agelimit">
+								<option selected="selected" disabled>年龄</option>
+								<option>全部</option>
+								<option id="children">[10,20)</option>
+								<option>[20,30)</option>
+								<option>[30,40)</option>
+								<option>[40,50)</option>
+								<option>50及以上</option>
+							</select>
+							<select id="sexlimit">
+								<option selected="selected" disabled>地域</option>
+								<option>全部</option>
+								<option>男</option>
+								<option>女</option>
+							</select>
+							<select id="sexlimit">
+								<option selected="selected" disabled>子嗣</option>
+								<option>全部</option>
+								<option>男</option>
+								<option>女</option>
+							</select>
+						</div>
+					</div>
+				</form>-->
+				<!--<div class="subnav-btn">
+					<input type="button" value="生成" class="create-btn" id="create-btn" onclick="refreshBrand()">
+				</div>-->
+			</div>
+			<!--content_left结束-->
+			<div id="main" class="content_right fl">
+				<ul class="downloadList">
+					<li class="downloadImg"><img src="images/download_sex.png" alt="" />
+						<p class="text" value='downArea' name="userImg">地域<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_age.png" alt="" />
+						<p class="text" value="downSex" name="userImg">性别<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_area.png" alt="" />
+						<p class="text" value="downAge" name="userImg">年龄<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_child.png" alt="" />
+						<p class="text" value="downChild" name="userImg">子嗣<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_xiaofei.png" alt="" />
+						<p class="text"  value="downXiaofei" name="userImg">消费能力<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_taocan.png" alt="" />
+						<p class="text" value="downTaocan" name="userImg">套餐<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_liuliang.png" alt="" />
+						<p class="text" value="downLiuliang" name="userImg">使用流量<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_shouru.png" alt="" />
+						<p class="text" value="downShouru" name="userImg">出账收入<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_pinpai.png" alt="" />
+						<p class="text" value="downPinpai" name="userImg">终端品牌<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_huanji.png" alt="" />
+						<p class="text" value="downHuanji" name="userImg">换机频率<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_pindao.png" alt="" />
+						<p class="text" value="downPindao"  name="behavior">频道内容偏好<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_jumu.png" alt="" />
+						<p class="text" value="downJumu"  name="behavior">剧目人群电商属性<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_huoyue.png" alt="" />
+						<p class="text" value="downHuoyue"  name="behavior">活跃时段<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_xingqu.png" alt="" />
+						<p class="text" value="downXingqu"  name="behavior">兴趣分布<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_shixu.png" alt="" />
+						<p class="text" value="downShixu" name="app">APP时序分布<span></span></p>
+					</li>
+					<li class="downloadImg"><img src="images/download_liucunlv.png" alt="" />
+						<p class="text" value="downLiucun" name="app">APP留存率<span></span></p>
+					</li>
+				</ul>
+
+				<!--<ul class="down-type">
+					<li class="down-img"><img src="images/download_sex.png" alt="" />
+						<p class="imgText" data-value="downloadSex">性别<span></span></p>
+					</li>
+					<li class="down-img"><img src="images/download_age.png" alt="" />
+						<p class="imgText" data-value="downloadAge">年龄<i></i></p>
+					</li>
+					<li class="down-img"><img src="images/download_area.png" alt="" />
+						<p class="imgText" data-value="downloadArea">地域<i></i></p>
+					</li>
+					<li class="down-img"><img src="images/download_child.png" alt="" />
+						<p class="imgText" data-value="downloadChild">子嗣<i></i></p>
+					</li>
+				</ul>
+				<ul class="down-type fl">
+					<li class="down-img"><img src="images/download_xiaofei.png" alt="" />
+						<p class="imgText" data-value="downloadSex">消费能力<i></i></p>
+					</li>
+					<li class="down-img"><img src="images/download_taocan.png" alt="" />
+						<p class="imgText" data-value="downloadAge">套餐<i></i></p>
+					</li>
+					<li class="down-img"><img src="images/download_liuliang.png" alt="" />
+						<p class="imgText" data-value="downloadArea">使用流量<i></i></p>
+					</li>
+					<li class="down-img"><img src="images/download_shouru.png" alt="" />
+						<p class="imgText" data-value="downloadChild">出账收入<i></i></p>
+					</li>
+				</ul>
+				<ul class="down-type fl">
+					<li class="down-img"><img src="images/download_pinpai.png" alt="" />
+						<p class="imgText" data-value="downloadVideo">终端品牌<i class="select-pic"></i></p>
+					</li>
+					<li class="down-img"><img src="images/download_huanji.png" alt="" />
+						<p class="imgText" data-value="downloadVideo">换机频率<i class="select-pic"></i></p>
+					</li>
+				</ul>
+				<ul class="down-type fl">
+					<li class="down-img"><img src="images/download_pindao.png" alt="" />
+						<p class="imgText" data-value="downloadSex">频道内容偏好<i></i></p>
+					</li>
+					<li class="down-img"><img src="images/download_jumu.png" alt="" />
+						<p class="imgText" data-value="downloadAge">剧目人群电商属性<i></i></p>
+					</li>
+					<li class="down-img"><img src="images/download_huoyue.png" alt="" />
+						<p class="imgText" data-value="downloadArea">活跃时段<i></i></p>
+					</li>
+					<li class="down-img"><img src="images/download_xingqu.png" alt="" />
+						<p class="imgText" data-value="downloadChild">兴趣分布<i></i></p>
+					</li>
+				</ul>
+				<ul class="down-type fl">
+					<li class="down-img"><img src="images/download_shixu.png" alt="" />
+						<p class="imgText" data-value="downloadLiucun">APP时序分布<i></i></p>
+					</li>
+					<li class="down-img"><img src="images/download_liucunlv.png" alt="" />
+						<p class="imgText" data-value="downloadLiucun">APP留存率<i></i></p>
+					</li>
+				</ul>-->
+
+			</div>
+		</div>
+		<!--content结束-->
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/download.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

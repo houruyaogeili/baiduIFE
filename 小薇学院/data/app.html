@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>APP行为分析</title>
+
+		<!-- Bootstrap -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/baseinfo.css"> -->
+		<link rel="stylesheet" type="text/css" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/app_analyze.css" />
+		<!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+
+		<div class="public-nav">
+			<div class="wrapper">
+				<a href="" class="logo">logo</a>
+				<ul class="navbar">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">用户画像<span class="caret"></span></a>
+						<ul>
+							<li>
+								<a href="baseinfo.html">基本信息</a>
+							</li>
+							<li>
+								<a href="communication.html">通讯消费</a>
+							</li>
+							<li>
+								<a href="terminal.html">终端信息</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0);">用户行为分析<span class="caret"></span></a>
+						<ul>
+							<li>
+								<a href="userbehavior.html">视频方向</a>
+							</li>
+							<li>
+								<a href=" " class="nochoose">汽车方向</a>
+							</li>
+							<li>
+								<a href="javascript:return false;" class="nochoose">游戏方向</a>
+							</li>
+							<li>
+								<a href="javascript:return false;" class="nochoose">金融方向</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="app.html" class="active">APP分析</a>
+					</li>
+					<li>
+						<a href="download.html">下载</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="banner">
+			<ul class="app_menu">
+				<li id="app_time" class="app_btns app_active">APP时序分布</li>
+				<li id="app_paihang" class="app_btns">APP排行</li>
+				<li id="app_keep" class="app_btns">APP留存率</li>
+			</ul>
+		</div>
+
+		<!--APP排行-->
+		<div class="app_analyze">
+			<div class="shixu">
+				<div class="shixu_icon"><img src="images/shixu_icon.png" /></div>
+				<div id="shixu"></div>
+			</div>
+			<div class="app_ranking clearfix">
+				<form class="subnav fl" name="form1" id="form1">
+					<div class="subnav-selects fl">
+						<div class="main-item">限定条件</div>
+						<!--<select name="" class="app_select app_sl_r">
+							<option value="" selected="selected" disabled>账 期</option>
+							<option value="">16-06</option>
+							<option value="" disabled>16-07</option>
+							<option value="" disabled>16-08</option>
+						</select>
+						<select id="appTypeSelect" name="" class="app_select app_sl_l">
+							<option value="totalApp" selected="selected" disabled>应用分类</option>
+							<option value="totalApp">全部</option>
+							<option value="social">通信社交</option>
+							<option value="video">视频影音</option>
+							<option value="news">新闻阅读</option>
+							<option value="shopping">电商购物</option>
+							<option value="tourism">旅游出行</option>
+							<option value="game">游戏</option>
+							<option value="life">生活服务</option>
+							<option value="financial">金融理财</option>
+							<option value="medical">医疗健康</option>
+							<option value="imagetool">图片工具</option>
+							<option value="systemsafe">系统安全</option>
+							<option value="office">学习办公</option>
+						</select>-->
+						<ul class="app_select">
+							<li value="" class="select_all">账期</li>
+							<li value="" class="paymentTime">16-06</li>
+							<li value="" class="nochoose" disabled="">16-07</li>
+							<li value="" class="nochoose" disabled="">16-08</li>
+						</ul>
+						<ul class="app_select" id="appTypeSelect">
+							<li value="totalApp" class="select_all">应用分类</li>
+							<li value="totalApp" class="selected">全部</li>
+							<li value="social">通信社交</li>
+							<li value="video">视频影音</li>
+							<li value="news">新闻阅读</li>
+							<li value="shopping">电商购物</li>
+							<li value="tourism">旅游出行</li>
+							<li value="game">游 戏</li>
+							<li value="life">生活服务</li>
+							<li value="financial">金融理财</li>
+							<li value="medical">医疗健康</li>
+							<li value="imagetool">图片工具</li>
+							<li value="systemsafe">系统安全</li>
+							<li value="office">学习办公</li>
+						</ul>
+					</div>
+				</form>
+				<div class="rangking_list fl">
+					<div class="rangking_show app_rangking_l fl">
+						<ul class="app_th">
+							<li class="app_no">排名</li>
+							<li class="app_name">APP名称</li>
+							<li class="app_uv">活跃数</li>
+						</ul>
+						<ul class="app_body" id="appBodyOne">
+							<!--<li class="app_list">
+									<span>1</span>
+									<img src="images/app/shopping/电商购物_001.png" alt="" />
+									<b>1111191</b>
+								</li>
+								<li class="app_list">
+									<span>2</span>
+									<img src="images/app/shopping/电商购物_002.png" alt="" />
+									<b>1111181</b>
+								</li>
+								<li class="app_list">
+									<span>3</span>
+									<img src="images/app/shopping/电商购物_003.png" alt="" />
+									<b>1111171</b>
+								</li>
+								<li class="app_list">
+									<span>4</span>
+									<img src="images/app/shopping/电商购物_004.png" alt="" />
+									<b>1111161</b>
+								</li>
+								<li class="app_list">
+									<span>5</span>
+									<img src="images/app/shopping/电商购物_005.png" alt="" />
+									<b>1111151</b>
+								</li>
+								<li class="app_list">
+									<span>6</span>
+									<img src="images/app/shopping/电商购物_006.png" alt="" />
+									<b>1111141</b>
+								</li>
+								<li class="app_list">
+									<span>7</span>
+									<img src="images/app/shopping/电商购物_007.png" alt="" />
+									<b>1111131</b>
+								</li>
+								<li class="app_list">
+									<span>8</span>
+									<img src="images/app/shopping/电商购物_008.png" alt="" />
+									<b>1111121</b>
+								</li>-->
+						</ul>
+					</div>
+					<!--app_rangking_l 结束-->
+
+					<div class="rangking_show app_rangking_r fl">
+						<ul class="app_th">
+							<li>排名</li>
+							<li>APP名称</li>
+							<li>活跃数</li>
+						</ul>
+						<ul class="app_body" id="appBodyTwo">
+							<!--<li class="app_list">
+									<span>9</span>
+									<img src="images/app/shopping/电商购物_001.png" alt="" />
+									<b>1111119</b>
+								</li>
+								<li class="app_list">
+									<span>10</span>
+									<img src="images/app/shopping/电商购物_002.png" alt="" />
+									<b>1111118</b>
+								</li>
+								<li class="app_list">
+									<span>11</span>
+									<img src="images/app/shopping/电商购物_003.png" alt="" />
+									<b>1111117</b>
+								</li>
+								<li class="app_list">
+									<span>12</span>
+									<img src="images/app/shopping/电商购物_004.png" alt="" />
+									<b>1111116</b>
+								</li>
+								<li class="app_list">
+									<span>13</span>
+									<img src="images/app/shopping/电商购物_005.png" alt="" />
+									<b>1111115</b>
+								</li>
+								<li class="app_list">
+									<span>14</span>
+									<img src="images/app/shopping/电商购物_006.png" alt="" />
+									<b>1111114</b>
+								</li>
+								<li class="app_list">
+									<span>15</span>
+									<img src="images/app/shopping/电商购物_007.png" alt="" />
+									<b>1111113</b>
+								</li>
+								<li class="app_list">
+									<span>16</span>
+									<img src="images/app/shopping/电商购物_008.png" alt="" />
+									<b>1111111</b>
+								</li>-->
+						</ul>
+					</div>
+					<!--app_rangking_r 结束-->
+					<!--<div class="liucunlv">
+						<div id="liucunlv"></div>
+					</div>-->
+				</div>
+				<!--rangking_list 结束-->
+
+			</div>
+			<!--app_ranking结束-->
+			<div class="liucunlv clearfix">
+				<form class="subnav fl" name="form1" id="form1">
+					<div class="subnav-selects fl">
+						<div class="main-item">限定条件</div>
+						<!--<select name="" class="app_select app_sl_r">
+							<option value="" selected="selected" disabled>账 期</option>
+							<option value="">16-06</option>
+							<option value="" disabled>16-07</option>
+							<option value="" disabled>16-08</option>
+						</select>
+						<select id="appTypeSelect" name="" class="app_select app_sl_l">
+							<option value="totalApp" selected="selected" disabled>应用分类</option>
+							<option value="totalApp">全部</option>
+							<option value="social">通信社交</option>
+							<option value="video">视频影音</option>
+							<option value="news">新闻阅读</option>
+							<option value="shopping">电商购物</option>
+							<option value="tourism">旅游出行</option>
+							<option value="game">游戏</option>
+							<option value="life">生活服务</option>
+							<option value="financial">金融理财</option>
+							<option value="medical">医疗健康</option>
+							<option value="imagetool">图片工具</option>
+							<option value="systemsafe">系统安全</option>
+							<option value="office">学习办公</option>
+						</select>-->
+						<ul class="app_select">
+							<li value="" class="select_all">账期</li>
+							<li value="" class="paymentTime">16-06</li>
+							<li value="" class="nochoose" disabled="">16-07</li>
+							<li value="" class="nochoose" disabled="">16-08</li>
+						</ul>
+						<ul class="app_select" id="appLiucun">
+							<li value="totalApp" class="select_all">应用分类</li>
+							<li value="totalApp" class="selected">全部</li>
+							<li value="social">通信社交</li>
+							<li value="video">视频影音</li>
+							<li value="news">新闻阅读</li>
+							<li value="shopping">电商购物</li>
+							<li value="tourism">旅游出行</li>
+							<li value="game">游 戏</li>
+							<li value="life">生活服务</li>
+							<li value="financial">金融理财</li>
+							<li value="medical">医疗健康</li>
+							<li value="imagetool">图片工具</li>
+							<li value="systemsafe">系统安全</li>
+							<li value="office">学习办公</li>
+						</ul>
+					</div>
+				</form>
+				<div class="liucunPic">
+					<p id="liucunlv1" value="totalApp" style="display: block;"></p>
+					<p id="liucunlv2" value="news"></p>
+					<p id="liucunlv3" value="video"></p>
+				</div>
+			</div>
+
+		</div>
+		<!--app_analyze结束-->
+
+		<script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="data/data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/app_change.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lib/echarts.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lib/charts.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+
+	</body>
+
+</html>

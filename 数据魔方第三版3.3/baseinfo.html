@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>数据魔方-基本信息</title>
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/userimg.css">
+</head>
+<body>
+	<div class="public-nav">
+		<div class="wrapper">
+			<a href="login.html" class="logo">logo</a>
+			<ul class="navbar">
+				<li ><a href="index.html">首页</a></li>
+				<li>
+					<a href="javascript:void(0);" class="active">用户画像<span class="caret"></span></a>
+					<ul>
+						<li><a href="baseinfo.html">基本信息</a></li>
+						<li><a href="communication.html">通讯消费</a></li>
+						<li><a href="terminal.html">终端信息</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);">用户行为分析<span class="caret"></span></a>
+					<ul>
+						<li><a href="userbehavior.html">视频方向</a></li>
+						<li><a href="javascript:return false;" class="nochoose">汽车方向</a></li>
+						<li><a href="javascript:return false;" class="nochoose">游戏方向</a></li>
+						<li><a href="javascript:return false;" class="nochoose">金融方向</a></li>
+					</ul> 
+				</li>
+				<li><a href="app.html">APP分析</a></li>
+				<li><a href="download.html">下载</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="banner">	
+		<div class="wrapper">
+            <span class="banner-btn">基本信息</span>
+        </div>	
+	</div>
+	<div class="content">
+		<div class="wrapper">
+			<form class="subnav" name="form1">
+				<div class="subnav-selects">
+						<div class="main-item">主字段</div>
+						<div class="main-select">
+							<select id="main-item">
+				              <option value="area" selected="selected">地域</option>
+				              <option value="sex">性别</option>
+				              <option value="age">年龄</option>                  
+				              <option value="child">子嗣</option>
+							</select>
+							<select>
+				              <option selected="selected">16-06</option>
+				              <option disabled>16-07</option>
+				              <option disabled>16-08</option>
+				            </select>
+						</div>
+			            <div class="limit-condition">限定条件</div>
+			            <div class="limit-select">
+						  <select id="sexlimit">
+						    <option  disabled>性别</option>
+						    <option>全部</option>
+						    <option selected="selected">男</option>
+						    <option>女</option>
+						  </select>
+						  <select id="agelimit">
+						    <option disabled>年龄</option>
+						    <option>全部</option>
+						    <option id="children">[10,20)</option>
+						    <option selected="selected" >[20,30)</option>
+						    <option>[30,40)</option>
+						    <option>[40,50)</option>
+						    <option>50及以上</option>
+						  </select>
+						  <select id="arealimit">
+						    <option selected="selected" disabled>地域</option>
+						    <option>全部</option>
+						    <option>安徽</option>
+						    <option>北京</option>
+						    <option>重庆</option>
+						    <option>福建</option>
+						    <option>甘肃</option>
+						    <option>广东</option>
+						    <option>广西</option>
+						    <option>贵州</option>
+						    <option>海南</option>
+						    <option>河北</option>
+						    <option>河南</option>
+						    <option>黑龙江</option>
+						    <option>湖北</option>
+						    <option>吉林</option>
+						    <option>江苏</option>
+						    <option>江西</option>
+						    <option>辽宁</option>
+						    <option>内蒙古</option>
+						    <option>宁夏</option>
+						    <option>青海</option>
+						    <option>山东</option>
+						    <option>山西</option>
+						    <option>陕西</option>
+						    <option>上海</option>
+						    <option>四川</option>
+						    <option>天津</option>
+						    <option>西藏</option>
+						    <option>新疆</option>
+						    <option>云南</option>
+						    <option>浙江</option>
+						  </select>
+						  <select id="childlimit">
+						    <option selected="selected" disabled>子嗣</option>
+						    <option>全部</option>
+						    <option>无子女</option>
+						    <option>有子女</option>
+						  </select>
+						  <select id="package">
+						    <option disabled>套餐</option>
+						    <option>全部</option>
+						    <option>0-10</option>
+						    <option>10-30</option>
+						    <option>30-50</option>
+						    <option>50-100</option>
+						    <option>100-150</option>
+						    <option selected="selected">150-200</option>
+						    <option>200-250</option>
+						    <option>250-300</option>
+						    <option>300以上</option>
+						  </select>
+						  <select id="flow">
+						    <option selected="selected" disabled>使用流量</option>
+						    <option>全部</option>
+						    <option>0-50MB</option>
+						    <option>50-100MB</option>
+						    <option>100-200MB</option>
+						    <option>200-300MB</option>
+						    <option>300-400MB</option>
+						    <option>400-500MB</option>
+						    <option>500MB-1G</option>
+						    <option>1G-2G</option>
+						    <option>2G以上</option>
+						  </select>
+						  <select id="income">
+						    <option selected="selected" disabled>出账收入</option>
+						    <option>全部</option>
+						    <option>0-50</option>
+						    <option>50-100</option>
+						    <option>100-300</option>
+						    <option>300以上</option>
+						  </select>
+						  <select id="brand" name="brand" onchange="select_change(this.selectedIndex)">
+						    <option selected="selected" disabled>终端品牌</option>
+						    <option value=>全部</option>
+						    <option value=>苹果</option>
+						    <option value=>小米</option>
+						    <option value=>华为</option>
+						    <option value=>魅族</option>
+						    <option value=>三星</option>
+						    <option value=>维沃</option>
+						    <option value=>欧珀</option>
+						    <option value=>乐视</option>
+						    <option value=>酷派</option>
+						    <option value=>金立</option>
+						  </select>
+						  <select id="models" name="city">
+						  	<option selected="selected" disabled>终端机型</option>
+				            <option value="iPhone 6">iPhone 6</option>
+				            <option value="iPhone 6 Plus">iPhone 6 Plus</option>
+				            <option value="iPhone 6s">iPhone 6s</option>
+				            <option value="iPhone SE">iPhone SE</option>
+				            <option value="iPhone 5s">iPhone 5s</option>
+				            <option value="iPhone 6s Plus">iPhone 6s Plus</option>
+				            <option value="iPhone 5">iPhone 5</option>
+				            <option value="iPhone 4s">iPhone 4s</option>
+				            <option value="iPhone 4">iPhone 4</option>
+				            <option value="红米Note3">红米Note3</option>
+				            <option value="小米4">小米4</option>
+				            <option value="小米Note">小米Note</option>
+				            <option value="小米3">小米3</option>
+				            <option value="红米Note">红米Note</option>
+				            <option value="小米4i">小米4i</option>
+				            <option value="红米2">红米2</option>
+				            <option value="小米2s">小米2s</option>
+				            <option value="红米Note2">红米Note2</option>
+				            <option value="红米Note2">红米Note2</option>
+				            <option value="红米3">红米3</option>
+				            <option value="荣耀6">荣耀6</option>
+				            <option value="华为Mate7">华为Mate7</option>
+				            <option value="华为Mate8">华为Mate8</option>
+				            <option value="荣耀畅玩4X">荣耀畅玩4X</option>
+				            <option value="荣耀6 Plus">荣耀6 Plus</option>
+				            <option value="华为P8">华为P8</option>
+				            <option value="荣耀畅玩4C">荣耀畅玩4C</option>
+				            <option value="荣耀4A">荣耀4A</option>
+				            <option value="荣耀7">荣耀7</option>
+				            <option value="荣耀畅玩5X">荣耀畅玩5X</option>
+				            <option value="魅蓝Note2">魅蓝Note2</option>
+				            <option value="魅蓝Note3">魅蓝Note3</option>
+				            <option value="魅族MX5">魅族MX5</option>
+				            <option value="魅蓝Note">魅蓝Note</option>
+				            <option value="魅族MX4">魅族MX4</option>
+				            <option value="魅族MX5 Pro">魅族MX5 Pro</option>
+				            <option value="魅族MX4 Pro">魅族MX4 Pro</option>
+				            <option value="魅族MX6">魅族MX6</option>
+				            <option value="魅蓝2">魅蓝2</option>
+				            <option value="魅蓝metal">魅蓝metal</option>
+				            <option value="三星S7">三星S7</option>
+				            <option value="三星Note3">三星Note3</option>
+				            <option value="三星S6 Edge">三星S6 Edge</option>
+				            <option value="三星S5">三星S5</option>
+				            <option value="三星A7">三星A7</option>
+				            <option value="三星S6 Edge+">三星S6 Edge+</option>
+				            <option value="三星Note4">三星Note4</option>
+				            <option value="三星S6">三星S6</option>
+				            <option value="三星S4">三星S4</option>
+				            <option value="三星A8">三星A8</option>
+				            <option value="vivo X5 Pro">vivo X5 Pro</option>
+				            <option value="vivo X6">vivo X6</option>
+				            <option value="vivo X6 Plus">vivo X6 Plus</option>
+				            <option value="vivo Y51A">vivo Y51A</option>
+				            <option value="vivo Y35A">vivo Y35A</option>
+				            <option value="vivo XPLAY 5">vivo XPLAY 5</option>
+				            <option value="vivo X3S">vivo X3S</option>
+				            <option value="vivo X3F">vivo X3F</option>
+				            <option value="vivo Y613">vivo Y613</option>
+				            <option value="vivo Y627">vivo Y627</option>
+				            <option value="OPPO R7s">OPPO R7s</option>
+				            <option value="OPPO R9">OPPO R9</option>
+				            <option value="OPPO R7 Plus">OPPO R7 Plus</option>
+				            <option value="OPPO R1c">OPPO R1c</option>
+				            <option value="OPPO R9 Plus">OPPO R9 Plus</option>
+				            <option value="OPPO R1s">OPPO R1s</option>
+				            <option value="OPPO A31">OPPO A31</option>
+				            <option value="OPPO Find7">OPPO Find7</option>
+				            <option value="OPPO A30">OPPO A30</option>
+				            <option value="OPPO R830">OPPO R830</option>
+				            <option value="乐1s">乐1s</option>
+				            <option value="乐2">乐2</option>
+				            <option value="乐1">乐1</option>
+				            <option value="乐1 Pro">乐1 Pro</option>
+				            <option value="乐max">乐max</option>
+				            <option value="乐max2">乐max2</option>
+				            <option value="乐max Pro">乐max Pro</option>
+				            <option value="大神F2">大神F2</option>
+				            <option value="大神Note3">大神Note3</option>
+				            <option value="奇酷青春版">奇酷青春版</option>
+				            <option value="锋尚">锋尚</option>
+				            <option value="大神F2 Plus">大神F2 Plus</option>
+				            <option value="锋尚 Pro">锋尚 Pro</option>
+				            <option value="酷派K1">酷派K1</option>
+				            <option value="大神F1 Plus">大神F1 Plus</option>
+				            <option value="锋尚Max">锋尚Max</option>
+				            <option value="锋尚Air">锋尚Air</option>
+				            <option value="金立 M6">金立 M6</option>
+				            <option value="金立 S7">金立 S7</option>
+				            <option value="金立金刚">金立金刚</option>
+				            <option value="金立 M5">金立 M5</option>
+				            <option value="金立 F103">金立 F103</option>
+				            <option value="金立 M5 Plus">金立 M5 Plus</option>
+				            <option value="GIONEE F103s">GIONEE F103s</option>
+				            <option value="金立 S5">金立 S5</option>
+				            <option value="金立 S7 mini">金立 S7 mini</option>
+				            <option value="金立天鉴">金立天鉴</option>
+						        </select>
+						  <select id="changenum">
+						    <option selected="selected" disabled>换机频率</option>
+						    <option>全部</option>
+						    <option>从未换机</option>
+						    <option>1-6月</option>
+						    <option>6-12月</option>
+						    <option>12-18月</option>
+						    <option>18-24月</option>
+						    <option>24月以上</option>
+						  </select>
+						</div>
+				</div>
+				<div class="subnav-btn">
+					<input type="button" value="生成" class="create-btn" id="create-btn">
+				</div>
+			</form>
+			<div class="panel">
+				<div class="pic-show">
+					<div id="regionDiv" style="height:610px;" class="panel-half"></div>
+					<div id="regionDiv2" style="height:610px;" class="panel-half"></div>
+					<div id="genderDiv" style="height:610px;" class="panel-half"></div>
+					<div id="genderDiv2" style="height:610px;" class="panel-half"></div>
+					<div id="ageDiv" style="height:610px;" class="panel-half"></div>
+					<div id="ageDiv2" style="height:610px;" class="panel-half"></div>
+					<div id="childDiv" style="height:610px;" class="panel-half"></div>
+					<div id="childDiv2" style="height:610px;" class="panel-half"></div> 
+				</div>	
+			</div>	
+		</div>
+	</div>
+	<script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lib/echarts.js"></script>
+	<script src="js/lib/charts.js"></script>
+	<script src="js/lib/init.js"></script>
+	<script src="js/lib/refresh.js"></script>
+	<script src="js/lib/china.js"></script>
+	<script type="text/javascript" src="js/public.js"></script>
+	<script type="text/javascript">
+		   $(function(){
+	        var clicknum = 0;
+	        init();
+	        $("#arealimit").attr("disabled","disabled");
+	        $("#main-item").change(function(){         
+	          var mainfieldvalue = $("#main-item").val();
+	          $(".limit-select select").attr("disabled",false);
+	          if(mainfieldvalue == "sex"){
+	          	$("#sexlimit").val("性别");
+	          	$("#agelimit").val("年龄");
+	          	$("#arealimit").val("地域");
+	          	$("#childlimit").val("子嗣");
+	          	$("#package").val("套餐");
+	          	$("#flow").val("使用流量");
+	          	$("#income").val("出账收入");
+	          	$("#brand").val("终端品牌");
+	          	$("#models").val("终端机型");
+	          	$("#changenum").val("换机频率");
+	          	$("#children").attr("disabled", false);
+	            $("#sexlimit").attr("disabled","disabled");
+	            $(".pic-show").stop().animate({top: "-610px"});
+	            $("#genderDiv").css({opacity: 1.0});
+	            $("#genderDiv2").css({opacity: 1.0}); 
+	          }
+	          if(mainfieldvalue == "age"){
+	          	$("#sexlimit").val("性别");
+	          	$("#agelimit").val("年龄");
+	          	$("#arealimit").val("地域");
+	          	$("#childlimit").val("子嗣");
+	          	$("#package").val("套餐");
+	          	$("#flow").val("使用流量");
+	          	$("#income").val("出账收入");
+	          	$("#brand").val("终端品牌");
+	          	$("#models").val("终端机型");
+	          	$("#changenum").val("换机频率");
+	            $("#agelimit").attr("disabled","disabled");
+	            $(".pic-show").stop().animate({top: "-1220px"});
+	            $("#ageDiv").css({opacity: 1.0});
+	            $("#ageDiv2").css({opacity: 1.0});
+	          }         
+	          if(mainfieldvalue == "child"){
+	          	$("#sexlimit").val("性别");
+	          	$("#agelimit").val("年龄");
+	          	$("#arealimit").val("地域");
+	          	$("#childlimit").val("子嗣");
+	          	$("#package").val("套餐");
+	          	$("#flow").val("使用流量");
+	          	$("#income").val("出账收入");
+	          	$("#brand").val("终端品牌");
+	          	$("#models").val("终端机型");
+	          	$("#changenum").val("换机频率");
+	            $("#childlimit").attr("disabled","disabled");
+	            $("#children").attr("disabled","disabled");
+	            $(".pic-show").stop().animate({top: "-1830px"});
+	            $("#childDiv").css({opacity: 1.0});
+	            $("#childDiv2").css({opacity: 1.0}); 
+	          }
+	          if(mainfieldvalue == "area"){
+	          	$("#sexlimit").val("男");
+	          	$("#agelimit").val("[20,30)");
+	          	$("#arealimit").val("地域");
+	          	$("#childlimit").val("子嗣");
+	          	$("#package").val("150-200");
+	          	$("#flow").val("使用流量");
+	          	$("#income").val("出账收入");
+	          	$("#brand").val("终端品牌");
+	          	$("#models").val("终端机型");
+	          	$("#changenum").val("换机频率");
+	          	$("#children").attr("disabled", false);
+	            $("#arealimit").attr("disabled","disabled");
+	            $(".pic-show").stop().animate({top: "0"});
+	            $("#regionDiv").css({opacity: 1.0});
+	            $("#regionDiv2").css({opacity: 1.0}); 
+	          }
+	        });
+		    $("#create-btn").click(function(e){
+	          var mainfieldvalue = $("#main-item").val();
+	          if(mainfieldvalue == "sex"){           
+	            addGenderChart("genderDiv2");         
+	            refreshGender("genderDiv2");
+	          }
+	          if(mainfieldvalue == "age"){            
+	            addAgeChart("ageDiv2");
+	            refreshAge("ageDiv2",clicknum);
+	            clicknum++;
+	          }
+	          if(mainfieldvalue == "child"){           
+	            addChildChart("childDiv2");
+	            refreshChild("childDiv2");
+	          }
+	          if(mainfieldvalue == "area"){       
+	            addRegionChart("regionDiv2");
+	            refreshRegion("regionDiv2");
+	          }
+	          
+		    	});	       	    	
+		    });
+
+	      function init(){
+	        $("#genderDiv").css({opacity: 0.0});
+	        $("#genderDiv2").css({opacity: 0.0});
+	        $("#childDiv").css({opacity: 0.0});
+	        $("#childDiv2").css({opacity: 0.0});
+	        $("#ageDiv").css({opacity: 0.0});
+	        $("#ageDiv2").css({opacity: 0.0});
+	        addGenderChart("genderDiv");
+	        addGenderChart("genderDiv2");
+	        addAgeChart("ageDiv");
+	        addAgeChart("ageDiv2");
+	        addChildChart("childDiv");
+	        addChildChart("childDiv2");
+	        addRegionChart("regionDiv");
+	        addRegionChart("regionDiv2");
+	        refreshRegion("regionDiv2");
+	      }
+	      function addGenderChart(id){ 
+	        var data = [ 
+	                     {value:335, name:'男'},
+	                     {value:450, name:'女'}
+	                   ];
+	        var color = ['#ffb930','#55dbd5'];
+	        initCharts("gender",id,data,color);
+	      }
+	      function addAgeChart(id){ 
+	        var data = [["0-10","10-20","20-30","30-40","40-50","50及以上"],[3.07,28.49,43.75,10.86,9.64,4.19]];
+	        var color = ['#ffcc33','#99cc99','#99cccc','#83b0de','#ff7166','#ff9933'];
+	        initCharts("age",id,data,color);
+	      }
+	      function addChildChart(id){ 
+	        var data = [ 
+	                       {value:220, name:'有'},
+	                       {value:130, name:'无'}
+	                     ];
+	          var color = ['#ffcb30','#7ee32b'];
+	          initCharts("child",id,data,color);
+	      }
+	      function addRegionChart(id){ 
+	        var data = [ 
+	                      {name: '江苏',value: 73714 },
+	                      {name: '山东',value: 67149 },
+	                      {name: '河南',value: 57949 },
+	                      {name: '北京',value: 49521 },
+	                      {name: '湖南',value: 41711 },
+	                      {name: '重庆',value: 40505 },
+	                      {name: '辽宁',value: 40489 },
+	                      {name: '湖北',value: 37317 },
+	                      {name: '广东',value: 37266 },
+	                      {name: '上海',value: 35620 },
+	                      {name: '河北',value: 34832 },
+	                      {name: '内蒙古',value: 33669 },
+	                      {name: '安徽',value: 33475 },
+	                      {name: '浙江',value: 30380 },
+	                      {name: '福建',value: 27673 },
+	                      {name: '陕西',value: 26529 },
+	                      {name: '天津',value: 24053 },
+	                      {name: '吉林',value: 23456 },
+	                      {name: '黑龙江',value: 23361 },
+	                      {name: '四川',value: 22036 },
+	                      {name: '山西',value: 20458 },
+	                      {name: '新疆',value: 10475 },
+	                      {name: '广西',value: 10029 },
+	                      {name: '贵州',value: 8822  },
+	                      {name: '江西',value: 7130  },
+	                      {name: '海南',value: 6795  },
+	                      {name: '云南',value: 6197  },
+	                      {name: '甘肃',value: 6142  },
+	                      {name: '青海',value: 2699  },
+	                      {name: '宁夏',value: 1867  },
+	                      {name: '西藏',value: 563   },
+	                      {name: '台湾',value: 0 },    
+	                      {name: '香港',value: 0 },    
+	                      {name: '澳门',value: 0 }  
+	                             ];
+	          var color = ['#ffcbac','#e6587a'];
+	          initCharts("region",id,data,color);
+	      }
+	      function refreshGender(id){
+	        var data = [ 
+	                   {value:randomData(), name:'男'},
+	                   {value:randomData(), name:'女'}
+	          ];
+	        var color = ['#ffb930','#55dbd5'];
+	        refreshCharts(id,"gender",data,color);
+	      }
+	      function refreshAge(id,clicknum){
+	        var dataArr = [["3.07","5.19","14.64","16.86","54.75","5.49"],["6.22","10.10","12.64","31.80","34.35","4.89"]];
+	        var data = [];
+	        data[0] = ["0-10","10-20","20-30","30-40","40-50","50及以上"];
+	        var color = ['#ffcc33','#99cc99','#99cccc','#83b0de','#ff7166','#ff9933'];
+	        var length = dataArr.length;
+	        if(clicknum >= length){
+	          clicknum = clicknum % length;
+	        }
+	        data[1] = dataArr[clicknum];
+	        refreshCharts(id,"age",data,color);       
+	      }
+	      function refreshChild(id){
+	        var data = [ 
+	                   {value:randomData(), name:'有'},
+	                   {value:randomData(), name:'无'}
+	          ];
+	        var color = ['#ffcb30','#7ee32b'];
+	        refreshCharts(id,"child",data,color);
+	      }
+	      function refreshRegion(id){
+	        var data = [ 
+	                    {name: '北京',value: randomDataNum(49521) },
+	                  {name: '天津',value: randomDataNum(24053) },
+	                  {name: '上海',value: randomDataNum(35620) },
+	                  {name: '重庆',value: randomDataNum(40505) },
+	                  {name: '河北',value: randomDataNum(34832) },
+	                  {name: '河南',value: randomDataNum(57949) },
+	                  {name: '云南',value: randomDataNum(6197) },
+	                  {name: '辽宁',value: randomDataNum(40489) },
+	                  {name: '黑龙江',value: randomDataNum(23361) },
+	                  {name: '湖南',value: randomDataNum(41711) },
+	                  {name: '安徽',value: randomDataNum(33475) },
+	                  {name: '山东',value: randomDataNum(67149) },
+	                  {name: '新疆',value: randomDataNum(10475) },
+	                  {name: '江苏',value: randomDataNum(73714) },
+	                  {name: '浙江',value: randomDataNum(30380) },
+	                  {name: '江西',value: randomDataNum(7130) },
+	                  {name: '湖北',value: randomDataNum(37317) },
+	                  {name: '广西',value: randomDataNum(10029) },
+	                  {name: '甘肃',value: randomDataNum(6142) },
+	                  {name: '山西',value: randomDataNum(20458) },
+	                  {name: '内蒙古',value: randomDataNum(33669) },
+	                  {name: '陕西',value: randomDataNum(26529) },
+	                  {name: '吉林',value: randomDataNum(23456) },
+	                  {name: '福建',value: randomDataNum(27673) },
+	                  {name: '贵州',value: randomDataNum(8822) },
+	                  {name: '广东',value: randomDataNum(37266) },
+	                  {name: '青海',value: randomDataNum(2699) },
+	                  {name: '西藏',value: randomDataNum(563) },
+	                  {name: '四川',value: randomDataNum(22036) },
+	                  {name: '宁夏',value: randomDataNum(1867) },
+	                  {name: '海南',value: randomDataNum(6795) },
+	                  {name: '台湾',value: 0 },
+	                  {name: '香港',value: 0 },
+	                  {name: '澳门',value: 0 }
+	          ];
+	        var color = ['#ffcbac','#e6587a'];
+	        refreshCharts(id,"region",data,color);
+	      }
+	      function randomDataNum(num) {
+	          return Math.round(num*Math.random());
+	      }
+	      function randomData() {
+	          return Math.round(Math.random()*1000000);
+	      }
+	      
+
+	         
+	</script>
+</body>
+</html>
